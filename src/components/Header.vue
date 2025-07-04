@@ -80,6 +80,7 @@
         >
           <v-col
             v-for="item in headerItems.slice(0,3)"
+            :key="item.title"
             cols="auto"
           >
             <span class="header-item">{{ item.title }}</span>
@@ -98,6 +99,7 @@
         >
           <v-col
             v-for="item in headerItems.slice(3,6)"
+            :key="item.title"
             cols="auto"
           >
             <span class="header-item">{{ item.title }}</span>
@@ -108,12 +110,13 @@
 
     <v-navigation-drawer
       v-model="drawer"
+      disable-resize-watcher
       :location="xs ? 'left' : undefined"
       class="drawer-container"
     >
       <template #prepend>
         <v-container class="d-flex align-center drawer-prepend">
-          <v-icon size="40" icon="mdi-bookmark"/>
+          <v-icon size="35" icon="mdi-bookmark"/>
 
           <v-list-item
             class="drawer-title-item"
@@ -166,6 +169,10 @@
 
 .drawer-container {
   background-color: rgb(var(--v-theme-background));
+}
+
+.drawer-title-item {
+  padding-left: 5px;
 }
 
 .drawer-item {

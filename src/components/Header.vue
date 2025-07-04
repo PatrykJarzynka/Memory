@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-  import {useDisplay} from "vuetify/framework";
+  import { useDisplay } from "vuetify/framework"
 
   const { xs } = useDisplay()
 
@@ -11,29 +11,41 @@
 
   const headerItems: HeaderItem[] = [
     {
-      title: 'Start',
-      action: () => {return}
+      title: "Start",
+      action: () => {
+        return
+      },
     },
     {
-      title: 'Historia',
-      action: () => {return}
+      title: "Historia",
+      action: () => {
+        return
+      },
     },
     {
-      title: 'Choroba',
-      action: () => {return}
+      title: "Choroba",
+      action: () => {
+        return
+      },
     },
     {
-      title: 'Leczenie',
-      action: () => {return}
+      title: "Leczenie",
+      action: () => {
+        return
+      },
     },
     {
-      title: 'Pomoc',
-      action: () => {return}
+      title: "Pomoc",
+      action: () => {
+        return
+      },
     },
     {
-      title: 'Kontakt',
-      action: () => {return}
-    }
+      title: "Kontakt",
+      action: () => {
+        return
+      },
+    },
   ]
 
   const drawer = ref(false)
@@ -82,12 +94,13 @@
       <v-col cols="5">
         <v-row
           no-gutters
-          class="align-center h-100 justify-space-around">
+          class="align-center h-100 justify-space-around"
+        >
           <v-col
             v-for="item in headerItems.slice(3,6)"
             cols="auto"
           >
-            <span class="header-item">{{item.title}}</span>
+            <span class="header-item">{{ item.title }}</span>
           </v-col>
         </v-row>
       </v-col>

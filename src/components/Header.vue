@@ -120,8 +120,9 @@
 
           <v-list-item
             class="drawer-title-item"
-            title="Sekcje"
-          />
+          >
+            <span class="drawer-title-item--text">{{ 'Sekcje' }}</span>
+          </v-list-item>
         </v-container>
       </template>
 
@@ -159,7 +160,7 @@
 
 .header-item {
   color: rgb(var(--v-theme-primary));
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.1rem;
 
   @media only screen and (max-width: 960px) {
@@ -173,6 +174,10 @@
 
 .drawer-title-item {
   padding-left: 5px;
+
+  &--text {
+    font-size: 1.1rem;
+  }
 }
 
 .drawer-item {

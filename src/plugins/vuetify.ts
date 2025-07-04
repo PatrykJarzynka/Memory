@@ -17,7 +17,7 @@ const lightTheme: ThemeDefinition = {
   colors: {
     background: '#efebdf',
     primary: '#6b5336'
-  }
+  },
 }
 
 // https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides

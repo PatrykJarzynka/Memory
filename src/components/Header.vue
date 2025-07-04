@@ -83,8 +83,13 @@
               v-for="item in headerItems.slice(0,3)"
               :key="item.title"
               cols="auto"
+              class="h-100 d-flex align-center"
             >
-              <span class="header-item">{{ item.title }}</span>
+              <v-btn
+                :text="item.title"
+                variant="plain"
+                class="header-item h-100"
+              />
             </v-col>
           </v-row>
         </v-col>
@@ -102,8 +107,13 @@
               v-for="item in headerItems.slice(3,6)"
               :key="item.title"
               cols="auto"
+              class="h-100 d-flex align-center"
             >
-              <span class="header-item">{{ item.title }}</span>
+              <v-btn
+                :text="item.title"
+                variant="plain"
+                class="header-item h-100"
+              />
             </v-col>
           </v-row>
         </v-col>
@@ -177,14 +187,13 @@
 }
 
 .header-item {
+  background-color: transparent;
   color: rgb(var(--v-theme-background));
-  font-weight: 600;
-  font-size: 1.1rem;
-  text-transform: uppercase;
+  opacity: 1;
+}
 
-  @media only screen and (max-width: 960px) {
-    font-size: 1rem;
-  }
+.header-item:hover {
+  transform: translateY(-10%);
 }
 
 .drawer-container {

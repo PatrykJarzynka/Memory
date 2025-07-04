@@ -110,6 +110,8 @@
       </v-row>
     </v-container>
 
+    <v-divider color="white"/>
+
     <v-navigation-drawer
       v-model="drawer"
       disable-resize-watcher
@@ -175,9 +177,10 @@
 }
 
 .header-item {
-  color: rgb(var(--v-theme-accent));
+  color: rgb(var(--v-theme-background));
   font-weight: 600;
   font-size: 1.1rem;
+  text-transform: uppercase;
 
   @media only screen and (max-width: 960px) {
     font-size: 1rem;

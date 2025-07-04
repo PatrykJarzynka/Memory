@@ -16,7 +16,9 @@ const lightTheme: ThemeDefinition = {
   dark: false,
   colors: {
     background: '#efebdf',
-    primary: '#6b5336'
+    primary: '#6b5336',
+    accent: '#fff',
+
   },
 }
 

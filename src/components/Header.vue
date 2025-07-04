@@ -53,60 +53,62 @@
 </script>
 
 <template>
-  <header>
-    <v-row
-      v-if="xs"
-      no-gutters
-    >
-      <v-col class="d-flex align-center">
-        <v-icon size="40" icon="mdi-brain"/>
-      </v-col>
-
-      <v-col class="justify-end d-flex">
-        <v-app-bar-nav-icon variant="text" @click.stop="drawer = !drawer"/>
-      </v-col>
-    </v-row>
-
-    <v-row
-      v-else
-      no-gutters
-    >
-      <v-col
-        cols="5"
+  <header class="header">
+    <v-container>
+      <v-row
+        v-if="xs"
+        no-gutters
       >
-        <v-row
-          no-gutters
-          class="align-center h-100 justify-space-around"
-        >
-          <v-col
-            v-for="item in headerItems.slice(0,3)"
-            :key="item.title"
-            cols="auto"
-          >
-            <span class="header-item">{{ item.title }}</span>
-          </v-col>
-        </v-row>
-      </v-col>
+        <v-col class="d-flex align-center">
+          <v-icon size="40" icon="mdi-brain"/>
+        </v-col>
 
-      <v-col class="d-flex justify-center">
-        <v-icon class="brand-icon" icon="mdi-brain"/>
-      </v-col>
+        <v-col class="justify-end d-flex">
+          <v-app-bar-nav-icon variant="text" @click.stop="drawer = !drawer"/>
+        </v-col>
+      </v-row>
 
-      <v-col cols="5">
-        <v-row
-          no-gutters
-          class="align-center h-100 justify-space-around"
+      <v-row
+        v-else
+        no-gutters
+      >
+        <v-col
+          cols="5"
         >
-          <v-col
-            v-for="item in headerItems.slice(3,6)"
-            :key="item.title"
-            cols="auto"
+          <v-row
+            no-gutters
+            class="align-center h-100 justify-space-around"
           >
-            <span class="header-item">{{ item.title }}</span>
-          </v-col>
-        </v-row>
-      </v-col>
-    </v-row>
+            <v-col
+              v-for="item in headerItems.slice(0,3)"
+              :key="item.title"
+              cols="auto"
+            >
+              <span class="header-item">{{ item.title }}</span>
+            </v-col>
+          </v-row>
+        </v-col>
+
+        <v-col class="d-flex justify-center">
+          <v-icon class="brand-icon" icon="mdi-brain"/>
+        </v-col>
+
+        <v-col cols="5">
+          <v-row
+            no-gutters
+            class="align-center h-100 justify-space-around"
+          >
+            <v-col
+              v-for="item in headerItems.slice(3,6)"
+              :key="item.title"
+              cols="auto"
+            >
+              <span class="header-item">{{ item.title }}</span>
+            </v-col>
+          </v-row>
+        </v-col>
+      </v-row>
+    </v-container>
 
     <v-navigation-drawer
       v-model="drawer"
@@ -120,6 +122,7 @@
 
           <v-list-item
             class="drawer-title-item"
+            lines="one"
           >
             <span class="drawer-title-item--text">{{ 'Sekcje' }}</span>
           </v-list-item>
@@ -150,6 +153,19 @@
 
 <style scoped lang="scss">
 
+.header {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media only screen and (min-width: 1920px) {
+    max-width: 1500px;
+  }
+}
+
 .brand-icon {
   font-size: 65px;
 
@@ -159,7 +175,7 @@
 }
 
 .header-item {
-  color: rgb(var(--v-theme-primary));
+  color: rgb(var(--v-theme-accent));
   font-weight: 600;
   font-size: 1.1rem;
 

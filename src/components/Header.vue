@@ -1,59 +1,70 @@
 <script setup lang="ts">
 
-  import { useDisplay } from "vuetify/framework"
+import { useDisplay } from "vuetify/framework"
 
-  const { xs } = useDisplay()
+const { xs } = useDisplay()
 
-  interface HeaderItem {
-    title: string;
-    action: () => void;
-  }
+interface HeaderItem {
+  title: string;
+  action: () => void;
+}
 
-  const headerItems: HeaderItem[] = [
-    {
-      title: "Start",
-      action: () => {
-        return
-      },
+const headerItems: HeaderItem[] = [
+  {
+    title: "Start",
+    action: () => {
+      return
     },
-    {
-      title: "Historia",
-      action: () => {
-        return
-      },
+  },
+  {
+    title: "Historia",
+    action: () => {
+      return
     },
-    {
-      title: "Choroba",
-      action: () => {
-        return
-      },
+  },
+  {
+    title: "Choroba",
+    action: () => {
+      return
     },
-    {
-      title: "Leczenie",
-      action: () => {
-        return
-      },
+  },
+  {
+    title: "Leczenie",
+    action: () => {
+      return
     },
-    {
-      title: "Pomoc",
-      action: () => {
-        return
-      },
+  },
+  {
+    title: "Media",
+    action: () => {
+      return
     },
-    {
-      title: "Kontakt",
-      action: () => {
-        return
-      },
+  },
+  {
+    title: "Pomoc",
+    action: () => {
+      return
     },
-  ]
+  },
+  {
+    title: "Kontakt",
+    action: () => {
+      return
+    },
+  },
+]
 
-  const drawer = ref(false)
+const drawer = ref(false)
 
 </script>
 
 <template>
-  <header class="header">
+  <v-app-bar
+    color="transparent"
+    flat
+    border="b"
+    class="header"
+  >
     <v-container>
       <v-row
         v-if="xs"
@@ -71,96 +82,64 @@
       <v-row
         v-else
         no-gutters
+        class="justify-space-around"
       >
         <v-col
-          cols="5"
+          v-for="item in headerItems"
+          :key="item.title"
+          cols="auto"
+          class="h-100 d-flex align-center"
         >
-          <v-row
-            no-gutters
-            class="align-center h-100 justify-space-around"
-          >
-            <v-col
-              v-for="item in headerItems.slice(0,3)"
-              :key="item.title"
-              cols="auto"
-              class="h-100 d-flex align-center"
-            >
-              <v-btn
-                :text="item.title"
-                variant="plain"
-                class="header-item h-100"
-              />
-            </v-col>
-          </v-row>
-        </v-col>
-
-        <v-col class="d-flex justify-center">
-          <v-icon class="brand-icon" icon="mdi-brain"/>
-        </v-col>
-
-        <v-col cols="5">
-          <v-row
-            no-gutters
-            class="align-center h-100 justify-space-around"
-          >
-            <v-col
-              v-for="item in headerItems.slice(3,6)"
-              :key="item.title"
-              cols="auto"
-              class="h-100 d-flex align-center"
-            >
-              <v-btn
-                :text="item.title"
-                variant="plain"
-                class="header-item h-100"
-              />
-            </v-col>
-          </v-row>
+          <v-btn
+            :text="item.title"
+            variant="plain"
+            class="header-item h-100 py-3"
+          />
         </v-col>
       </v-row>
     </v-container>
+  </v-app-bar>
 
-    <v-divider color="white"/>
+  <v-divider color="red"/>
 
-    <v-navigation-drawer
-      v-model="drawer"
-      disable-resize-watcher
-      :location="xs ? 'left' : undefined"
-      class="drawer-container"
-    >
-      <template #prepend>
-        <v-container class="d-flex align-center drawer-prepend">
-          <v-icon size="35" icon="mdi-bookmark"/>
+  <v-navigation-drawer
+    v-model="drawer"
+    disable-resize-watcher
+    :location="xs ? 'left' : undefined"
+    class="drawer-container"
+  >
+    <template #prepend>
+      <v-container class="d-flex align-center drawer-prepend">
+        <v-icon size="35" icon="mdi-bookmark"/>
 
-          <v-list-item
-            class="drawer-title-item"
-            lines="one"
-          >
-            <span class="drawer-title-item--text">{{ 'Sekcje' }}</span>
-          </v-list-item>
-        </v-container>
-      </template>
-
-      <v-divider/>
-
-      <v-container>
-        <v-list>
-          <v-list-item
-            v-for="item in headerItems"
-            :key="item.title"
-            :title="item.title"
-            :value="item.title"
-            class="drawer-item"
-          >
-
-            <template #append>
-              <v-icon size="22" icon="mdi-arrow-right-circle-outline"/>
-            </template>
-          </v-list-item>
-        </v-list>
+        <v-list-item
+          class="drawer-title-item"
+          lines="one"
+        >
+          <span class="drawer-title-item--text">{{ 'Sekcje' }}</span>
+        </v-list-item>
       </v-container>
-    </v-navigation-drawer>
-  </header>
+    </template>
+
+    <v-divider/>
+
+    <v-container>
+      <v-list>
+        <v-list-item
+          v-for="item in headerItems"
+          :key="item.title"
+          :title="item.title"
+          :value="item.title"
+          class="drawer-item"
+        >
+
+          <template #append>
+            <v-icon size="22" icon="mdi-arrow-right-circle-outline"/>
+          </template>
+        </v-list-item>
+      </v-list>
+    </v-container>
+  </v-navigation-drawer>
 </template>
 
 <style scoped lang="scss">
@@ -188,8 +167,8 @@
 
 .header-item {
   background-color: transparent;
-  color: rgb(var(--v-theme-background));
   opacity: 1;
+  color: rgb(var(--v-theme-primary));
 }
 
 .header-item:hover {

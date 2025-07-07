@@ -1,7 +1,7 @@
 <template>
-  <v-container class="main-container h-100">
-    <Hero/>
-  </v-container>
+<!--  <v-container class="main-container h-100">-->
+<!--    <Hero/>-->
+<!--  </v-container>-->
 </template>
 
 <script lang="ts" setup>

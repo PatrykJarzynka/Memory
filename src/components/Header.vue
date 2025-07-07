@@ -1,60 +1,60 @@
 <script setup lang="ts">
 
-import { useDisplay } from "vuetify/framework"
+  import { useDisplay } from "vuetify/framework"
 
-const { xs } = useDisplay()
+  const { xs } = useDisplay()
 
-interface HeaderItem {
-  title: string;
-  action: () => void;
-}
+  interface HeaderItem {
+    title: string;
+    action: () => void;
+  }
 
-const headerItems: HeaderItem[] = [
-  {
-    title: "Start",
-    action: () => {
-      return
+  const headerItems: HeaderItem[] = [
+    {
+      title: "Start",
+      action: () => {
+        return
+      },
     },
-  },
-  {
-    title: "Historia",
-    action: () => {
-      return
+    {
+      title: "Historia",
+      action: () => {
+        return
+      },
     },
-  },
-  {
-    title: "Choroba",
-    action: () => {
-      return
+    {
+      title: "Choroba",
+      action: () => {
+        return
+      },
     },
-  },
-  {
-    title: "Leczenie",
-    action: () => {
-      return
+    {
+      title: "Leczenie",
+      action: () => {
+        return
+      },
     },
-  },
-  {
-    title: "Media",
-    action: () => {
-      return
+    {
+      title: "Media",
+      action: () => {
+        return
+      },
     },
-  },
-  {
-    title: "Pomoc",
-    action: () => {
-      return
+    {
+      title: "Pomoc",
+      action: () => {
+        return
+      },
     },
-  },
-  {
-    title: "Kontakt",
-    action: () => {
-      return
+    {
+      title: "Kontakt",
+      action: () => {
+        return
+      },
     },
-  },
-]
+  ]
 
-const drawer = ref(false)
+  const drawer = ref(false)
 
 </script>
 
@@ -62,18 +62,14 @@ const drawer = ref(false)
   <v-app-bar
     color="transparent"
     flat
-    border="b"
     class="header"
+    height="auto"
   >
-    <v-container>
+    <v-container class="header-container">
       <v-row
         v-if="xs"
         no-gutters
       >
-        <v-col class="d-flex align-center">
-          <v-icon size="40" icon="mdi-brain"/>
-        </v-col>
-
         <v-col class="justify-end d-flex">
           <v-app-bar-nav-icon variant="text" @click.stop="drawer = !drawer"/>
         </v-col>
@@ -99,8 +95,6 @@ const drawer = ref(false)
       </v-row>
     </v-container>
   </v-app-bar>
-
-  <v-divider color="red"/>
 
   <v-navigation-drawer
     v-model="drawer"
@@ -152,9 +146,17 @@ const drawer = ref(false)
   margin-left: auto;
   margin-right: auto;
 
+  :deep(.v-toolbar__content) {
+    overflow: initial;
+  }
+
   @media only screen and (min-width: 1920px) {
     max-width: 1500px;
   }
+}
+
+.header-container {
+  border-bottom: thin solid rgba(var(--v-border-color), var(--v-border-opacity));
 }
 
 .brand-icon {
@@ -169,6 +171,7 @@ const drawer = ref(false)
   background-color: transparent;
   opacity: 1;
   color: rgb(var(--v-theme-primary));
+  padding: 0 5px;
 }
 
 .header-item:hover {

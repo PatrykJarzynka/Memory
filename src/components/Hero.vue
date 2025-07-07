@@ -1,35 +1,17 @@
 <script setup lang="ts">
-  const wordBank = ["wspomnienia", "przyszłość", "młodość", "czas", "bliskich"]
-  const currentWordIndex = ref<number>(0)
+import {useDisplay} from "vuetify/framework";
 
-  // const visible = ref(true)
-  // const currentWord = computed(() => wordBank[currentWordIndex.value])
-  //
-  // onMounted(() => {
-  //   setInterval(() => {
-  //     visible.value = false
-  //     setTimeout(() => {
-  //       currentWordIndex.value = (currentWordIndex.value + 1) % wordBank.length
-  //       visible.value = true
-  //     }, 800) // czas na animację "wyjścia"
-  //   }, 2800) // 1 sekunda widoczne + 0.3s animacji
-  // })
+const { md, lg, xl, xxl } = useDisplay()
 </script>
 
 <template>
   <div class="hero-container">
-    <v-row
-      no-gutters
-      class="h-100 hero-main-row"
-    >
-      <v-col class="d-flex align-center">
-        <div class="hero-left-column-wrapper">
-          <div class="hero-text-container">
-            <h1 class="hero-title">Zanim dogoni nas czas - działamy</h1>
+    <v-row v-if="md || lg || xl || xxl">
+      <v-col>
+        <div class="hero-content">
+          <h1 class="hero-title">Zanim dogoni nas czas - działamy</h1>
 
-            <p class="hero-description">W naszej rodzinie Alzheimer zaczyna się w wieku 30–40 lat.
-              Wiemy, że nie mamy czasu – ale mamy nadzieję.</p>
-          </div>
+          <p class="hero-description">W naszej rodzinie Alzheimer zaczyna się w wieku 30–40 lat. Wiemy, że nie mamy czasu – ale mamy nadzieję.</p>
 
           <div class="hero-action-buttons">
             <v-btn
@@ -54,23 +36,82 @@
         </div>
       </v-col>
 
-      <v-col class="h-100">
-        <v-row
-          no-gutters
-          class="ga-5 h-100"
-        >
-          <v-col class="d-flex flex-column ga-5 h-100">
-            <v-img src="/images/hero-img-h1.jfif" class="grid-item" aspect-ratio="2" cover/>
-            <v-img src="/images/hero-img-v1.jfif" class="grid-item tall" aspect-ratio="1" cover/>
-          </v-col>
-
-          <v-col class="d-flex flex-column ga-5 my-8">
-            <v-img src="/images/hero-img-v2.jfif" class="grid-item" aspect-ratio="0.8" cover/>
-            <v-img src="/images/hero-img-h2.jfif" class="grid-item tall" aspect-ratio="2" cover/>
-          </v-col>
-        </v-row>
+      <v-col>
+        <v-img src="/images/hero-img-h1.jfif" class="hero-image" cover/>
       </v-col>
     </v-row>
+
+    <div v-else>
+      <v-img src="/images/hero-img-h1.jfif" class="hero-image" cover/>
+
+      <div class="hero-content">
+        <h1 class="hero-title">Zanim dogoni nas czas - działamy</h1>
+
+        <p class="hero-description">W naszej rodzinie Alzheimer zaczyna się w wieku 30–40 lat. Wiemy, że nie mamy czasu – ale mamy nadzieję.</p>
+
+        <div class="hero-action-buttons">
+          <v-btn
+            size="large"
+            class="hero-button"
+          >
+            Wesprzyj
+          </v-btn>
+
+          <v-btn
+            variant="text"
+            size="large"
+            class="hero-button--flat"
+          >
+            Poznaj historie
+
+            <template #append>
+              <v-icon class="pt-1" icon="mdi-arrow-right-thin"/>
+            </template>
+          </v-btn>
+        </div>
+      </div>
+    </div>
+
+        <!--    <v-row-->
+<!--      no-gutters-->
+<!--      class="h-100 hero-main-row"-->
+<!--    >-->
+<!--      <v-col class="d-flex align-center">-->
+<!--        <div class="hero-left-column-wrapper">-->
+<!--          <div class="hero-text-container">-->
+<!--            <h1 class="hero-title">Zanim dogoni nas czas - działamy</h1>-->
+
+<!--            <p class="hero-description">W naszej rodzinie Alzheimer zaczyna się w wieku 30–40 lat.-->
+<!--              Wiemy, że nie mamy czasu – ale mamy nadzieję.</p>-->
+<!--          </div>-->
+
+<!--          <div class="hero-action-buttons">-->
+<!--            <v-btn-->
+<!--              size="large"-->
+<!--              class="hero-button"-->
+<!--            >-->
+<!--              Wesprzyj-->
+<!--            </v-btn>-->
+
+<!--            <v-btn-->
+<!--              variant="text"-->
+<!--              size="large"-->
+<!--              class="hero-button&#45;&#45;flat"-->
+<!--            >-->
+<!--              Poznaj historie-->
+
+<!--              <template #append>-->
+<!--                <v-icon class="pt-1" icon="mdi-arrow-right-thin"/>-->
+<!--              </template>-->
+<!--            </v-btn>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </v-col>-->
+
+<!--      <v-col class="h-100">-->
+<!--        <v-img src="/images/hero-img-h1.jfif" class="grid-item" aspect-ratio="1" cover/>-->
+<!--      </v-col>-->
+<!--    </v-row>-->
   </div>
 
   <!--    <div class="py-15 d-flex flex-column align-center">-->
@@ -104,9 +145,17 @@
 .hero-container {
   background-color: rgb(var(--v-theme-primary));
   width: 100%;
-  height: 80%;
   border-radius: 24px;
-  padding: 50px 120px;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  text-align: center;
+  align-items: center;
+
+  @media only screen and (width > 500px) {
+    padding: 50px 60px;
+  }
 }
 
 .hero-main-row {
@@ -125,34 +174,58 @@
   row-gap: 15px;
 }
 
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+
+  @media only screen and (700px < width < 960px) {
+    padding-inline: 95px;
+  }
+
+  @media only screen and (width > 700px) {
+    padding-inline: 60px;
+  }
+}
+
 .hero-title {
   color: white;
-  font-size: 67px;
+  font-size: 43px;
   font-weight: 100;
-  line-height: 85px;
+  line-height: 53px;
   font-family: Playfair Display, serif;
 }
 
 .hero-description {
   color: white;
   font-size: 20px;
+  font-family: Rubik, "sans-serif";
 }
 
 .hero-text {
-  font-size: 60px;
-  font-weight: bold;
-  color: rgb(var(--v-theme-primary));
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  row-gap: 20px;
 }
 
 .hero-action-buttons {
   display: flex;
-  column-gap: 30px;
+  flex-direction: column;
+  row-gap: 10px;
+
+  @media only screen and (width > 700px) {
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 30px;
+  }
 }
 
 .hero-button {
   text-transform: none;
   color: rgb(var(--v-theme-primary));
+  font-weight: 500;
+  font-family: Rubik, "sans-serif";
 
   &--flat {
     @extend .hero-button;
@@ -160,19 +233,16 @@
   }
 }
 
-.grid-item {
+.hero-image {
   border-radius: 20px;
-  overflow: hidden;
   box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  width: 100%;
+
+  @media only screen and (width > 700px) {
+    max-width: 460px;
+  }
 }
 
-.tall {
-  grid-row: span 2;
-}
-
-.wide {
-  grid-column: span 2;
-}
 
 .highlighted-word-container {
   position: relative;
@@ -214,30 +284,5 @@
   opacity: 1;
 }
 
-/* Wejście z góry */
-.slide-enter-from {
-  transform: translate(-50%, -150%);
-  opacity: 0;
-}
-.slide-enter-active {
-  transition: all 0.8s ease;
-}
-.slide-enter-to {
-  transform: translate(-50%, -50%);
-  opacity: 1;
-}
-
-/* Wyjście w dół */
-.slide-leave-from {
-  transform: translate(-50%, -50%);
-  opacity: 1;
-}
-.slide-leave-active {
-  transition: all 0.8s ease;
-}
-.slide-leave-to {
-  transform: translate(-50%, 150%);
-  opacity: 0;
-}
 
 </style>

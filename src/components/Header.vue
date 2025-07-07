@@ -63,7 +63,6 @@
     color="transparent"
     flat
     class="header"
-    height="auto"
   >
     <v-container class="header-container">
       <v-row
@@ -156,6 +155,9 @@
 }
 
 .header-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
   border-bottom: thin solid rgba(var(--v-border-color), var(--v-border-opacity));
 }
 

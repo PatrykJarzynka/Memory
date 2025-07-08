@@ -7,7 +7,11 @@
 </script>
 
 <template>
-  <v-card class="family-member-card">
+
+  <v-card
+    elevation="5"
+    class="family-member-card"
+  >
 
     <v-img
       position="top"
@@ -16,7 +20,7 @@
       cover
     />
 
-    <v-card-title>{{ member.name }}</v-card-title>
+    <v-card-title>{{ member.name }} </v-card-title>
 
     <v-card-text>{{ member.description }}</v-card-text>
 
@@ -35,6 +39,9 @@
     border-radius: 15px;
     height: 100%;
     position: relative;
+    background-color: transparent;
+    border-bottom: 3px solid rgb(var(--v-theme-primary));
+    text-align: center;
   }
 
   .indicator {
@@ -44,4 +51,5 @@
     color: rgb(var(--v-theme-primary));
     font-weight: 500;
   }
+
 </style>

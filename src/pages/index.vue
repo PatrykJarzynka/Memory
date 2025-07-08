@@ -7,18 +7,23 @@
       <v-col
         v-for="member in familyMembers"
         :key="member.name"
-        cols="2"
+        cols="4"
+        md="3"
+        lg="2"
       >
         <FamilyMemberCard
           :member="member"
         />
       </v-col>
+
+      <v-btn class="scroll-button" icon="mdi-chevron-right"/>
     </v-row>
   </v-container>
 
 </template>
 
 <script lang="ts" setup>
+
   const familyMembers: FamilyMember[] = [
     {
       name: "Kacper Libera",
@@ -65,9 +70,17 @@
 .family-container {
   width: 100%;
   justify-content: space-evenly;
+  flex-wrap: nowrap;
+  overflow: auto;
+  column-gap: 20px;
+  position: relative;
 }
 
-.testCol {
-  width: 20%;
+.scroll-button {
+  position: absolute;
+  right: 0;
+  top:50%;
+  transform: translate(-10%,-100%);
 }
+
 </style>

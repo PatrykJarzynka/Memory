@@ -1,15 +1,15 @@
 <script setup lang="ts">
   import { useDisplay } from "vuetify/framework"
 
-  const { xl, lg } = useDisplay()
+  const { xl, xs } = useDisplay()
 
   const buttonSize = computed((): string | undefined => {
     if (xl.value) {
       return "large"
-    } else if (lg.value) {
-      return undefined
-    } else {
+    } else if (xs.value) {
       return "small"
+    } else {
+      return undefined
     }
   })
 

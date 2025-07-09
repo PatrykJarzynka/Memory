@@ -16,7 +16,7 @@
 </script>
 
 <template>
-  <v-container class="hero-container">
+  <div class="hero-container">
     <v-row
       no-gutters
       class="hero-content"
@@ -54,7 +54,7 @@
         <v-img src="/images/hero-img.jfif" class="hero-image" cover/>
       </v-col>
     </v-row>
-  </v-container>
+  </div>
 </template>
 
 <style scoped lang="scss">
@@ -65,10 +65,6 @@
   border-radius: 24px;
   padding: 50px 20px;
   margin-top: 20px;
-
-  @media only screen and (width > 1280px) {
-    max-width: 1500px;
-  }
 }
 
 .hero-content {

@@ -1,4 +1,6 @@
 <script setup lang="ts">
+  import type { VImg } from "vuetify/components"
+
   interface Props {
     member: FamilyMember;
   }
@@ -9,47 +11,67 @@
 <template>
 
   <v-card
-    elevation="5"
+    elevation="4"
     class="family-member-card"
   >
 
     <v-img
-      position="top"
       class="card-image"
       :src="member.imageUrl"
       cover
     />
 
-    <v-card-title>{{ member.name }} </v-card-title>
+    <div class="flex-1-0-0">
+      <v-card-title class="title">{{ member.name }} </v-card-title>
 
-    <v-card-text>{{ member.description }}</v-card-text>
-
-    <span
-      v-if="member.psen"
-      class="indicator"
-    >
-      PSEN
-    </span>
+      <v-card-text class="description">{{ member.description }}</v-card-text>
+    </div>
 
   </v-card>
 </template>
 
 <style scoped lang="scss">
   .family-member-card {
-    border-radius: 15px;
-    height: 100%;
-    position: relative;
+    display: flex;
+    align-items: center;
     background-color: transparent;
-    border-bottom: 3px solid rgb(var(--v-theme-primary));
-    text-align: center;
+    padding: 10px;
+    height: 100%;
+    border-radius: 20px;
   }
 
-  .indicator {
-    position: absolute;
-    right: 8px;
-    bottom: 5px;
-    color: rgb(var(--v-theme-primary));
-    font-weight: 500;
+  .title {
+    color:rgb(var(--v-theme-primary));
+    text-align: center;
+    font-size: 1.25rem;
+    white-space: normal;
+
+    @media only screen and (960px > width > 600px) {
+      font-size: 1.25rem;
+    }
+  }
+
+  .description {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 1.25rem;
+    justify-content: center;
+    color:rgb(var(--v-theme-primary));
+  }
+
+  .card-image {
+    width: 150px;
+    border-radius: 150px;
+    flex: initial;
+
+    @media only screen and (960px > width > 600px) {
+      width: 130px;
+    }
+
+    @media only screen and (width < 600px) {
+      width: 110px;
+    }
   }
 
 </style>

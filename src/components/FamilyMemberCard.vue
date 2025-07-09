@@ -1,5 +1,6 @@
 <script setup lang="ts">
   import type { VImg } from "vuetify/components"
+  import type { FamilyMember } from "@/interfaces/FamilyMember.ts"
 
   interface Props {
     member: FamilyMember;

@@ -1,4 +1,4 @@
-interface FamilyMember {
+export interface FamilyMember {
   name: string;
   description: string;
   imageUrl: string;

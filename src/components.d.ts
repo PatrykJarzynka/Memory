@@ -10,6 +10,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     FamilyMemberCard: typeof import('./components/FamilyMemberCard.vue')['default']
     FamilyMembers: typeof import('./components/FamilyMembers.vue')['default']
+    FamilyTimeline: typeof import('./components/FamilyTimeline.vue')['default']
     Header: typeof import('./components/Header.vue')['default']
     Hero: typeof import('./components/Hero.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']

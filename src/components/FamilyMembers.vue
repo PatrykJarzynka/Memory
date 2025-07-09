@@ -1,4 +1,6 @@
 <script setup lang="ts">
+  import type { FamilyMember } from "@/interfaces/FamilyMember.ts"
+
   const familyMembers: FamilyMember[] = [
     {
       name: "Kacper Libera",
@@ -36,7 +38,7 @@
 <template>
   <div class="family-members-container">
     <div class="psen-members-container">
-      <p class="psen-title">Alzheimer o wczesnym początku (PSEN-1)</p>
+      <p class="psen-title">Alzheimer o wczesnym początku (PSEN 1)</p>
 
       <v-row
         no-gutters
@@ -87,6 +89,7 @@
   display: flex;
   flex-direction: column;
   row-gap: 20px;
+  width: 100%;
 }
 
 .psen-members-container {

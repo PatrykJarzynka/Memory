@@ -75,7 +75,7 @@
     }
 
     @media only screen and (width >= 1280px) {
-      width: 150px;
+      width: 130px;
     }
   }
 

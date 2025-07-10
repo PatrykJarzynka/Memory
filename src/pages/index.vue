@@ -30,6 +30,33 @@
       </template>
     </IllustratedContent>
 
+    <div>
+      <h2 class="section-title">Rokowania i co możemy zrobić obecnie</h2>
+      <h3 class="section-sub_title">Posiadając gen PSEN1 mamy pewność wystąpienia choroby Alzheimera.</h3>
+
+      <v-row class="possibilities-container">
+        <v-col
+          v-for="possibility in possibilities"
+          :key="possibility.text"
+          cols="4"
+        >
+          <v-card
+            elevation="0"
+            class="possibility-card"
+          >
+            <v-avatar class="possibilities-icon" size="90">
+              <v-icon
+                size="60"
+                :icon="possibility.icon"
+              />
+            </v-avatar>
+
+            <v-card-title>{{ possibility.text }}</v-card-title>
+          </v-card>
+        </v-col>
+      </v-row>
+    </div>
+
   </v-container>
 
 </template>
@@ -38,6 +65,29 @@
 
   import FamilyTimeline from "@/components/FamilyTimeline.vue"
   import IllustratedContent from "@/components/IllustratedContent.vue"
+
+  const possibilities = [
+    {
+      icon: "mdi-brain",
+      text: "Trening funkcji poznawczych",
+    },
+    {
+      icon: "mdi-dumbbell",
+      text: "Trening siłowy",
+    },
+    {
+      icon: "mdi-food-apple",
+      text: "Odpowiednia dieta",
+    },
+    {
+      icon: "mdi-emoticon",
+      text: "Pozytywne nastawienie",
+    },
+    {
+      icon: "mdi-pill",
+      text: "Wczesna reakcja farmakologiczna",
+    },
+  ]
 </script>
 
 <style lang="scss" scoped>
@@ -96,7 +146,7 @@
   color: rgb(var(--v-theme-primary));
   font-size: 18px;
   text-align: center;
-  margin-block: 40px;
+  margin-block: 10px;
 
   @media only screen and (width >= 600px) {
     font-size: 21px;
@@ -127,7 +177,22 @@
   @media only screen and (width >= 1280px) {
     font-size: 25px;
   }
+}
 
+.possibilities-container {
+  justify-content: center;
+}
+
+.possibility-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+}
+
+.possibilities-icon {
+  border: 1px solid black;
+  border-radius: 50%;
 }
 
 </style>

@@ -44,10 +44,10 @@
   .title {
     color:rgb(var(--v-theme-primary));
     text-align: center;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     white-space: normal;
 
-    @media only screen and (960px > width > 600px) {
+    @media only screen and (width >= 960px) {
       font-size: 1.25rem;
     }
   }
@@ -62,16 +62,20 @@
   }
 
   .card-image {
-    width: 150px;
+    width: 110px;
     border-radius: 150px;
     flex: initial;
 
-    @media only screen and (960px > width > 600px) {
-      width: 130px;
+    @media only screen and (width >= 600px) {
+      width: 120px;
     }
 
-    @media only screen and (width < 600px) {
-      width: 110px;
+    @media only screen and (width >= 960px) {
+      width: 100px;
+    }
+
+    @media only screen and (width >= 1280px) {
+      width: 150px;
     }
   }
 

@@ -71,25 +71,26 @@
   align-items: center;
   justify-content: space-evenly;
   row-gap: 40px;
+  flex-direction: column-reverse;
 
-  @media only screen and (width < 960px) {
-    flex-direction: column-reverse;
+  @media only screen and (width >= 960px) {
+    flex-direction: initial;
   }
 }
 
 .hero-lead-column {
   display: flex;
   flex-direction: column;
-  text-align: left;
-  row-gap: 60px;
+  text-align: center;
+  row-gap: 30px;
   padding-inline: 60px;
 
-  @media only screen and (width < 1280px) {
-    row-gap: 30px;
+  @media only screen and (width >= 960px) {
+    text-align: left;
   }
 
-  @media only screen and (width < 960px) {
-    text-align: center;
+  @media only screen and (width >= 1280px) {
+    row-gap: 60px;
   }
 }
 
@@ -101,39 +102,39 @@
 
 .hero-title {
   color: white;
-  font-size: 67px;
+  font-size: 30px;
   font-weight: 100;
   line-height: 1.2em;
   font-family: Playfair Display, serif;
 
-  @media only screen and (width < 1920px) {
-    font-size: 53px;
-  }
-
-  @media only screen and (width < 1280px) {
+  @media only screen and (width >= 600px) {
     font-size: 40px;
   }
 
-  @media only screen and (width < 600px) {
-    font-size: 30px;
+  @media only screen and (width >= 1280px) {
+    font-size: 53px;
+  }
+
+  @media only screen and (width >= 1920px) {
+    font-size: 67px;
   }
 }
 
 .hero-description {
   color: white;
-  font-size: 20px;
+  font-size: 14px;
   font-family: Rubik, "sans-serif";
 
-  @media only screen and (width < 1920px) {
-    font-size: 18px;
-  }
-
-  @media only screen and (width < 1280px) {
+  @media only screen and (width >= 600px) {
     font-size: 16px;
   }
 
-  @media only screen and (width < 600px) {
-    font-size: 14px;
+  @media only screen and (width >= 1280px) {
+    font-size: 18px;
+  }
+
+  @media only screen and (width >= 1920px) {
+    font-size: 20px;
   }
 }
 
@@ -141,13 +142,15 @@
   display: flex;
   column-gap: 20px;
   row-gap: 10px;
+  flex-direction: column;
+  justify-content: center;
 
-  @media only screen and (width < 960px) {
-    justify-content: center;
+  @media only screen and (width >= 320px) {
+    flex-direction: initial;
   }
 
-  @media only screen and (width < 320px) {
-    flex-direction: column;
+  @media only screen and (width >= 960px) {
+    justify-content: initial;
   }
 }
 
@@ -156,18 +159,19 @@
   color: rgb(var(--v-theme-primary));
   font-weight: 500;
   font-family: Rubik, "sans-serif";
+  font-size: 12px;
 
   &--flat {
     @extend .hero-button;
     color: white;
   }
 
-  @media only screen and (width < 1280px) {
+  @media only screen and (width >= 600px) {
     font-size: 14px;
   }
 
-  @media only screen and (width < 600px) {
-    font-size: 12px;
+  @media only screen and (width >= 1280px) {
+    font-size: initial;
   }
 }
 
@@ -175,10 +179,10 @@
   border-radius: 20px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.15);
   width: 100%;
-  aspect-ratio: 1/1;
+  aspect-ratio: 1.7/1;
 
-  @media only screen and (width < 960px) {
-    aspect-ratio: 1.7/1;
+  @media only screen and (width >= 960px) {
+    aspect-ratio: 1;
   }
 }
 </style>

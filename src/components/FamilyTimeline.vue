@@ -3,10 +3,10 @@
 
   import { useDisplay } from "vuetify/framework"
 
-  const { xs } = useDisplay()
+  const { smAndDown, mdAndUp } = useDisplay()
 
   function getTextAlignClassName (side: string): string {
-    if (xs.value) {
+    if (mdAndUp.value) {
       return "text-center"
     } else if (side === "start") {
       return "text-end"
@@ -43,12 +43,14 @@
 </script>
 
 <template>
-  <v-timeline direction="horizontal">
+  <v-timeline
+    :direction="smAndDown ? 'vertical' : 'horizontal'"
+  >
     <v-timeline-item
       v-for="event in timelineEvents"
       :key="event.id"
       :icon="event.icon"
-      :side="event.side"
+      :side="smAndDown ? event.side : 'end'"
       dot-color="primary"
       fill-dot
     >

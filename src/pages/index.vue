@@ -45,57 +45,87 @@
   display: flex;
   flex-direction: column;
   row-gap: 100px;
+  padding-inline: 10px;
 
-  @media only screen and (width > 1280px) {
+  @media only screen and (width >= 600px) {
+    padding-inline: 40px;
+  }
+
+  @media only screen and (width >= 1280px) {
     max-width: 1500px;
-  }
-
-  @media only screen and (width < 960px) {
-    padding-inline: 50px;
-  }
-
-  @media only screen and (width < 600px) {
-    padding-inline: 10px;
   }
 }
 
 .section-title {
   color: rgb(var(--v-theme-primary));
-  font-size: 38px;
+  font-size: 30px;
   text-align: center;
 
+  @media only screen and (width >= 600px) {
+    font-size: 35px;
+  }
+
+  @media only screen and (width >= 960px) {
+    font-size: 40px;
+  }
+
+  @media only screen and (width >= 1280px) {
+    font-size: 45px;
+  }
 }
 
 .description-section-title {
   @extend .section-title;
 
-  @media only screen and (width < 1280px) {
+  font-size: 21px;
+
+  @media only screen and (width >= 600px) {
     font-size: 26px;
   }
 
-  @media only screen and (width < 960px) {
-    font-size: 23px;
+  @media only screen and (width >= 960px) {
+    font-size: 28px;
+  }
+
+  @media only screen and (width >= 1280px) {
+    font-size: 38px;
   }
 }
 
 .section-sub_title {
   color: rgb(var(--v-theme-primary));
-  font-size: 25px;
+  font-size: 18px;
   text-align: center;
   margin-block: 40px;
+
+  @media only screen and (width >= 600px) {
+    font-size: 21px;
+  }
+
+  @media only screen and (width >= 960px) {
+    font-size: 23px;
+  }
+
+  @media only screen and (width >= 1280px) {
+    font-size: 30px;
+  }
 }
 
 .description-text {
   color: rgb(var(--v-theme-primary));
-  font-size: 25px;
-  text-align: center;
+  font-size: 17px;
+  text-align: justify;
 
-  @media only screen and (width < 1280px) {
-    font-size: 15px;
+  @media only screen and (width >= 600px) {
+    font-size: 20px;
   }
 
-  @media only screen and (width > 960px) {
-    text-align: justify;
+  @media only screen and (width >= 960px) {
+    font-size: 16px;
+  }
+
+  @media only screen and (width >= 1280px) {
+    font-size: 25px;
   }
 
 }

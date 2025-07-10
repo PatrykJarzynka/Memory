@@ -13,6 +13,8 @@ declare module 'vue' {
     FamilyTimeline: typeof import('./components/FamilyTimeline.vue')['default']
     Header: typeof import('./components/Header.vue')['default']
     Hero: typeof import('./components/Hero.vue')['default']
+    IllustratedContent: typeof import('./components/IllustratedContent.vue')['default']
+    IlustratedContent: typeof import('./components/IlustratedContent.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

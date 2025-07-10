@@ -17,6 +17,7 @@ const lightTheme: ThemeDefinition = {
   colors: {
     background: '#efebdf',
     primary: '#6b5336',
+    primaryLight: '#886944',
     accent: '#fff',
 
   },

@@ -43,7 +43,7 @@
 </script>
 
 <template>
-  <v-timeline direction="vertical">
+  <v-timeline direction="horizontal">
     <v-timeline-item
       v-for="event in timelineEvents"
       :key="event.id"

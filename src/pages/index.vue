@@ -235,7 +235,7 @@
 }
 
 .possibilities-icon-container {
-  border: 2px solid rgb(var(--v-theme-highlight));
+  border: 3px solid rgb(var(--v-theme-highlight));
   border-radius: 50%;
   color: rgb(var(--v-theme-primary));
   width: 90px;

@@ -30,8 +30,44 @@
             md="5"
           >
             <v-list class="family-members-list">
+              <div class="psen-members">
+                <span class="indicator">PSEN 1</span>
+
+                <v-list-item
+                  v-for="member in familyMembers.slice(0,3)"
+                  :key="member.name"
+                >
+                  <v-row
+                    no-gutters
+                    class="family-members-list-row justify-center"
+                  >
+                    <v-col
+                      cols="4"
+                      sm="3"
+                      class="image-column"
+                    >
+                      <v-img
+                        cover
+                        aspect-ratio="1"
+                        src="/images/kacper2.JPG"
+                        class="family-member-image"
+                      />
+                    </v-col>
+
+                    <v-col
+                      cols="3"
+                      md="6"
+                      class="family-member-text-container"
+                    >
+                      <p class="family-member-name">{{ member.name }}</p>
+                      <p class=" family-member-description">{{ member.description }}</p>
+                    </v-col>
+                  </v-row>
+                </v-list-item>
+              </div>
+
               <v-list-item
-                v-for="member in familyMembers"
+                v-for="member in familyMembers.slice(3,5)"
                 :key="member.name"
               >
                 <v-row
@@ -303,6 +339,33 @@
   display: flex;
 }
 
+.psen-members {
+  border: 3px solid rgb(var(--v-theme-primary));
+  border-radius: 24px;
+  position: relative;
+}
+
+.indicator {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-weight: 500;
+  font-size: 15px;
+  color: rgb(var(--v-theme-primary));
+
+  @media only screen and (width >= 600px) {
+    font-size: 18px;
+    right: 15px;
+    top: 10px;
+  }
+
+  @media only screen and (width >= 960px) {
+    font-size: 14px;
+    right: 10px;
+    top: 2px;
+  }
+}
+
 .family-members-list-row {
   column-gap: 30px;
 }
@@ -329,6 +392,10 @@
   font-size: 18px;
 
   @media only screen and (width >= 600px) {
+    font-size: 19px;
+  }
+
+  @media only screen and (width >= 1280px) {
     font-size: 21px;
   }
 }

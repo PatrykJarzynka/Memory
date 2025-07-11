@@ -8,8 +8,13 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    FamilyIllustrated: typeof import('./components/FamilyIllustrated.vue')['default']
     FamilyMemberCard: typeof import('./components/FamilyMemberCard.vue')['default']
+    FamilyMemberItem: typeof import('./components/FamilyMemberItem.vue')['default']
+    FamilyMemberNew: typeof import('./components/FamilyMemberNew.vue')['default']
     FamilyMembers: typeof import('./components/FamilyMembers.vue')['default']
+    FamilyMembersList: typeof import('./components/FamilyMembersList.vue')['default']
+    FamilyMembersNew: typeof import('./components/FamilyMembersNew.vue')['default']
     FamilyTimeline: typeof import('./components/FamilyTimeline.vue')['default']
     Header: typeof import('./components/Header.vue')['default']
     Hero: typeof import('./components/Hero.vue')['default']

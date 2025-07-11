@@ -13,7 +13,7 @@
   <v-list-item>
     <v-row
       no-gutters
-      class="family-members-list-row justify-center"
+      class="family-members-list-row"
     >
       <v-col
         cols="4"
@@ -53,6 +53,11 @@
   padding-block: 5px;
   column-gap: 30px;
   position: relative;
+  justify-content: start;
+
+  @media only screen and (width >= 600px) {
+    justify-content: center;
+  }
 }
 
 .image-column {
@@ -105,7 +110,7 @@
   bottom: 5px;
   font-weight: 500;
   font-size: 15px;
-  color: rgb(var(--v-theme-primary));
+  color: rgb(var(--v-theme-highlight));
 
   @media only screen and (width >= 600px) {
     font-size: 18px;

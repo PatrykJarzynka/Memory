@@ -44,16 +44,17 @@
         <v-col
           v-for="possibility in possibilities"
           :key="possibility.text"
-          cols="4"
+          cols="12"
+          sm="4"
         >
           <v-card
             elevation="2"
             class="possibility-card"
           >
-            <v-avatar class="possibilities-icon" size="90">
+            <v-avatar class="possibilities-icon-container">
               <v-icon
-                size="60"
                 :icon="possibility.icon"
+                class="possibilities-icon"
               />
             </v-avatar>
 
@@ -198,12 +199,17 @@
   background-color: transparent;
   padding-block: 50px;
   border-radius: 24px;
+  height: 100%;
+
+  @media only screen and (width >= 600px) {
+    padding-block: 30px;
+  }
 }
 
 .possibility-card:hover {
   background-color: rgb(var(--v-theme-primary));
 
-  .possibilities-icon {
+  .possibilities-icon-container {
     color: white;
   }
 
@@ -212,10 +218,50 @@
   }
 }
 
-.possibilities-icon {
+.possibility-text {
+  white-space: wrap;
+  text-align: center;
+  display: flex;
+  flex: 1;
+  align-items: center;
+
+  @media only screen and (width >= 600px) {
+    font-size: 15px;
+  }
+
+  @media only screen and (width >= 1280px) {
+    font-size: 20px;
+  }
+}
+
+.possibilities-icon-container {
   border: 2px solid rgb(var(--v-theme-highlight));
   border-radius: 50%;
   color: rgb(var(--v-theme-primary));
+  width: 90px;
+  height: 90px;
+
+  @media only screen and (width >= 600px) {
+    width: 60px;
+    height: 60px;
+  }
+
+  @media only screen and (width >= 1280px) {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+.possibilities-icon {
+  font-size: 60px;
+
+  @media only screen and (width >= 600px) {
+    font-size: 45px;
+  }
+
+  @media only screen and (width >= 1280px) {
+    font-size: 60px;
+  }
 }
 
 </style>

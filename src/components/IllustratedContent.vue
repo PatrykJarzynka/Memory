@@ -54,6 +54,15 @@
   flex-direction: column;
   row-gap: 30px;
   justify-content: center;
+  padding-top: 30px;
+
+  @media only screen and (width >= 960px){
+    row-gap: 15px;
+  }
+
+  @media only screen and (width >= 1280px){
+    padding-top: initial;
+  }
 }
 
 .image {

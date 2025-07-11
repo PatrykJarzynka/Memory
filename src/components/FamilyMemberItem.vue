@@ -123,6 +123,10 @@
     right: 10px;
     bottom: 2px;
   }
+
+  @media only screen and (width >= 1280px) {
+    font-size: 17px;
+  }
 }
 
 </style>

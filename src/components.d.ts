@@ -21,6 +21,7 @@ declare module 'vue' {
     IconDivider: typeof import('./components/IconDivider.vue')['default']
     IllustratedContent: typeof import('./components/IllustratedContent.vue')['default']
     IlustratedContent: typeof import('./components/IlustratedContent.vue')['default']
+    Possibilities: typeof import('./components/Possibilities.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

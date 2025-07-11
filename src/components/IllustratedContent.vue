@@ -14,10 +14,11 @@
 </script>
 
 <template>
-  <v-row>
+  <v-row class="justify-center">
     <v-col
       :style="{order: side === 'ltr' || smAndDown ? 0 : 1 }"
       cols="12"
+      sm="10"
       md="6"
       class="image-column"
     >

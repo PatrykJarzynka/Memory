@@ -18,7 +18,7 @@ const lightTheme: ThemeDefinition = {
     background: '#efebdf',
     primary: '#6b5336',
     primaryLight: '#886944',
-    accent: '#fff',
+    highlight: '#BE753A',
 
   },
 }

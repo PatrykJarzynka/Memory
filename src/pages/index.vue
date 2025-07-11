@@ -2,16 +2,20 @@
   <v-container class="main-container">
     <Hero/>
 
+    <IconDivider/>
+
     <div class="d-flex flex-column align-center ga-3">
       <h2 class="section-title">Historia choroby w naszej rodzinie</h2>
       <h3 class="section-sub_title">Choroba Alzheimera o wczesnym początku od lat niszczy naszą rodzinę:</h3>
 
-      <div class="d-flex flex-column align-center ga-8">
+      <div class="d-flex flex-column align-center ga-16">
         <FamilyIllustrated/>
 
         <FamilyTimeline/>
       </div>
     </div>
+
+    <IconDivider/>
 
     <IllustratedContent
       image-path="/images/Alzheimer-desc-image.jfif"
@@ -30,6 +34,8 @@
       </template>
     </IllustratedContent>
 
+    <IconDivider/>
+
     <div>
       <h2 class="section-title">Rokowania i co możemy zrobić obecnie</h2>
       <h3 class="section-sub_title">Posiadając gen PSEN1 mamy pewność wystąpienia choroby Alzheimera.</h3>
@@ -41,7 +47,7 @@
           cols="4"
         >
           <v-card
-            elevation="0"
+            elevation="2"
             class="possibility-card"
           >
             <v-avatar class="possibilities-icon" size="90">
@@ -51,7 +57,7 @@
               />
             </v-avatar>
 
-            <v-card-title>{{ possibility.text }}</v-card-title>
+            <v-card-title class="possibility-text">{{ possibility.text }}</v-card-title>
           </v-card>
         </v-col>
       </v-row>
@@ -65,6 +71,7 @@
 
   import FamilyIllustrated from "@/components/FamilyIllustrated.vue"
   import FamilyTimeline from "@/components/FamilyTimeline.vue"
+  import IconDivider from "@/components/IconDivider.vue"
   import IllustratedContent from "@/components/IllustratedContent.vue"
 
   const possibilities = [
@@ -95,7 +102,6 @@
 .main-container {
   display: flex;
   flex-direction: column;
-  row-gap: 100px;
   padding-inline: 10px;
 
   @media only screen and (width >= 600px) {
@@ -181,6 +187,7 @@
 }
 
 .possibilities-container {
+  padding-block: 50px;
   justify-content: center;
 }
 
@@ -189,11 +196,26 @@
   flex-direction: column;
   align-items: center;
   background-color: transparent;
+  padding-block: 50px;
+  border-radius: 24px;
+}
+
+.possibility-card:hover {
+  background-color: rgb(var(--v-theme-primary));
+
+  .possibilities-icon {
+    color: white;
+  }
+
+  .possibility-text {
+    color: white;
+  }
 }
 
 .possibilities-icon {
-  border: 1px solid black;
+  border: 2px solid rgb(var(--v-theme-highlight));
   border-radius: 50%;
+  color: rgb(var(--v-theme-primary));
 }
 
 </style>

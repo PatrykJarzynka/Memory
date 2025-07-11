@@ -20,6 +20,7 @@
       class="card-image"
       :src="member.imageUrl"
       cover
+      position="center"
     />
 
     <div class="flex-1-0-0">
@@ -63,19 +64,23 @@
 
   .card-image {
     width: 110px;
-    border-radius: 150px;
+    height: 110px;
+    border-radius: 130px;
     flex: initial;
 
     @media only screen and (width >= 600px) {
       width: 120px;
+      height: 120px;
     }
 
     @media only screen and (width >= 960px) {
       width: 100px;
+      height: 100px;
     }
 
     @media only screen and (width >= 1280px) {
       width: 130px;
+      height: 130px;
     }
   }
 

@@ -8,11 +8,7 @@
       <h2 class="section-title">Historia choroby w naszej rodzinie</h2>
       <h3 class="section-sub_title">Choroba Alzheimera o wczesnym początku od lat niszczy naszą rodzinę:</h3>
 
-      <div class="d-flex flex-column align-center ga-16">
-        <FamilyIllustrated/>
-
-        <FamilyTimeline/>
-      </div>
+      <FamilyIllustrated/>
     </div>
 
     <IconDivider/>
@@ -36,13 +32,50 @@
 
     <IconDivider/>
 
-    <h2 class="section-title">Rokowania i co możemy zrobić obecnie</h2>
+    <h2 class="section-title">Rokowania i co możemy obecnie zrobić</h2>
     <h3 class="section-sub_title">Posiadając gen PSEN1 mamy pewność wystąpienia choroby Alzheimera.</h3>
 
     <Possibilities/>
 
     <IconDivider/>
+
+    <h2 class="section-title">Dostępne leki</h2>
   </v-container>
+
+  <div class="treatment-container">
+    <div class="treatment-list-container">
+      <div class="treatment-item">
+        <p class="treatment-name">Donanemab</p>
+        <p class="treatment-price">130 000 PLN / rok</p>
+      </div>
+
+      <div class="separator"/>
+
+      <div class="treatment-item">
+        <p class="treatment-name">Gantenerumab</p>
+        <p class="treatment-price">testowy / eksperymentalny</p>
+      </div>
+
+      <div class="separator"/>
+
+      <div class="treatment-item">
+        <p class="treatment-name">Lecanamab</p>
+        <p class="treatment-price">98 000 PLN / rok</p>
+      </div>
+    </div>
+  </div>
+
+  <IconDivider/>
+
+  <h2 class="section-title">Gdzie o nas mówiono</h2>
+
+  <IconDivider/>
+
+  <h2 class="section-title">Czego nam potrzeba</h2>
+
+  <IconDivider/>
+
+  <h2 class="section-title">Nasi przyjaciele</h2>
 
 </template>
 
@@ -143,5 +176,57 @@
     font-size: 25px;
   }
 }
+
+.treatment-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(var(--v-theme-primary));
+}
+
+.treatment-list-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  column-gap: 50px;
+  padding-block: 30px;
+
+  @media only screen and (width >= 960px) {
+    flex-direction: row;
+    align-items: stretch;
+    padding-block: 60px;
+  }
+}
+
+.treatment-item {
+  font-family: Playfair Display, serif;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin-block: 40px;
+  text-align: center;
+  row-gap: 30px;
+}
+
+.treatment-name {
+  font-size: 28px;
+}
+
+.treatment-price {
+  font-size: 22px;
+}
+
+.separator {
+  width: 30%;
+  height: 2px;
+  background: white;
+
+  @media only screen and (width >= 960px) {
+    width: 1px;
+    height: initial;
+  }
+}
+
 
 </style>

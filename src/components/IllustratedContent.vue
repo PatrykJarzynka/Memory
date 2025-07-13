@@ -19,7 +19,7 @@
       :style="{order: side === 'ltr' || smAndDown ? 0 : 1 }"
       cols="12"
       sm="10"
-      md="6"
+      md="5"
       class="image-column"
     >
       <div

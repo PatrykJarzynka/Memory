@@ -23,7 +23,7 @@
         <v-img
           cover
           aspect-ratio="1"
-          src="/images/kacper2.JPG"
+          :src="member.imageUrl"
           class="family-member-image"
         />
       </v-col>

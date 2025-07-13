@@ -63,19 +63,63 @@
         <p class="treatment-price">98 000 PLN / rok</p>
       </div>
     </div>
+
+    <p class="treatment-link">Dostęp do leków za pomocą www.medicine.washu.edu/</p>
   </div>
 
-  <IconDivider/>
+  <v-container class="main-container">
+    <IconDivider/>
 
-  <h2 class="section-title">Gdzie o nas mówiono</h2>
+    <h2 class="section-title">Gdzie o nas mówiono</h2>
 
-  <IconDivider/>
+    <v-row no-gutters class="media-container">
+      <div class="media-name-container">
+        <v-icon
+          icon="mdi-television"
+          class="media-icon"
+        />
+        <p class="media-name">PYTANIE NA ŚNIADANIE</p>
+      </div>
 
-  <h2 class="section-title">Czego nam potrzeba</h2>
+      <v-btn
+        :size="smAndDown ? undefined : 'large'"
+        class="media-button"
+      >
+        <div class="d-flex ga-2">
+          <span>TVP2</span>
+          <v-icon icon="mdi-open-in-new"/>
+        </div>
+      </v-btn>
+      <div class="media-name-container">
+        <v-icon
+          class="media-icon"
+          icon="mdi-television"
+        />
+        <p class="media-name">REPORTERZY</p>
+      </div>
 
-  <IconDivider/>
+      <v-btn
+        :size="smAndDown ? undefined : 'large'"
+        class="media-button"
+      >
+        <div class="d-flex ga-2">
+          <span>TVP</span>
+          <v-icon icon="mdi-open-in-new"/>
+        </div>
+      </v-btn>
+    </v-row>
 
-  <h2 class="section-title">Nasi przyjaciele</h2>
+
+    <IconDivider/>
+
+    <h2 class="section-title">Czego obecnie nam trzeba</h2>
+
+    <IconDivider/>
+
+    <h2 class="section-title">Nasi przyjaciele</h2>
+  </v-container>
+
+
 
 </template>
 
@@ -86,6 +130,9 @@
   import IconDivider from "@/components/IconDivider.vue"
   import IllustratedContent from "@/components/IllustratedContent.vue"
   import Possibilities from "@/components/Possibilities.vue"
+  import {useDisplay} from "vuetify/framework";
+
+  const { smAndDown } = useDisplay()
 
 </script>
 
@@ -179,9 +226,12 @@
 
 .treatment-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: rgba(var(--v-theme-primary));
+  padding-block: 30px;
+  text-align: center;
 }
 
 .treatment-list-container {
@@ -190,7 +240,6 @@
   justify-content: center;
   flex-direction: column;
   column-gap: 50px;
-  padding-block: 30px;
 
   @media only screen and (width >= 960px) {
     flex-direction: row;
@@ -227,6 +276,83 @@
     height: initial;
   }
 }
+
+.treatment-link {
+  color: white;
+}
+
+.media-container {
+  padding: 30px 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 1fr 1fr;
+  column-gap: 50px;
+  row-gap: 30px;
+  align-items: center;
+  border-inline: 2px solid rgb(var(--v-theme-primary));
+
+  @media only screen and (width >= 600px) {
+    padding: 60px;
+  }
+
+  @media only screen and (width >= 960px) {
+    padding: 60px 80px;
+  }
+
+  @media only screen and (width >= 1280px) {
+    padding: 60px 150px;
+  }
+}
+
+.media-name-container {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+}
+
+.media-icon {
+  font-size: 25px;
+
+  @media only screen and (width >= 600px) {
+    font-size: 35px;
+  }
+}
+
+
+.media-name {
+  font-size: 17px;
+  font-weight: 400;
+  color: rgba(var(--v-theme-primary));
+
+  @media only screen and (width >= 600px) {
+    font-size: 25px;
+  }
+
+  @media only screen and (width >= 960px) {
+    font-size: 35px;
+  }
+
+  @media only screen and (width >= 1280px) {
+    font-size: 60px;
+  }
+}
+
+.media-button {
+  background-color: rgb(var(--v-theme-primary));
+  color: white;
+  font-size: 13px;
+
+  @media only screen and (width >= 960px) {
+    font-size: 16px;
+  }
+
+  @media only screen and (width >= 1280px) {
+    font-size: 20px;
+  }
+}
+
 
 
 </style>

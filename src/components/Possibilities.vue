@@ -36,7 +36,7 @@
         md="4"
       >
         <v-card
-          elevation="2"
+          elevation="0"
           class="possibility-card"
         >
           <v-avatar class="possibilities-icon-container">
@@ -57,7 +57,7 @@
 
 <style scoped lang="scss">
 .possibilities-container {
-  padding-block: 50px;
+  padding-top: 50px;
   justify-content: center;
 
   @media only screen and (width >= 1280px) {
@@ -70,7 +70,6 @@
   flex-direction: column;
   align-items: center;
   background-color: transparent;
-  border-radius: 24px;
   height: 100%;
   padding: 20px;
 
@@ -81,7 +80,6 @@
   }
 
   @media only screen and (width >= 768px) {
-    aspect-ratio: 1;
     padding-top: 50px;
   }
 }

@@ -1,27 +1,65 @@
 <script setup lang="ts">
+  interface TreatmentItem {
+    id: number;
+    name: string;
+    price: number | null;
+  }
 
+  const treatmentItems: TreatmentItem[] = [
+    {
+      id: 1,
+      name: "Donanemab",
+      price: 130_000,
+    },
+    {
+      id: 2,
+      name: "Gantenerumab",
+      price: null,
+    },
+    {
+      id: 3,
+      name: "Lecanamab",
+      price: 98_000,
+    },
+  ]
+
+  function splitNumber (value: number): string {
+    return value
+      .toString()
+      .replace(/\B(?=(\d{3})+(?!\d))/g, " ")
+  }
 </script>
 
 <template>
   <div class="treatment-container">
     <div class="treatment-list-container">
-      <div class="treatment-item">
-        <p class="treatment-name">Donanemab</p>
-        <p class="treatment-price">130 000 PLN / rok</p>
-      </div>
+      <div
+        v-for="(item, index) in treatmentItems"
+        :key="item.id"
+        class="treatment-item-container"
+      >
+        <div class="treatment-item">
+          <p class="treatment-name">{{ item.name }}</p>
 
-      <div class="separator"/>
+          <p
+            v-if="item.price"
+            class="treatment-price"
+          >
+            {{ splitNumber(item.price) }} PLN / rok
+          </p>
 
-      <div class="treatment-item">
-        <p class="treatment-name">Gantenerumab</p>
-        <p class="treatment-price">testowy / eksperymentalny</p>
-      </div>
+          <p
+            v-else
+            class="treatment-price"
+          >
+            testowy / eksperymentalny
+          </p>
+        </div>
 
-      <div class="separator"/>
-
-      <div class="treatment-item">
-        <p class="treatment-name">Lecanamab</p>
-        <p class="treatment-price">98 000 PLN / rok</p>
+        <div
+          v-if="index !== treatmentItems.length - 1"
+          class="separator"
+        />
       </div>
     </div>
 
@@ -45,12 +83,24 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  column-gap: 50px;
 
   @media only screen and (width >= 960px) {
     flex-direction: row;
     align-items: stretch;
     padding-block: 60px;
+  }
+}
+
+.treatment-item-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+
+  @media only screen and (width >= 960px) {
+    flex-direction: row;
+    width: initial;
   }
 }
 
@@ -62,6 +112,7 @@
   margin-block: 40px;
   text-align: center;
   row-gap: 30px;
+  padding-inline: 25px;
 }
 
 .treatment-name {
@@ -79,7 +130,7 @@
 
   @media only screen and (width >= 960px) {
     width: 1px;
-    height: initial;
+    height: 100%;
   }
 }
 

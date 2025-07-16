@@ -55,6 +55,8 @@
 
     <h2 class="section-title">Czego obecnie nam trzeba</h2>
 
+    <SupportList/>
+
     <IconDivider/>
 
     <h2 class="section-title">Nasi przyjaciele</h2>
@@ -69,6 +71,7 @@
   import IllustratedContent from "@/components/IllustratedContent.vue"
   import MediaList from "@/components/MediaList.vue"
   import Possibilities from "@/components/Possibilities.vue"
+  import SupportList from "@/components/SupportList.vue"
   import Treatment from "@/components/Treatment.vue"
 
 </script>
@@ -92,6 +95,7 @@
   color: rgb(var(--v-theme-primary));
   font-size: 30px;
   text-align: center;
+  padding-bottom: 40px;
 
   @media only screen and (width >= 600px) {
     font-size: 35px;

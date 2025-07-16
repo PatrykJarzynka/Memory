@@ -127,7 +127,7 @@
 }
 
 .media-button {
-  background-color: rgb(var(--v-theme-primary));
+  background-color: rgb(var(--v-theme-primaryLight));
   color: white;
   font-size: 13px;
   width: 100%;

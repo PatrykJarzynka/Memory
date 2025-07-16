@@ -2,59 +2,80 @@
   import { useDisplay } from "vuetify/framework"
 
   const { smAndDown } = useDisplay()
+
+  interface MediaData {
+    link: string;
+    platformName: string;
+  }
+
+  interface MediaItem {
+    id: number;
+    name: string;
+    icon: string;
+    mediaData: MediaData;
+  }
+
+  const mediaItems: MediaItem[] = [
+    {
+      id: 1,
+      name: "Pytanie na śniadanie",
+      icon: "mdi-television",
+      mediaData: {
+        link: "123",
+        platformName: "TVP2",
+      },
+    },
+    {
+      id: 2,
+      name: "Reporterzy",
+      icon: "mdi-television",
+      mediaData: {
+        link: "123",
+        platformName: "TVP",
+      },
+    },
+  ]
 </script>
 
 <template>
-  <v-row no-gutters class="media-container">
-    <div class="media-name-container">
-      <v-icon
-        icon="mdi-television"
-        class="media-icon"
-      />
-      <p class="media-name">PYTANIE NA ŚNIADANIE</p>
-    </div>
-
-    <v-btn
-      :size="smAndDown ? undefined : 'large'"
-      class="media-button"
+  <div class="media-container">
+    <div
+      v-for="item in mediaItems"
+      :key="item.id"
+      class="grid-row"
     >
-      <div class="d-flex ga-2">
-        <span>TVP2</span>
-        <v-icon icon="mdi-open-in-new"/>
+      <div class="media-name-container">
+        <v-icon
+          :icon="item.icon"
+          class="media-icon"
+        />
+        <p class="media-name">{{ item.name.toUpperCase() }}</p>
       </div>
-    </v-btn>
-    <div class="media-name-container">
-      <v-icon
-        class="media-icon"
-        icon="mdi-television"
-      />
-      <p class="media-name">REPORTERZY</p>
-    </div>
 
-    <v-btn
-      :size="smAndDown ? undefined : 'large'"
-      class="media-button"
-    >
-      <div class="d-flex ga-2">
-        <span>TVP</span>
-        <v-icon icon="mdi-open-in-new"/>
-      </div>
-    </v-btn>
-  </v-row>
+      <v-btn
+        :size="smAndDown ? undefined : 'large'"
+        class="media-button"
+      >
+        <div class="d-flex ga-2">
+          <span>{{ item.mediaData.platformName }}</span>
+          <v-icon icon="mdi-open-in-new"/>
+        </div>
+      </v-btn>
+    </div>
+  </div>
 </template>
 
 <style scoped lang="scss">
-.media-container {
-  padding: 30px 20px;
-  margin-left: auto;
-  margin-right: auto;
+
+.media-container{
   display: grid;
   grid-template-columns: 1fr auto;
-  grid-template-rows: 1fr 1fr;
   column-gap: 50px;
   row-gap: 30px;
+  margin-inline: auto;
   align-items: center;
   border-inline: 2px solid rgb(var(--v-theme-primary));
+  padding: 30px 20px;
 
   @media only screen and (width >= 600px) {
     padding: 60px;
@@ -67,6 +88,10 @@
   @media only screen and (width >= 1280px) {
     padding: 60px 150px;
   }
+}
+
+.grid-row {
+  display: contents;
 }
 
 .media-name-container {
@@ -105,6 +130,7 @@
   background-color: rgb(var(--v-theme-primary));
   color: white;
   font-size: 13px;
+  width: 100%;
 
   @media only screen and (width >= 960px) {
     font-size: 16px;

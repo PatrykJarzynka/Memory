@@ -33,12 +33,12 @@
     <IconDivider/>
 
     <v-row no-gutters class="pb-16 justify-center">
-      <v-col cols="12" md="6" class="d-flex align-center justify-center">
+      <v-col cols="12" md="6" :class="['d-flex align-center', smAndDown ? 'justify-center' : '']">
         <h2 class="section-title--left">Rokowania</h2>
       </v-col>
 
-      <v-col cols="10" md="6" class="d-flex justify-center">
-        <h3 class="section-sub_title--left  text-center">Posiadając gen PSEN1 mamy pewność wystąpienia choroby Alzheimera.</h3>
+      <v-col cols="10" md="6" class="d-flex align-center">
+        <h3 :class="['section-sub_title--left', smAndDown ? 'text-center' : 'text-left']">Posiadając gen PSEN1 mamy pewność wystąpienia choroby Alzheimera.</h3>
       </v-col>
     </v-row>
 
@@ -68,21 +68,7 @@
 
     <h2 class="section-title">Nasi przyjaciele</h2>
 
-    <v-row>
-      <v-col cols="6">
-        <v-card>
-          <v-card-title>Full name</v-card-title>
-          <v-card-subtitle>Subtitle</v-card-subtitle>
-        </v-card>
-      </v-col>
-
-      <v-col cols="6">
-        <v-card>
-          <v-card-title>Full name</v-card-title>
-          <v-card-subtitle>Subtitle</v-card-subtitle>
-        </v-card>
-      </v-col>
-    </v-row>
+    <Friends/>
 
   </v-container>
 
@@ -90,32 +76,18 @@
 
 <script lang="ts" setup>
 
+  import { useDisplay } from "vuetify/framework"
   import FamilyIllustrated from "@/components/FamilyIllustrated.vue"
+  import Friends from "@/components/Friends.vue"
   import IconDivider from "@/components/IconDivider.vue"
   import IllustratedContent from "@/components/IllustratedContent.vue"
   import MediaList from "@/components/MediaList.vue"
   import Possibilities from "@/components/Possibilities.vue"
   import SupportList from "@/components/SupportList.vue"
+
   import Treatment from "@/components/Treatment.vue"
 
-  const friends = [
-    {
-      name: "Patryk Jarzynka",
-      description: "Programista i przyjaciel, który z zaangażowaniem tworzy naszą stronę internetową, dbając o to, by była nie tylko funkcjonalna, ale i pełna serca.",
-    },
-    {
-      name: "Aleksandra Bratek",
-      description: "Przyjaciółka i lekarka w trakcie specjalizacji urologicznej. Z ogromnym zaangażowaniem wspiera w poszukiwaniu leczenia choroby.",
-    },
-    {
-      name: "Aleksandra Dzierżawa",
-      description: "Terapeutka, przyjaciółka. Ogromne wsparcie w naszych działaniach i organizacji.",
-    },
-    {
-      name: "SuperHumans Jarosław Szlachta",
-      description: "Twórca systemu walki S.A.R.24. Wspiera naszą inicjatywę na wielu poziomach.",
-    },
-  ]
+  const { smAndDown } = useDisplay()
 
 </script>
 

@@ -24,7 +24,7 @@
       <v-col
         class="d-flex justify-center"
         cols="12"
-        md="5"
+        md="6"
       >
         <FamilyMembersList/>
       </v-col>

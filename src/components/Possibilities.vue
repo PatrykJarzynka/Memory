@@ -3,22 +3,27 @@
 
   const possibilities: PossibilityItem[] = [
     {
+      id: 1,
       icon: "mdi-brain",
       text: "Trening funkcji poznawczych",
     },
     {
+      id: 2,
       icon: "mdi-dumbbell",
       text: "Trening siłowy",
     },
     {
+      id: 3,
       icon: "mdi-food-apple",
       text: "Odpowiednia dieta",
     },
     {
+      id: 4,
       icon: "mdi-emoticon",
       text: "Pozytywne nastawienie",
     },
     {
+      id: 5,
       icon: "mdi-pill",
       text: "Wczesna reakcja farmakologiczna",
     },
@@ -26,133 +31,59 @@
 </script>
 
 <template>
-  <div class="w-100 d-flex flex-column align-center">
-    <v-row class="possibilities-container">
-      <v-col
+  <div class="possibilities-container">
+    <p class="title">Co możemy zrobić</p>
+
+    <ul class="possibilities-list">
+      <li
         v-for="possibility in possibilities"
-        :key="possibility.text"
-        cols="12"
-        sm="5"
-        md="4"
+        :key="possibility.id"
+        class="possibilities-list-item"
       >
-        <v-card
-          elevation="0"
-          class="possibility-card"
-        >
-          <v-avatar class="possibilities-icon-container">
-            <v-icon
-              :icon="possibility.icon"
-              class="possibilities-icon"
-            />
-          </v-avatar>
+        <v-icon :icon="possibility.icon"/>
+        {{ possibility.text }}
 
-          <v-card-title class="possibility-text">{{ possibility.text }}</v-card-title>
-        </v-card>
-      </v-col>
-    </v-row>
+      </li>
+    </ul>
   </div>
-
-
 </template>
 
 <style scoped lang="scss">
 .possibilities-container {
-  padding-top: 50px;
-  justify-content: center;
-
-  @media only screen and (width >= 1280px) {
-    max-width: 70%;
-  }
-}
-
-.possibility-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: transparent;
-  height: 100%;
-  padding: 20px;
-
-
-  @media only screen and (width >= 600px) {
-    aspect-ratio: 1;
-    padding-top: 40px;
-  }
-
-  @media only screen and (width >= 768px) {
-    padding-top: 50px;
-  }
+  padding: 40px 50px;
+  gap: 30px;
+  border-radius: 12px;
+  background-color: rgb(var(--v-theme-primaryLight));
 }
 
-.possibility-card:hover {
-  background-color: rgb(var(--v-theme-primary));
-
-  .possibilities-icon-container {
-    color: white;
-  }
-
-  .possibility-text {
-    color: white;
-  }
-}
-
-.possibility-text {
-  white-space: wrap;
+.title {
+  color: white;
+  font-size: 32px;
   text-align: center;
+
+  @media only screen and (width >= 960px) {
+    font-size: 43px;
+  }
+}
+
+.possibilities-list {
   display: flex;
-  align-items: center;
-  flex:1;
-  font-size: 17px;
+  flex-wrap: wrap;
+  gap: 20px;
+  place-content: flex-start center;
+}
 
-  @media only screen and (width >= 600px) {
-    font-size: 15px;
-  }
+.possibilities-list-item {
+  color: white;
+  font-size: 16px;
+  text-align: center;
 
-  @media only screen and (width >= 768px) {
-    font-size: 17px;
-  }
-
-  @media only screen and (width >= 1280px) {
+  @media only screen and (width >= 960px) {
     font-size: 20px;
-  }
-}
-
-.possibilities-icon-container {
-  border: 3px solid rgb(var(--v-theme-primaryLight));
-  border-radius: 50%;
-  color: rgb(var(--v-theme-primary));
-  width: 70px;
-  height: 70px;
-
-  @media only screen and (width >= 600px) {
-    width: 60px;
-    height: 60px;
-  }
-
-  @media only screen and (width >= 768px) {
-    width: 70px;
-    height: 70px;
-  }
-
-  @media only screen and (width >= 1280px) {
-    width: 90px;
-    height: 90px;
-  }
-}
-
-.possibilities-icon {
-  font-size: 45px;
-
-  @media only screen and (width >= 600px) {
-    font-size: 45px;
-  }
-
-  @media only screen and (width >= 768px) {
-    font-size: 50px;
-  }
-
-  @media only screen and (width >= 1280px) {
-    font-size: 60px;
+    margin-left: 20px;
   }
 }
 </style>

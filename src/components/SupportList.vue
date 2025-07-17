@@ -107,7 +107,7 @@
   display: grid;
   grid-template-columns: repeat(v-bind(numberOfColumns), 1fr);
   background-color: transparent;
-  column-gap: 30px;
+  column-gap: 50px;
 }
 
 .support-item-title-container {

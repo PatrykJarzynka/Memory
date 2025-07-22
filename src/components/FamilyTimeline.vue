@@ -44,6 +44,7 @@
 
 <template>
   <v-timeline
+    line-color="black"
     :direction="smAndDown ? 'vertical' : 'horizontal'"
   >
     <v-timeline-item
@@ -51,7 +52,8 @@
       :key="event.id"
       :icon="event.icon"
       :side="smAndDown ? event.side : 'end'"
-      dot-color="primary"
+      dot-color="#d5c699"
+      icon-color="#753c00"
       fill-dot
     >
       <p
@@ -66,5 +68,6 @@
 <style scoped lang="scss">
 .event-description {
   font-weight: 500;
+  color: white;
 }
 </style>

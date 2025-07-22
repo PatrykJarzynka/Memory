@@ -2,14 +2,40 @@
   <v-container class="main-container">
     <Hero/>
 
+    <v-row class="columns-row">
+      <v-col class="column1">
+        <div class="testClass">
+          <p class="textHello">Udało nam się zebrać już: </p>
+          <p class="textHello">2% celu! </p>
+
+          <v-btn>Wesprzyj zbiórkę</v-btn>
+        </div>
+
+      </v-col>
+
+    </v-row>
+
     <IconDivider/>
 
     <div class="d-flex flex-column align-center ga-3">
       <h2 class="section-title">Historia choroby w naszej rodzinie</h2>
-      <h3 class="section-sub_title">Choroba Alzheimera o wczesnym początku od lat niszczy naszą rodzinę:</h3>
-
       <FamilyIllustrated/>
+
+
     </div>
+  </v-container>
+
+  <div class="family-history-container">
+    <v-container class="main-container">
+      <h3 class="section-sub_title">Choroba Alzheimera o wczesnym początku od lat niszczy naszą rodzinę:</h3>
+      <v-img src="/images/Family-structure.png" width="65%"/>
+
+      <FamilyTimeline/>
+    </v-container>
+
+  </div>
+
+  <v-container class="main-container">
 
     <IconDivider/>
 
@@ -72,6 +98,24 @@
 
   </v-container>
 
+  <v-footer class="footer-container">
+    <h2>Jeżeli masz pomysł, lub wiesz jak nam pomóc odezwij się</h2>
+
+    <v-row>
+      <v-col>
+        <v-list>
+          <v-list-item>Gwidon Libera – +48501525624</v-list-item>
+          <v-list-item>Aleksandra Libera – +48507602660 / pamietnikalzheimerowca@gmail.com</v-list-item>
+        </v-list>
+      </v-col>
+
+      <v-col>
+        <p> Ze względu na duże obciążenie emocjonalne prosimy o ograniczenie kontaktu z Jagodą i Kacprem w tym temacie</p>
+      </v-col>
+    </v-row>
+
+  </v-footer>
+
 </template>
 
 <script lang="ts" setup>
@@ -95,6 +139,7 @@
 .main-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding-inline: 10px;
 
   @media only screen and (width >= 600px) {
@@ -150,7 +195,7 @@
 }
 
 .section-sub_title {
-  color: rgb(var(--v-theme-primaryLight));
+  color: white;
   font-size: 18px;
   text-align: center;
   margin-block: 10px;
@@ -189,6 +234,48 @@
   @media only screen and (width >= 1280px) {
     font-size: 25px;
   }
+}
+
+.footer-container {
+  flex-direction: column;
+  padding-block: 50px;
+  justify-content: center;
+  row-gap: 50px;
+  background-color: rgb(var(--v-theme-primary));
+}
+
+.contact-container {
+  text-align: center;
+  width: 100%;
+}
+
+.columns-row {
+  padding-top: 200px;
+  padding-inline: 100px;
+}
+
+.column1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+
+.textHello {
+  color: rgb(var(--v-theme-primary));
+  font-weight: 500;
+}
+
+.testClass {
+  text-align: center;
+}
+
+.family-history-container {
+  padding-block: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(var(--v-theme-primary));
 }
 
 </style>

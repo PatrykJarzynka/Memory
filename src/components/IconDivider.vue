@@ -18,6 +18,7 @@
 .divider-container {
   display: flex;
   align-items: center;
+  width: 100%;
   padding-block: 140px;
 }
 

@@ -21,7 +21,6 @@
         class="image-column"
       >
         <v-img
-          cover
           aspect-ratio="1"
           :src="member.imageUrl"
           class="family-member-image"

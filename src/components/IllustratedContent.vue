@@ -17,7 +17,7 @@
   <v-row class="justify-center">
     <v-col
       :style="{order: side === 'ltr' || smAndDown ? 0 : 1 }"
-      cols="12"
+      cols="11"
       sm="10"
       md="5"
       class="image-column"

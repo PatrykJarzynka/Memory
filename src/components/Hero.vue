@@ -1,5 +1,6 @@
 <script setup lang="ts">
   import { useDisplay } from "vuetify/framework"
+  import AppButton from "@/components/core/AppButton.vue"
 
   const { xl, xs } = useDisplay()
 
@@ -29,24 +30,16 @@
         </div>
 
         <div class="hero-action-buttons">
-          <v-btn
-            :size="buttonSize"
-            class="hero-button"
-          >
-            Wesprzyj
-          </v-btn>
+          <AppButton
+            type="normal"
+            text="Wesprzyj"
+          />
 
-          <v-btn
-            variant="text"
-            :size="buttonSize"
-            class="hero-button--flat"
-          >
-            Poznaj historie
-
-            <template #append>
-              <v-icon icon="mdi-arrow-right-thin"/>
-            </template>
-          </v-btn>
+          <AppButton
+            type="flat"
+            text="Poznaj historie"
+            icon="mdi-arrow-right-thin"
+          />
         </div>
       </v-col>
 

@@ -1,19 +1,10 @@
 <template>
   <v-container class="main-container align-center">
-    <Hero/>
+    <div class="start-container">
+      <Hero/>
 
-    <v-row class="columns-row">
-      <v-col class="column1">
-        <div class="testClass">
-          <p class="textHello">Udało nam się zebrać już: </p>
-          <p class="textHello">2% celu! </p>
-
-          <v-btn>Wesprzyj zbiórkę</v-btn>
-        </div>
-
-      </v-col>
-
-    </v-row>
+      <GoalTracker/>
+    </div>
 
     <IconDivider/>
 
@@ -104,14 +95,16 @@
 <script lang="ts" setup>
 
   import { useDisplay } from "vuetify/framework"
+  import AppButton from "@/components/core/AppButton.vue"
+  import Friends from "@/components/core/Friends.vue"
   import FamilyIllustrated from "@/components/FamilyIllustrated.vue"
-  import Friends from "@/components/Friends.vue"
+  import GoalTracker from "@/components/GoalTracker.vue"
   import IconDivider from "@/components/IconDivider.vue"
   import IllustratedContent from "@/components/IllustratedContent.vue"
   import MediaList from "@/components/MediaList.vue"
+
   import Possibilities from "@/components/Possibilities.vue"
   import SupportList from "@/components/SupportList.vue"
-
   import Treatment from "@/components/Treatment.vue"
 
   const { smAndDown } = useDisplay()
@@ -218,25 +211,12 @@
   }
 }
 
-.columns-row {
-  padding-top: 200px;
-  padding-inline: 100px;
-}
-
-.column1 {
+.start-container {
   display: flex;
+  flex-direction: column;
+  width: 100%;
+  row-gap: 130px;
   align-items: center;
-  justify-content: center;
-  font-size: 40px;
-}
-
-.textHello {
-  color: rgb(var(--v-theme-primary));
-  font-weight: 500;
-}
-
-.testClass {
-  text-align: center;
 }
 
 .family-history-container {

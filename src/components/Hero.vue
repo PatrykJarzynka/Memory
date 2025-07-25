@@ -1,19 +1,5 @@
 <script setup lang="ts">
-  import { useDisplay } from "vuetify/framework"
   import AppButton from "@/components/core/AppButton.vue"
-
-  const { xl, xs } = useDisplay()
-
-  const buttonSize = computed((): string | undefined => {
-    if (xl.value) {
-      return "large"
-    } else if (xs.value) {
-      return "small"
-    } else {
-      return undefined
-    }
-  })
-
 </script>
 
 <template>

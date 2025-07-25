@@ -1,5 +1,5 @@
 <template>
-  <v-container class="main-container align-center">
+  <v-container class="main-container align-center pb-10">
     <div class="start-container">
       <Hero/>
 
@@ -16,9 +16,15 @@
   </v-container>
 
   <div class="family-history-container">
-    <v-container class="main-container align-center">
-      <h3 class="section-sub_title">Choroba Alzheimera o wczesnym początku od lat niszczy naszą rodzinę:</h3>
-      <v-img src="/images/Family-structure.png" width="65%"/>
+    <v-container class="main-container align-center ga-5">
+      <h3 class="section-sub_title">
+        Choroba Alzheimera o wczesnym początku od lat niszczy naszą rodzinę:
+      </h3>
+
+      <v-img
+        class="family-tree-image"
+        src="/images/Family-structure.png"
+      />
 
       <FamilyTimeline/>
     </v-container>
@@ -54,7 +60,7 @@
       </v-col>
 
       <v-col cols="10" md="6" class="d-flex align-center">
-        <h3 :class="['section-sub_title--left', smAndDown ? 'text-center' : 'text-left']">Posiadając gen PSEN1 mamy pewność wystąpienia choroby Alzheimera.</h3>
+        <h3 :class="['section-sub_title--left ', smAndDown ? 'text-center' : 'text-left']">Posiadając gen PSEN1 mamy pewność wystąpienia choroby Alzheimera.</h3>
       </v-col>
     </v-row>
 
@@ -95,7 +101,6 @@
 <script lang="ts" setup>
 
   import { useDisplay } from "vuetify/framework"
-  import AppButton from "@/components/core/AppButton.vue"
   import Friends from "@/components/core/Friends.vue"
   import FamilyIllustrated from "@/components/FamilyIllustrated.vue"
   import GoalTracker from "@/components/GoalTracker.vue"
@@ -171,7 +176,7 @@
 
 .section-sub_title {
   color: white;
-  font-size: 18px;
+  font-size:20px;
   text-align: center;
   margin-block: 10px;
 
@@ -185,11 +190,6 @@
 
   @media only screen and (width >= 1280px) {
     font-size: 25px;
-  }
-
-  &--left {
-    @extend .section-sub_title;
-    text-align: left;
   }
 }
 
@@ -220,11 +220,21 @@
 }
 
 .family-history-container {
-  padding-block: 100px;
+  padding-block: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: rgb(var(--v-theme-primary));
+}
+
+.family-tree-image {
+  border: 3px solid black;
+  border-radius: 12px;
+  width: 100%;
+
+  @media only screen and (width >= 1280px) {
+    width: 60%;
+  }
 }
 
 </style>

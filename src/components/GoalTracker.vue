@@ -18,12 +18,16 @@
 
 <style scoped lang="scss">
 .goal-container {
-  width: 60%;
+  width: 70%;
   position: relative;
   aspect-ratio: 1;
   padding: 30px;
   background: rgb(var(--v-theme-primary));
   border-radius: 50%;
+
+  @media only screen and (width >= 450px) {
+    width: 60%
+  }
 
   @media only screen and (width >= 600px) {
     width: 50%;
@@ -78,6 +82,10 @@
   font-weight: 500;
 
   @media only screen and (width >= 600px) {
+    font-size: 20px;
+  }
+
+  @media only screen and (width >= 700px) {
     font-size: 23px;
   }
 
@@ -91,6 +99,10 @@
   font-size: 28px;
 
   @media only screen and (width >= 600px) {
+    font-size: 35px;
+  }
+
+  @media only screen and (width >= 700px) {
     font-size: 40px;
   }
 

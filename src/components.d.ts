@@ -14,6 +14,7 @@ declare module 'vue' {
     FamilyMembers: typeof import('./components/FamilyMembers.vue')['default']
     FamilyMembersList: typeof import('./components/FamilyMembersList.vue')['default']
     FamilyTimeline: typeof import('./components/FamilyTimeline.vue')['default']
+    Footer: typeof import('./components/Footer.vue')['default']
     Friends: typeof import('./components/Friends.vue')['default']
     Header: typeof import('./components/Header.vue')['default']
     Hero: typeof import('./components/Hero.vue')['default']

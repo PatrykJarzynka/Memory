@@ -19,7 +19,7 @@
   display: flex;
   align-items: center;
   width: 100%;
-  padding-block: 140px;
+  padding-block: 100px;
 }
 
 .divider-icon {

@@ -1,5 +1,5 @@
 <template>
-  <v-container class="main-container">
+  <v-container class="main-container align-center">
     <Hero/>
 
     <v-row class="columns-row">
@@ -21,12 +21,11 @@
       <h2 class="section-title">Historia choroby w naszej rodzinie</h2>
       <FamilyIllustrated/>
 
-
     </div>
   </v-container>
 
   <div class="family-history-container">
-    <v-container class="main-container">
+    <v-container class="main-container align-center">
       <h3 class="section-sub_title">Choroba Alzheimera o wczesnym początku od lat niszczy naszą rodzinę:</h3>
       <v-img src="/images/Family-structure.png" width="65%"/>
 
@@ -77,7 +76,7 @@
 
   <Treatment/>
 
-  <v-container class="main-container">
+  <v-container class="main-container pb-16">
     <IconDivider/>
 
     <h2 class="section-title">Gdzie o nas mówiono</h2>
@@ -98,23 +97,7 @@
 
   </v-container>
 
-  <v-footer class="footer-container">
-    <h2>Jeżeli masz pomysł, lub wiesz jak nam pomóc odezwij się</h2>
-
-    <v-row>
-      <v-col>
-        <v-list>
-          <v-list-item>Gwidon Libera – +48501525624</v-list-item>
-          <v-list-item>Aleksandra Libera – +48507602660 / pamietnikalzheimerowca@gmail.com</v-list-item>
-        </v-list>
-      </v-col>
-
-      <v-col>
-        <p> Ze względu na duże obciążenie emocjonalne prosimy o ograniczenie kontaktu z Jagodą i Kacprem w tym temacie</p>
-      </v-col>
-    </v-row>
-
-  </v-footer>
+  <Footer/>
 
 </template>
 
@@ -139,7 +122,6 @@
 .main-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding-inline: 10px;
 
   @media only screen and (width >= 600px) {
@@ -234,19 +216,6 @@
   @media only screen and (width >= 1280px) {
     font-size: 25px;
   }
-}
-
-.footer-container {
-  flex-direction: column;
-  padding-block: 50px;
-  justify-content: center;
-  row-gap: 50px;
-  background-color: rgb(var(--v-theme-primary));
-}
-
-.contact-container {
-  text-align: center;
-  width: 100%;
 }
 
 .columns-row {

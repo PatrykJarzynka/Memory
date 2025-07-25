@@ -51,7 +51,7 @@
     },
     {
       id: 6,
-      name: "Wsparcie w logistyce - mieszkanie w USA, transport",
+      name: "Wsparcie w logistyce - mieszkanie, transport",
       description: "Leczenie i badania odbywają się za granicą — potrzebujemy pomocy w znalezieniu miejsca do życia, organizacji podróży i codziennej logistyce. To wsparcie pozwoli nam skupić się na walce z chorobą.",
       icon: "mdi-plane-car",
       action: null,
@@ -107,7 +107,7 @@
   display: grid;
   grid-template-columns: repeat(v-bind(numberOfColumns), 1fr);
   background-color: transparent;
-  column-gap: 50px;
+  column-gap: 130px;
 }
 
 .support-item-title-container {
@@ -132,7 +132,7 @@
 
 .support-item-title-text {
   font-size: 19px;
-  color: rgb(var(--v-theme-highlight));
+  color: rgb(var(--v-theme-primary));
   word-break: normal;
   white-space: normal;
 

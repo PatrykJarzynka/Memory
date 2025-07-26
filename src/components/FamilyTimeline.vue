@@ -68,6 +68,6 @@
 <style scoped lang="scss">
 .event-description {
   font-weight: 500;
-  color: white;
+  color: rgb(var(--v-theme-primaryContrast));
 }
 </style>

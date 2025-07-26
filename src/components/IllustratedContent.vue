@@ -19,7 +19,7 @@
       :style="{order: side === 'ltr' || smAndDown ? 0 : 1 }"
       cols="11"
       sm="10"
-      md="5"
+      md="6"
       class="image-column"
     >
       <div
@@ -53,7 +53,7 @@
 .description-column {
   display: flex;
   flex-direction: column;
-  row-gap: 30px;
+  row-gap: 15px;
   justify-content: center;
   padding-top: 30px;
 

@@ -54,7 +54,7 @@
     },
   ]
 
-  const drawer = ref(false)
+  const drawer = ref(false);
 
 </script>
 
@@ -144,6 +144,7 @@
   right: 0;
   margin-left: auto;
   margin-right: auto;
+  background-color: rgb(var(--v-theme-background)) !important;
 
   :deep(.v-toolbar__content) {
     overflow: initial;
@@ -199,7 +200,7 @@
 
 .drawer-prepend {
   background-color: rgb(var(--v-theme-primary));
-  color: white;
+  color: rgb(var(--v-theme-primaryContrast));
 }
 
 </style>

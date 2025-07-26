@@ -105,8 +105,8 @@
 }
 
 .treatment-item {
-  font-family: Playfair Display, serif;
-  color: white;
+  font-family: var(--v-secondary-font);
+  color: rgb(var(--v-theme-primaryContrast));
   display: flex;
   flex-direction: column;
   margin-block: 40px;
@@ -116,17 +116,28 @@
 }
 
 .treatment-name {
-  font-size: 28px;
+  font-size: 23px;
+  font-family: var(--v-primary-font);
+
+  @media only screen and (width >= 600px) {
+    font-size: 32px;
+  }
 }
 
 .treatment-price {
-  font-size: 22px;
+  font-size: 24px;
+  font-weight: 400;
+  font-family: var(--v-secondary-font);
+
+  @media only screen and (width >= 600px) {
+    font-size: 30px;
+  }
 }
 
 .separator {
   width: 30%;
   height: 2px;
-  background: white;
+  background: rgb(var(--v-theme-primaryContrast));
 
   @media only screen and (width >= 960px) {
     width: 1px;
@@ -135,6 +146,6 @@
 }
 
 .treatment-link {
-  color: white;
+  color: rgb(var(--v-theme-primaryContrast));
 }
 </style>

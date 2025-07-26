@@ -19,14 +19,21 @@ const lightTheme: ThemeDefinition = {
     primary: '#6b5336',
     primaryLight: '#886944',
     highlight: '#BE753A',
-
+    primaryContrast: '#fff'
   },
+  variables: {
+    'primary-font': 'Playfair Display, serif',
+    'secondary-font': '"Rubik", sans-serif',
+    'title-font': '"Outfit", sans-serif',
+    'space-vertical--sm': '50px',
+    'space-vertical--md': '100px'
+  }
 }
 
 // https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides
 export default createVuetify({
   theme: {
-    defaultTheme: 'dark',
+    defaultTheme: 'lightTheme',
     themes: {
       lightTheme,
     }

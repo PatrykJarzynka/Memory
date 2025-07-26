@@ -1,5 +1,5 @@
 <template>
-  <v-container class="main-container align-center pb-10">
+  <v-container class="main-container family-section">
     <div class="start-container">
       <Hero/>
 
@@ -31,7 +31,7 @@
 
   </div>
 
-  <v-container class="main-container">
+  <v-container class="main-container pt-0">
 
     <IconDivider/>
 
@@ -54,13 +54,13 @@
 
     <IconDivider/>
 
-    <v-row no-gutters class="pb-16 justify-center">
+    <v-row no-gutters class="pb-10 justify-center">
       <v-col cols="12" md="6" :class="['d-flex align-center', smAndDown ? 'justify-center' : '']">
         <h2 class="section-title--left">Rokowania</h2>
       </v-col>
 
       <v-col cols="10" md="6" class="d-flex align-center">
-        <h3 :class="['section-sub_title--left ', smAndDown ? 'text-center' : 'text-left']">Posiadając gen PSEN1 mamy pewność wystąpienia choroby Alzheimera.</h3>
+        <h3 :class="['section-sub_title--primary ', smAndDown ? 'text-center' : 'text-left']">Posiadając gen PSEN1 mamy pewność wystąpienia choroby Alzheimera.</h3>
       </v-col>
     </v-row>
 
@@ -73,7 +73,7 @@
 
   <Treatment/>
 
-  <v-container class="main-container pb-16">
+  <v-container class="main-container lower-container pt-0">
     <IconDivider/>
 
     <h2 class="section-title">Gdzie o nas mówiono</h2>
@@ -101,13 +101,12 @@
 <script lang="ts" setup>
 
   import { useDisplay } from "vuetify/framework"
-  import Friends from "@/components/core/Friends.vue"
+  import Friends from "@/components/Friends.vue"
   import FamilyIllustrated from "@/components/FamilyIllustrated.vue"
   import GoalTracker from "@/components/GoalTracker.vue"
   import IconDivider from "@/components/IconDivider.vue"
   import IllustratedContent from "@/components/IllustratedContent.vue"
   import MediaList from "@/components/MediaList.vue"
-
   import Possibilities from "@/components/Possibilities.vue"
   import SupportList from "@/components/SupportList.vue"
   import Treatment from "@/components/Treatment.vue"
@@ -131,11 +130,36 @@
   }
 }
 
+.family-section {
+
+  padding-bottom: 40px;
+
+  @media only screen and (width >= 1280px) {
+    align-items: center;
+  }
+}
+
+.start-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  row-gap: var(--v-space-vertical--sm);
+  align-items: center;
+
+  @media only screen and (width >= 600px) {
+    row-gap: var(--v-space-vertical--md);
+  }
+}
+
 .section-title {
   color: rgb(var(--v-theme-primary));
-  font-size: 30px;
+  font-size: 40px;
+  line-height: 1;
+  margin-top: -5px; // This is done due to the height of the font, to match spaces between sections
   text-align: center;
   padding-bottom: 40px;
+  font-weight: 500;
+  font-family: var(--v-title-font);
 
   @media only screen and (width >= 600px) {
     font-size: 35px;
@@ -158,11 +182,11 @@
 
 .description-section-title {
   @extend .section-title;
-
+  padding-bottom: 10px;
   font-size: 21px;
 
   @media only screen and (width >= 600px) {
-    font-size: 26px;
+    font-size: 35px;
   }
 
   @media only screen and (width >= 960px) {
@@ -170,13 +194,14 @@
   }
 
   @media only screen and (width >= 1280px) {
-    font-size: 38px;
+    padding-bottom: 20px;
+    font-size: 45px;
   }
 }
 
 .section-sub_title {
-  color: white;
-  font-size:20px;
+  color: rgb(var(--v-theme-primaryContrast));
+  font-size:18px;
   text-align: center;
   margin-block: 10px;
 
@@ -190,6 +215,11 @@
 
   @media only screen and (width >= 1280px) {
     font-size: 25px;
+  }
+
+  &--primary {
+    @extend .section-sub_title;
+    color: rgb(var(--v-theme-primaryLight));
   }
 }
 
@@ -211,16 +241,8 @@
   }
 }
 
-.start-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  row-gap: 130px;
-  align-items: center;
-}
-
 .family-history-container {
-  padding-block: 20px;
+  padding-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -235,6 +257,10 @@
   @media only screen and (width >= 1280px) {
     width: 60%;
   }
+}
+
+.lower-container {
+  padding-bottom: var(--v-space-vertical--sm);
 }
 
 </style>

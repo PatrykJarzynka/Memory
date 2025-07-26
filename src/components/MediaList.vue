@@ -113,6 +113,7 @@
   font-weight: 400;
   color: rgba(var(--v-theme-primary));
 
+
   @media only screen and (width >= 600px) {
     font-size: 25px;
   }
@@ -128,7 +129,7 @@
 
 .media-button {
   background-color: rgb(var(--v-theme-primaryLight));
-  color: white;
+  color: rgb(var(--v-theme-primaryContrast));
   font-size: 13px;
   width: 100%;
 

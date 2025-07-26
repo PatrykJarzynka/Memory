@@ -108,6 +108,7 @@
   grid-template-columns: repeat(v-bind(numberOfColumns), 1fr);
   background-color: transparent;
   column-gap: 130px;
+  padding-bottom: 0;
 }
 
 .support-item-title-container {
@@ -126,7 +127,7 @@
 }
 
 .support-item-button {
-  color: white;
+  color: rgb(var(--v-theme-primaryContrast));
   background-color: rgb(var(--v-theme-primaryLight));
 }
 

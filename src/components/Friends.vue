@@ -97,7 +97,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color:white;
+  color: rgb(var(--v-theme-primaryContrast));
   font-size: 16px;
   text-align: left;
 

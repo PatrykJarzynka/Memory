@@ -76,10 +76,11 @@
 }
 
 .goal-text {
-  color: white;
+  color: rgb(var(--v-theme-primaryContrast));
   font-size: 18px;
   width: 60%;
-  font-weight: 500;
+  font-weight: 400;
+  font-family: var(--v-secondary-font);
 
   @media only screen and (width >= 600px) {
     font-size: 20px;
@@ -97,6 +98,8 @@
 .goal-number {
   color: rgb(var(--v-theme-highlight));
   font-size: 28px;
+  font-weight: 500;
+  font-family: var(--v-secondary-font);
 
   @media only screen and (width >= 600px) {
     font-size: 35px;

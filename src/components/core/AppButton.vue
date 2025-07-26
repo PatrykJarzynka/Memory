@@ -49,7 +49,7 @@
 
   &--flat {
     @extend .app-button;
-    color: white;
+    color: rgb(var(--v-theme-primaryContrast));
   }
 
   @media only screen and (width >= 600px) {

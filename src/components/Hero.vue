@@ -80,7 +80,7 @@
 }
 
 .hero-title {
-  color: white;
+  color: rgb(var(--v-theme-primaryContrast));
   font-size: 30px;
   font-weight: 100;
   line-height: 1.2em;
@@ -100,7 +100,7 @@
 }
 
 .hero-description {
-  color: white;
+  color: rgb(var(--v-theme-primaryContrast));;
   font-size: 14px;
   font-family: Rubik, "sans-serif";
 
@@ -130,27 +130,6 @@
 
   @media only screen and (width >= 960px) {
     justify-content: initial;
-  }
-}
-
-.hero-button {
-  text-transform: none;
-  color: rgb(var(--v-theme-primary));
-  font-weight: 500;
-  font-family: Rubik, "sans-serif";
-  font-size: 12px;
-
-  &--flat {
-    @extend .hero-button;
-    color: white;
-  }
-
-  @media only screen and (width >= 600px) {
-    font-size: 14px;
-  }
-
-  @media only screen and (width >= 1280px) {
-    font-size: initial;
   }
 }
 

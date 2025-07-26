@@ -19,7 +19,11 @@
   display: flex;
   align-items: center;
   width: 100%;
-  padding-block: 100px;
+  padding-block: var(--v-space-vertical--sm);
+
+  @media only screen and (width >= 600px) {
+    padding-block: var(--v-space-vertical--md);
+  }
 }
 
 .divider-icon {

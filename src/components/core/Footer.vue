@@ -54,7 +54,7 @@
 
 .footer-container {
   flex-direction: column;
-  padding-block: 50px;
+  padding-block: var(--v-space-vertical--sm);
   justify-content: center;
   row-gap: 50px;
   background-color: rgb(var(--v-theme-primary));
@@ -68,16 +68,17 @@
 .footer-main-label {
   font-size: 20px;
   text-align: center;
-  color: white;
+  color: rgb(var(--v-theme-primaryContrast));
+  font-family: var(--v-primary-font);
 
   @media only screen and (width >= 1920px) {
-    font-size: 27px;
+    font-size: 35px;
   }
 }
 
 .footer-text {
   text-align: center;
-  color: white;
+  color: rgb(var(--v-theme-primaryContrast));
 
   @media only screen and (width >= 1920px) {
     font-size: 20px;
@@ -89,7 +90,7 @@
   justify-content: center;
   column-gap: 20px;
   background-color: transparent;
-  color: white;
+  color: rgb(var(--v-theme-primaryContrast));
   font-weight: 500;
 
   @media only screen and (width >= 1920px) {
@@ -120,7 +121,7 @@
 }
 
 .contact-email {
-  color: white;
+  color: rgb(var(--v-theme-primaryContrast));
   font-size: 15px;
   font-weight: 500;
   text-decoration: none;

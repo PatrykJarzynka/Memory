@@ -23,6 +23,7 @@
       name: "Jarosław Szlachta",
       association: "SuperHumans",
       description: "Twórca systemu walki S.A.R.24. Wspiera naszą inicjatywę na wielu poziomach.",
+      iconUrl: './src/assets/SuperHumans.svg',
     },
   ]
 </script>
@@ -47,17 +48,26 @@
       >
         <v-card-title class="friend-card-title-container">
           <div class="image-placeholder">
-            <v-icon icon="mdi-account-circle" class="image-icon"/>
+            <v-img
+              style="border-radius: 8px; height: 100%"
+              cover
+              v-if="friend.iconUrl"
+              :src="friend.iconUrl"
+            />
+
+            <v-icon
+              v-else
+              icon="mdi-account-circle"
+              class="image-icon"/>
           </div>
 
           <div class="friend-card-title">
             <p>{{ friend.name }}</p>
 
             <p
-              v-if="friend.association"
               class="association"
             >
-              {{ friend.association }}
+              {{ friend.association ?? '' }}
             </p>
           </div>
 
@@ -95,6 +105,7 @@
   background-color: rgb(var(--v-theme-primary));
   box-shadow: rgba(207, 231, 255, 0.2) 0px 2px 1px 0px inset, rgba(207, 231, 255, 0.1) 0px -1px 1px 0px inset;
   border-radius: 16px;
+  align-items: center;
 }
 
 .friend-card-title {
@@ -120,11 +131,10 @@
   background-color: rgb(var(--v-theme-highlight));
   border-radius: 8px;
   box-shadow: rgba(207, 231, 255, 0.2) 0px 1px 1px 0px inset;
-  padding:4px;
+
 
   @media only screen and (width >= 600px) {
-    width: 50px;
-    height: 50px;
+
   }
 }
 

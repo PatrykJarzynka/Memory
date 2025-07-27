@@ -9,7 +9,6 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     AppButton: typeof import('./components/core/AppButton.vue')['default']
-    Button: typeof import('./components/core/Button.vue')['default']
     FamilyIllustrated: typeof import('./components/FamilyIllustrated.vue')['default']
     FamilyMemberItem: typeof import('./components/FamilyMemberItem.vue')['default']
     FamilyMembersList: typeof import('./components/FamilyMembersList.vue')['default']

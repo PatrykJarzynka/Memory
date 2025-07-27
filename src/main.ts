@@ -6,6 +6,7 @@
 
 // Plugins
 import { registerPlugins } from '@/plugins'
+import {createI18n} from 'vue-i18n'
 
 // Components
 import App from './App.vue'
@@ -17,8 +18,25 @@ import { createApp } from 'vue'
 import 'unfonts.css'
 import '@/styles/animations.scss'
 
-const app = createApp(App)
+import pl from '@/locales/pl'
+import en from '@/locales/en'
 
-registerPlugins(app)
 
+const messages = {
+  pl,
+  en,
+}
+
+const i18n = createI18n({
+  allowComposition: true,
+  locale: 'pl',
+  fallbackLocale: 'en',
+  messages,
+})
+
+const app = createApp(App);
+
+registerPlugins(app);
+
+app.use(i18n)
 app.mount('#app')

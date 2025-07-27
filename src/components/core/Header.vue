@@ -1,8 +1,14 @@
 <script setup lang="ts">
 
-  import { useDisplay } from "vuetify/framework"
+import {useDisplay} from "vuetify/framework"
+import type {Language} from "@/interfaces/Language.ts";
+import {LanguageType} from "@/enums/LanguageType.ts";
 
-  const { xs } = useDisplay()
+const { xs } = useDisplay();
+const router = useRouter()
+const currentRoute = useRoute()
+import {useI18n} from "vue-i18n";
+const { locale } = useI18n();
 
   interface HeaderItem {
     title: string;
@@ -54,7 +60,39 @@
     },
   ]
 
+  const supportedLanguages: Language[] = [
+    {
+      type: LanguageType.PL,
+      flagSvg: '/src/assets/polish-flag.svg',
+      locale: 'pl',
+    },
+    {
+      type: LanguageType.EN,
+      flagSvg: '/src/assets/english-flag.svg',
+      locale: 'en',
+    },
+  ]
+
+  const selectedLanguage = computed(() => supportedLanguages.find((language) => language.locale === locale.value))
   const drawer = ref(false);
+
+  watch(() => currentRoute.path, (newPath) => {
+    locale.value = newPath.startsWith('/en') ? 'en' : 'pl'
+  }, { immediate: true })
+
+  function onLanguageClick(languageType: LanguageType): void {
+    const newLanguage = supportedLanguages.find(lang => lang.type === languageType)
+
+    if (newLanguage === selectedLanguage.value) {
+      return
+    }
+
+    if (newLanguage?.type !== LanguageType.PL) {
+      router.push(`/${newLanguage?.locale}`)
+    } else {
+      router.push('/')
+    }
+  }
 
 </script>
 
@@ -62,7 +100,7 @@
   <v-app-bar
     color="transparent"
     flat
-    class="header"
+    class="header px-5"
   >
     <v-container class="header-container">
       <v-row
@@ -93,6 +131,40 @@
         </v-col>
       </v-row>
     </v-container>
+
+    <v-menu>
+      <template #activator="{props}">
+          <v-btn
+            v-bind="props"
+            class="language-button"
+          >
+            <v-img
+              class="w-100"
+              :src="selectedLanguage.flagSvg"
+            />
+
+            <v-icon icon="mdi-menu-down"/>
+          </v-btn>
+      </template>
+
+      <v-list>
+        <v-list-item
+          v-for="language in supportedLanguages"
+          :key="language.type"
+          class="pa-0"
+        >
+          <v-btn
+            class="language-button"
+            @click="onLanguageClick(language.type)"
+          >
+            <v-img
+              class="w-100"
+              :src="language.flagSvg"
+            />
+          </v-btn>
+        </v-list-item>
+      </v-list>
+    </v-menu>
   </v-app-bar>
 
   <v-navigation-drawer
@@ -205,6 +277,19 @@
   background-color: rgb(var(--v-theme-primary));
   color: rgb(var(--v-theme-primaryContrast));
   height: 64px;
+}
+
+.language-selector {
+  display: flex;
+  align-items: center;
+  width: 60px;
+}
+
+.language-button {
+  display: flex;
+  :deep(.v-btn__content) {
+    width: 100%;
+  }
 }
 
 </style>

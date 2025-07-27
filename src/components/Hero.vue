@@ -1,6 +1,8 @@
 <script setup lang="ts">
   import AppButton from "@/components/core/AppButton.vue"
+  import {useI18n} from "vue-i18n";
 
+  const {t} = useI18n()
 </script>
 
 <template>
@@ -16,20 +18,20 @@
         class="hero-lead-column reveal-slide-up"
       >
         <div class="lead-column-text">
-          <h1 class="hero-title">Zanim dogoni nas czas - działamy</h1>
+          <h1 class="hero-title">{{ t('hero.title')}}</h1>
 
-          <p class="hero-description">W naszej rodzinie Alzheimer zaczyna się w wieku 30–40 lat. Wiemy, że nie mamy czasu – ale mamy nadzieję.</p>
+          <p class="hero-description">{{ t('hero.description')}}</p>
         </div>
 
         <div class="hero-action-buttons">
           <AppButton
             type="normal"
-            text="Wesprzyj"
+            :text="t('hero.supportButton')"
           />
 
           <AppButton
             type="flat"
-            text="Poznaj historie"
+            :text="t('hero.exploreButton')"
             icon="mdi-arrow-right-thin"
           />
         </div>

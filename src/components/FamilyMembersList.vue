@@ -8,31 +8,31 @@
       name: "Kacper Libera",
       description: "Brat",
       psen: true,
-      imageUrl: "/images/test-kacper.JPG",
+      imageUrl: "/images/kacper-profile.JPG",
     },
     {
       name: "Jagoda Libera",
       description: "Siostra",
       psen: true,
-      imageUrl: "/images/test-jagoda2.JPG",
+      imageUrl: "/images/jagoda-profile.JPG",
     },
     {
       name: "Monika Remplewska",
       description: "Ciocia",
       psen: true,
-      imageUrl: "/images/test-monika.JPG",
+      imageUrl: "/images/monika-profile.JPG",
     },
     {
       name: "Aleksandra Libera",
       description: "Siostra",
       psen: false,
-      imageUrl: "/images/test-ola.JPG",
+      imageUrl: "/images/ola-profile.JPG",
     },
     {
       name: "Gwidon Libera",
       description: "Tata",
       psen: false,
-      imageUrl: "/images/test-gwidon.JPG",
+      imageUrl: "/images/gwidon-profile.JPG",
     },
   ]
 </script>

@@ -3,10 +3,10 @@
 </script>
 
 <template>
-  <div class="family-container-2">
+  <div class="family-container">
     <v-row
       no-gutters
-      class="family-container"
+      class="family-container-row"
     >
       <v-col
         cols="12"
@@ -15,9 +15,9 @@
         class="d-flex justify-center reveal"
       >
         <div class="images-container">
-          <v-img cover class="family-image big-image" src="/images/kacper2.JPG"/>
-          <v-img aspect-ratio="1" cover class="family-image" src="/images/kacper2.JPG"/>
-          <v-img aspect-ratio="1" cover class="family-image" src="/images/kacper2.JPG"/>
+          <v-img cover class="family-image big-image" src="/images/family-members-2.PNG"/>
+          <v-img aspect-ratio="1" cover class="family-image" src="/images/monika-member.jfif"/>
+          <v-img aspect-ratio="1" cover class="family-image" src="/images/family-members-3.jfif"/>
         </div>
       </v-col>
 
@@ -35,7 +35,7 @@
 
 <style scoped lang="scss">
 
-.family-container {
+.family-container-row {
   justify-content: center;
   row-gap: var(--v-gap-elements-outside--xs);
 
@@ -44,8 +44,8 @@
   }
 }
 
-.family-container-2 {
-  width: 100%;
+.family-container {
+  width: 85%;
 }
 
 .images-container {

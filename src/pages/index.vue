@@ -10,8 +10,8 @@
 
     <div class="d-flex flex-column align-center">
       <h2 class="section-title reveal-slide-up">Historia choroby w naszej rodzinie</h2>
-      <FamilyIllustrated/>
 
+      <FamilyIllustrated/>
     </div>
   </v-container>
 
@@ -144,7 +144,6 @@
   padding-bottom: var(--v-gap-elements-outside--xs);
 
   @media only screen and (width >= 1280px) {
-    align-items: center;
     padding-bottom: var(--v-gap-elements-outside--sm);
   }
 }
@@ -222,10 +221,6 @@
 
   @media only screen and (width >= 600px) {
     font-size: 21px;
-  }
-
-  @media only screen and (width >= 960px) {
-    font-size: 23px;
   }
 
   @media only screen and (width >= 1280px) {

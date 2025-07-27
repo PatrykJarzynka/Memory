@@ -4,7 +4,7 @@
 </script>
 
 <template>
-  <div class="goal-container">
+  <div class="goal-container reveal">
     <div class="goal-content">
       <p class="goal-text">Udało nam się zebrać już: <br> <span class="goal-number">3%</span> celu!</p>
 

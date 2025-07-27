@@ -44,6 +44,7 @@
 
 <template>
   <v-timeline
+    class="reveal-slide-up"
     line-color="black"
     :direction="smAndDown ? 'vertical' : 'horizontal'"
   >

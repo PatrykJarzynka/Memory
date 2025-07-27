@@ -1,5 +1,6 @@
 <script setup lang="ts">
   import AppButton from "@/components/core/AppButton.vue"
+
 </script>
 
 <template>
@@ -8,7 +9,12 @@
       no-gutters
       class="hero-content"
     >
-      <v-col cols="12" sm="9" md="5" class="hero-lead-column">
+      <v-col
+        cols="12"
+        sm="9"
+        md="5"
+        class="hero-lead-column reveal-slide-up"
+      >
         <div class="lead-column-text">
           <h1 class="hero-title">Zanim dogoni nas czas - działamy</h1>
 
@@ -29,7 +35,12 @@
         </div>
       </v-col>
 
-      <v-col cols="12" sm="9" md="5">
+      <v-col
+        cols="12"
+        sm="9"
+        md="5"
+        class="reveal"
+      >
         <v-img src="/images/hero-img.jfif" class="hero-image" cover/>
       </v-col>
     </v-row>
@@ -55,6 +66,7 @@
     flex-direction: initial;
   }
 }
+
 
 .hero-lead-column {
   display: flex;

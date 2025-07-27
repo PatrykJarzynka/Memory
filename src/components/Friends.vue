@@ -35,7 +35,7 @@
     <v-col
       v-for="friend in friends"
       :key="friend.id"
-      class="pa-3"
+      class="pa-3 reveal-zoom-in"
       cols="12"
       sm="6"
       lg="4"

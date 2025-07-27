@@ -24,7 +24,7 @@
     >
       <div
         :class="smAndDown ? 'w-100' : 'w-75'"
-        class="img-wrapper"
+        class="img-wrapper reveal-slide-left"
       >
         <v-img
           class="image"

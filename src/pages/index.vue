@@ -9,7 +9,7 @@
     <IconDivider/>
 
     <div class="d-flex flex-column align-center">
-      <h2 class="section-title">Historia choroby w naszej rodzinie</h2>
+      <h2 class="section-title reveal-slide-up">Historia choroby w naszej rodzinie</h2>
       <FamilyIllustrated/>
 
     </div>
@@ -17,16 +17,16 @@
 
   <div class="family-history-container">
     <v-container class="main-container family-inside-container">
-      <h3 class="section-sub_title">
+      <h3 class="section-sub_title reveal-slide-up">
         Choroba Alzheimera o wczesnym początku od lat niszczy naszą rodzinę:
       </h3>
 
       <div class="family-history-content">
-        <v-img
-          class="family-tree-image"
-          src="/images/Family-structure.png"
-        />
-
+        <div class="family-tree-image reveal">
+          <v-img
+            src="/images/Family-structure.png"
+          />
+        </div>
         <FamilyTimeline/>
       </div>
 
@@ -43,9 +43,9 @@
       side="ltr"
     >
       <template #description-content>
-        <h2 class="description-section-title">Alzheimer o wczesnym początku</h2>
+        <h2 class="description-section-title reveal-slide-up">Alzheimer o wczesnym początku</h2>
 
-        <p class="description-text">Choroba Alzheimera o wczesnym początku może być dziedziczona w rodzinie, jeśli występuje
+        <p class="description-text reveal-slide-up">Choroba Alzheimera o wczesnym początku może być dziedziczona w rodzinie, jeśli występuje
           mutacja w genie PSEN1. Wystarczy ją odziedziczyć po jednym z rodziców, by choroba się rozwinęła.
           Mutacje w genach powodują nadmiar szkodliwego białka – amyloidu beta.
           Gromadzi się ono w mózgu i prowadzi do obumierania komórek nerwowych.
@@ -59,11 +59,11 @@
 
     <v-row no-gutters class="justify-center">
       <v-col cols="12" md="6" :class="['d-flex align-center', smAndDown ? 'justify-center' : '']">
-        <h2 class="section-title--left">Rokowania</h2>
+        <h2 class="section-title--left reveal-slide-up">Rokowania</h2>
       </v-col>
 
       <v-col cols="10" md="6" class="d-flex align-center">
-        <h3 :class="['section-sub_title--primary ', smAndDown ? 'text-center' : 'text-left']">Posiadając gen PSEN1 mamy pewność wystąpienia choroby Alzheimera.</h3>
+        <h3 :class="['section-sub_title--primary', 'reveal-slide-up', smAndDown ? 'text-center' : 'text-left']">Posiadając gen PSEN1 mamy pewność wystąpienia choroby Alzheimera.</h3>
       </v-col>
     </v-row>
 
@@ -71,7 +71,7 @@
 
     <IconDivider/>
 
-    <h2 class="section-title">Dostępne leki</h2>
+    <h2 class="section-title reveal-slide-up">Dostępne leki</h2>
   </v-container>
 
   <Treatment/>
@@ -79,19 +79,19 @@
   <v-container class="main-container lower-container pt-0">
     <IconDivider/>
 
-    <h2 class="section-title">Gdzie o nas mówiono</h2>
+    <h2 class="section-title reveal-slide-up">Gdzie o nas mówiono</h2>
 
     <MediaList/>
 
     <IconDivider/>
 
-    <h2 class="section-title">Czego obecnie nam trzeba</h2>
+    <h2 class="section-title reveal-slide-up">Czego obecnie nam trzeba</h2>
 
     <SupportList/>
 
     <IconDivider/>
 
-    <h2 class="section-title">Nasi przyjaciele</h2>
+    <h2 class="section-title reveal-slide-up">Nasi przyjaciele</h2>
 
     <Friends/>
 
@@ -113,8 +113,14 @@
   import Possibilities from "@/components/Possibilities.vue"
   import SupportList from "@/components/SupportList.vue"
   import Treatment from "@/components/Treatment.vue"
+  import {useScrollReveal} from "@/composables/useScrollReveal.ts";
 
-  const { smAndDown } = useDisplay()
+  const { smAndDown } = useDisplay();
+  useScrollReveal('.reveal');
+  useScrollReveal('.reveal-slide-up');
+  useScrollReveal('.reveal-slide-right');
+  useScrollReveal('.reveal-slide-left');
+  useScrollReveal('.reveal-zoom-in');
 
 </script>
 

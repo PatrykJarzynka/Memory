@@ -6,7 +6,7 @@
   <v-footer class="footer-container">
     <v-row
       no-gutters
-      class="ga-5 justify-center"
+      class="ga-5 justify-center reveal"
     >
       <v-col
         cols="12"
@@ -25,7 +25,7 @@
           <a
             href="tel:+48501525624"
             class="contact-number"
-          >+48501525624</a>
+          >+48 501 525 624</a>
         </div>
 
         <div class="contact-person">
@@ -33,7 +33,7 @@
           <a
             href="tel:+48507602660"
             class="contact-number"
-          >+48507602660</a>
+          >+48 507 602 660</a>
         </div>
 
       </v-col>

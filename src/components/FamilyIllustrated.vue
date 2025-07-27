@@ -12,7 +12,7 @@
         cols="12"
         sm="9"
         md="6"
-        class="d-flex justify-center"
+        class="d-flex justify-center reveal"
       >
         <div class="images-container">
           <v-img cover class="family-image big-image" src="/images/kacper2.JPG"/>
@@ -22,7 +22,7 @@
       </v-col>
 
       <v-col
-        class="d-flex justify-center"
+        class="d-flex justify-center reveal-slide-right"
         cols="12"
         md="6"
       >

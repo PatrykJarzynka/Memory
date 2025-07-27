@@ -31,7 +31,7 @@
 </script>
 
 <template>
-  <div class="treatment-container">
+  <div class="treatment-container reveal-slide-up">
     <div class="treatment-list-container">
       <div
         v-for="(item, index) in treatmentItems"

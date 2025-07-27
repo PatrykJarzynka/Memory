@@ -31,7 +31,7 @@
 </script>
 
 <template>
-  <div class="possibilities-container">
+  <div class="possibilities-container reveal-slide-up">
     <p class="title">Co możemy zrobić</p>
 
     <ul class="possibilities-list">

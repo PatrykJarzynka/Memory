@@ -70,7 +70,7 @@
       v-for="item in supportItems"
       :key="item.id"
     >
-      <v-list-item class="py-0">
+      <v-list-item class="py-0 reveal-slide-up">
         <v-list-item-title class="support-item-title-container">
           <div class="support-item-title-label">
             <v-icon
@@ -109,6 +109,7 @@
   background-color: transparent;
   padding:0;
   row-gap: var(--v-gap-elements-inside--xs);
+  overflow: hidden;
 
   @media only screen and (width >= 960px) {
     column-gap: 30px;

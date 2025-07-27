@@ -38,7 +38,7 @@
 </script>
 
 <template>
-  <div class="media-container">
+  <div class="media-container reveal-slide-up">
     <div
       v-for="item in mediaItems"
       :key="item.id"

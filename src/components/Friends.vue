@@ -28,10 +28,14 @@
 </script>
 
 <template>
-  <v-row class="justify-center">
+  <v-row
+    no-gutters
+    class="justify-center"
+  >
     <v-col
       v-for="friend in friends"
       :key="friend.id"
+      class="pa-3"
       cols="12"
       sm="6"
       lg="4"

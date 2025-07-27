@@ -75,18 +75,18 @@
   margin-inline: auto;
   align-items: center;
   border-inline: 2px solid rgb(var(--v-theme-primary));
-  padding: 30px 20px;
+  padding: var(--v-gap-elements-outside--xs) 20px;
 
   @media only screen and (width >= 600px) {
-    padding: 60px;
+    padding: var(--v-gap-elements-outside--sm);
   }
 
   @media only screen and (width >= 960px) {
-    padding: 60px 80px;
+    padding: var(--v-gap-elements-outside--sm) 80px;
   }
 
   @media only screen and (width >= 1280px) {
-    padding: 60px 150px;
+    padding: var(--v-gap-elements-outside--sm) 150px;
   }
 }
 
@@ -123,7 +123,7 @@
   }
 
   @media only screen and (width >= 1280px) {
-    font-size: 60px;
+    font-size: 52px;
   }
 }
 

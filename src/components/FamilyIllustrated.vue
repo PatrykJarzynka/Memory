@@ -10,7 +10,7 @@
     >
       <v-col
         cols="12"
-        sm="10"
+        sm="9"
         md="6"
         class="d-flex justify-center"
       >
@@ -37,8 +37,11 @@
 
 .family-container {
   justify-content: center;
-  row-gap: 30px;
+  row-gap: var(--v-gap-elements-outside--xs);
 
+  @media only screen and (width >= 1280px) {
+    row-gap: var(--v-gap-elements-outside--sm);
+  }
 }
 
 .family-container-2 {

@@ -70,7 +70,7 @@
       v-for="item in supportItems"
       :key="item.id"
     >
-      <v-list-item>
+      <v-list-item class="py-0">
         <v-list-item-title class="support-item-title-container">
           <div class="support-item-title-label">
             <v-icon
@@ -107,8 +107,12 @@
   display: grid;
   grid-template-columns: repeat(v-bind(numberOfColumns), 1fr);
   background-color: transparent;
-  column-gap: 130px;
-  padding-bottom: 0;
+  padding:0;
+  row-gap: var(--v-gap-elements-inside--xs);
+
+  @media only screen and (width >= 960px) {
+    column-gap: 30px;
+  }
 }
 
 .support-item-title-container {

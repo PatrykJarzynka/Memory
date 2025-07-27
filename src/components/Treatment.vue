@@ -74,8 +74,12 @@
   align-items: center;
   justify-content: center;
   background-color: rgba(var(--v-theme-primary));
-  padding-block: 30px;
+  padding-block: var(--v-gap-elements-outside--xs);
   text-align: center;
+
+  @media only screen and (width >= 1280px) {
+    padding-block: var(--v-gap-elements-outside--sm);
+  }
 }
 
 .treatment-list-container {
@@ -83,11 +87,16 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding-bottom: var(--v-gap-elements-outside--xs);
 
   @media only screen and (width >= 960px) {
     flex-direction: row;
     align-items: stretch;
     padding-block: 60px;
+  }
+
+  @media only screen and (width >= 1280px) {
+    padding-bottom: var(--v-gap-elements-outside--sm);
   }
 }
 
@@ -109,10 +118,13 @@
   color: rgb(var(--v-theme-primaryContrast));
   display: flex;
   flex-direction: column;
-  margin-block: 40px;
   text-align: center;
-  row-gap: 30px;
+  row-gap: var(--v-gap-elements-inside--xs);
   padding-inline: 25px;
+
+  @media only screen and (width >= 1280px) {
+    padding-inline: 40px;
+  }
 }
 
 .treatment-name {
@@ -120,7 +132,11 @@
   font-family: var(--v-primary-font);
 
   @media only screen and (width >= 600px) {
-    font-size: 32px;
+    font-size: 24px;
+  }
+
+  @media only screen and (width >= 1280px) {
+    font-size: 28px;
   }
 }
 
@@ -130,6 +146,10 @@
   font-family: var(--v-secondary-font);
 
   @media only screen and (width >= 600px) {
+    font-size: 25px;
+  }
+
+  @media only screen and (width >= 1280px) {
     font-size: 30px;
   }
 }
@@ -138,10 +158,15 @@
   width: 30%;
   height: 2px;
   background: rgb(var(--v-theme-primaryContrast));
+  margin-block: var(--v-gap-elements-outside--xs);
 
   @media only screen and (width >= 960px) {
     width: 1px;
     height: 100%;
+  }
+
+  @media only screen and (width >= 1280px) {
+    margin-block: var(--v-gap-elements-outside--sm);
   }
 }
 

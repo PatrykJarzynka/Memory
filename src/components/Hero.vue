@@ -42,8 +42,7 @@
   background-color: rgb(var(--v-theme-primary));
   width: 100%;
   border-radius: 24px;
-  padding: 50px 20px;
-  margin-top: 20px;
+  padding: var(--v-space-section--xs) 20px;
 }
 
 .hero-content {

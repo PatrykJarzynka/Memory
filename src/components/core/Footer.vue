@@ -6,11 +6,11 @@
   <v-footer class="footer-container">
     <v-row
       no-gutters
-      class="ga-7 justify-center"
+      class="ga-5 justify-center"
     >
       <v-col
         cols="12"
-        class="footer-info-column ga-7"
+        class="footer-info-column"
       >
         <h2 class="footer-main-label">Jeżeli masz pomysł, lub wiesz jak nam pomóc odezwij się</h2>
         <p class="footer-text"> Ze względu na duże obciążenie emocjonalne prosimy o ograniczenie kontaktu z Jagodą i Kacprem w tym temacie</p>
@@ -54,10 +54,13 @@
 
 .footer-container {
   flex-direction: column;
-  padding-block: var(--v-space-vertical--sm);
+  padding-block: var(--v-gap-elements-outside--xs);
   justify-content: center;
-  row-gap: 50px;
   background-color: rgb(var(--v-theme-primary));
+
+  @media only screen and (width >= 1280px) {
+    padding-block: var(--v-gap-elements-outside--sm);
+  }
 }
 
 .footer-info-column {
@@ -70,6 +73,16 @@
   text-align: center;
   color: rgb(var(--v-theme-primaryContrast));
   font-family: var(--v-primary-font);
+  padding-bottom: var(--v-gap-elements-outside--xs);
+
+  @media only screen and (width >= 600px) {
+    font-size: 22px;
+  }
+
+  @media only screen and (width >= 1280px) {
+    font-size: 27px;
+    padding-bottom: var(--v-gap-elements-outside--sm);
+  }
 
   @media only screen and (width >= 1920px) {
     font-size: 35px;
@@ -79,6 +92,14 @@
 .footer-text {
   text-align: center;
   color: rgb(var(--v-theme-primaryContrast));
+
+  @media only screen and (width >= 600px) {
+    font-size: 17px;
+  }
+
+  @media only screen and (width >= 1280px) {
+    font-size: 19px;
+  }
 
   @media only screen and (width >= 1920px) {
     font-size: 20px;
@@ -105,6 +126,10 @@
 .contact-name {
   font-size: 20px;
 
+  @media only screen and (width >= 1280px) {
+    font-size: 22px;
+  }
+
   @media only screen and (width >= 1920px) {
     font-size: 24px;
   }
@@ -114,6 +139,10 @@
   color: rgb(var(--v-theme-highlight));
   font-size: 17px;
   text-decoration: none;
+
+  @media only screen and (width >= 1280px) {
+    font-size: 19px;
+  }
 
   @media only screen and (width >= 1920px) {
     font-size: 20px;

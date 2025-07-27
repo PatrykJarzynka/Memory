@@ -53,10 +53,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px 50px;
+  padding: var(--v-gap-elements-outside--xs) 50px;
   gap: 30px;
   border-radius: 12px;
   background-color: rgb(var(--v-theme-primaryLight));
+
+  @media only screen and (width >= 1280px) {
+    padding: var(--v-gap-elements-outside--sm) 50px;
+  }
 }
 
 .title {

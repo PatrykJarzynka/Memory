@@ -66,6 +66,7 @@
   width: 100%;
   flex-direction: column;
   display: flex;
+  padding: 0;
 }
 
 </style>

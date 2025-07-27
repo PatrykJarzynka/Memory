@@ -25,8 +25,12 @@ const lightTheme: ThemeDefinition = {
     'primary-font': 'Playfair Display, serif',
     'secondary-font': '"Rubik", sans-serif',
     'title-font': '"Outfit", sans-serif',
-    'space-vertical--sm': '50px',
-    'space-vertical--md': '100px'
+    'space-section--xs': '50px',
+    'space-section--sm': '70px',
+    'space-section--md': '100px',
+    'gap-elements-outside--xs': '40px',
+    'gap-elements-outside--sm': '60px',
+    'gap-elements-inside--xs': '30px',
   }
 }
 

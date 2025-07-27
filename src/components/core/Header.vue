@@ -149,10 +149,6 @@
   :deep(.v-toolbar__content) {
     overflow: initial;
   }
-
-  @media only screen and (min-width: 1920px) {
-    max-width: 1500px;
-  }
 }
 
 .header-container {
@@ -160,6 +156,10 @@
   align-items: center;
   height: 100%;
   border-bottom: thin solid rgba(var(--v-border-color), var(--v-border-opacity));
+
+  @media only screen and (min-width: 1920px) {
+    max-width: 1500px;
+  }
 }
 
 .brand-icon {
@@ -183,6 +183,9 @@
 
 .drawer-container {
   background-color: rgb(var(--v-theme-background));
+  top: 0 !important;
+  height: 100% !important;
+  z-index: 1007 !important;
 }
 
 .drawer-title-item {
@@ -201,6 +204,7 @@
 .drawer-prepend {
   background-color: rgb(var(--v-theme-primary));
   color: rgb(var(--v-theme-primaryContrast));
+  height: 64px;
 }
 
 </style>

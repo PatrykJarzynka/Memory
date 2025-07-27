@@ -14,11 +14,11 @@
 </script>
 
 <template>
-  <v-row class="justify-center">
+  <v-row class="content-container">
     <v-col
       :style="{order: side === 'ltr' || smAndDown ? 0 : 1 }"
       cols="11"
-      sm="10"
+      sm="9"
       md="6"
       class="image-column"
     >
@@ -44,25 +44,36 @@
 
 <style scoped lang="scss">
 
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @media only screen and (width >= 960px) {
+    flex-direction: row;
+  }
+}
+
 .image-column {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .description-column {
   display: flex;
   flex-direction: column;
-  row-gap: 15px;
   justify-content: center;
-  padding-top: 30px;
+  padding-top: var(--v-gap-elements-outside--xs);
 
   @media only screen and (width >= 960px){
     row-gap: 15px;
   }
 
   @media only screen and (width >= 1280px){
-    padding-top: initial;
+    padding-top: var(--v-gap-elements-outside--sm);
   }
 }
 

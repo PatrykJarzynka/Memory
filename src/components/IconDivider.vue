@@ -19,10 +19,14 @@
   display: flex;
   align-items: center;
   width: 100%;
-  padding-block: var(--v-space-vertical--sm);
+  padding-block: var(--v-space-section--xs);
 
   @media only screen and (width >= 600px) {
-    padding-block: var(--v-space-vertical--md);
+    padding-block: var(--v-space-section--sm);
+  }
+
+  @media only screen and (width >= 1280px) {
+    padding-block: var(--v-space-section--md);
   }
 }
 

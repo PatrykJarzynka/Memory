@@ -8,7 +8,7 @@
 
     <IconDivider/>
 
-    <div class="d-flex flex-column align-center ga-3">
+    <div class="d-flex flex-column align-center">
       <h2 class="section-title">Historia choroby w naszej rodzinie</h2>
       <FamilyIllustrated/>
 
@@ -16,22 +16,25 @@
   </v-container>
 
   <div class="family-history-container">
-    <v-container class="main-container align-center ga-5">
+    <v-container class="main-container family-inside-container">
       <h3 class="section-sub_title">
         Choroba Alzheimera o wczesnym początku od lat niszczy naszą rodzinę:
       </h3>
 
-      <v-img
-        class="family-tree-image"
-        src="/images/Family-structure.png"
-      />
+      <div class="family-history-content">
+        <v-img
+          class="family-tree-image"
+          src="/images/Family-structure.png"
+        />
 
-      <FamilyTimeline/>
+        <FamilyTimeline/>
+      </div>
+
     </v-container>
 
   </div>
 
-  <v-container class="main-container pt-0">
+  <v-container class="main-container py-0">
 
     <IconDivider/>
 
@@ -54,7 +57,7 @@
 
     <IconDivider/>
 
-    <v-row no-gutters class="pb-10 justify-center">
+    <v-row no-gutters class="justify-center">
       <v-col cols="12" md="6" :class="['d-flex align-center', smAndDown ? 'justify-center' : '']">
         <h2 class="section-title--left">Rokowania</h2>
       </v-col>
@@ -132,10 +135,11 @@
 
 .family-section {
 
-  padding-bottom: 40px;
+  padding-bottom: var(--v-gap-elements-outside--xs);
 
   @media only screen and (width >= 1280px) {
     align-items: center;
+    padding-bottom: var(--v-gap-elements-outside--sm);
   }
 }
 
@@ -143,11 +147,11 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  row-gap: var(--v-space-vertical--sm);
+  row-gap: var(--v-space-section--xs);
   align-items: center;
 
   @media only screen and (width >= 600px) {
-    row-gap: var(--v-space-vertical--md);
+    row-gap: var(--v-space-section--sm);
   }
 }
 
@@ -157,7 +161,7 @@
   line-height: 1;
   margin-top: -5px; // This is done due to the height of the font, to match spaces between sections
   text-align: center;
-  padding-bottom: 40px;
+  padding-bottom: var(--v-gap-elements-outside--xs);
   font-weight: 500;
   font-family: var(--v-title-font);
 
@@ -171,19 +175,24 @@
 
   @media only screen and (width >= 1280px) {
     font-size: 67px;
+    padding-bottom: var(--v-gap-elements-outside--sm);
   }
 
   &--left {
     @extend .section-title;
     text-align: left;
-    padding: 0;
+    padding-bottom: var(--v-gap-elements-outside--xs);
+
+    @media only screen and (width >= 1280px) {
+      padding-bottom: var(--v-gap-elements-outside--sm);
+    }
   }
 }
 
 .description-section-title {
   @extend .section-title;
-  padding-bottom: 10px;
-  font-size: 21px;
+  font-size: 30px;
+  margin: 0;
 
   @media only screen and (width >= 600px) {
     font-size: 35px;
@@ -203,7 +212,7 @@
   color: rgb(var(--v-theme-primaryContrast));
   font-size:18px;
   text-align: center;
-  margin-block: 10px;
+  padding-bottom: var(--v-gap-elements-outside--xs);
 
   @media only screen and (width >= 600px) {
     font-size: 21px;
@@ -215,6 +224,7 @@
 
   @media only screen and (width >= 1280px) {
     font-size: 25px;
+    padding-bottom: var(--v-gap-elements-outside--sm);
   }
 
   &--primary {
@@ -233,7 +243,7 @@
   }
 
   @media only screen and (width >= 960px) {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   @media only screen and (width >= 1280px) {
@@ -242,11 +252,25 @@
 }
 
 .family-history-container {
-  padding-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: rgb(var(--v-theme-primary));
+}
+
+.family-inside-container {
+  padding-block: var(--v-gap-elements-outside--xs);
+
+  @media only screen and (width >= 1280px) {
+    padding-block: var(--v-gap-elements-outside--sm);
+  }
+}
+
+.family-history-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--v-gap-elements-inside--xs);
 }
 
 .family-tree-image {
@@ -260,7 +284,7 @@
 }
 
 .lower-container {
-  padding-bottom: var(--v-space-vertical--sm);
+  padding-bottom: var(--v-space-section--xs);
 }
 
 </style>

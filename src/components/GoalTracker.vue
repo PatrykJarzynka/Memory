@@ -1,16 +1,19 @@
 <script setup lang="ts">
 
   import AppButton from "@/components/core/AppButton.vue"
+  import {useI18n} from "vue-i18n";
+
+  const {t} = useI18n()
 </script>
 
 <template>
   <div class="goal-container reveal">
     <div class="goal-content">
-      <p class="goal-text">Udało nam się zebrać już: <br> <span class="goal-number">3%</span> celu!</p>
+      <p class="goal-text">{{t('goal.labelBegin')}} <br> <span class="goal-number">3%</span> {{t('goal.labelEnd')}}</p>
 
       <AppButton
         type="normal"
-        text="Wesprzyj zbiorkę"
+        :text="t('goal.supportButton')"
       />
     </div>
   </div>

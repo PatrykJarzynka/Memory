@@ -1,38 +1,44 @@
 <script setup lang="ts">
   import type { PossibilityItem } from "@/interfaces/PossibilityItem.ts"
+  import {useI18n} from "vue-i18n";
 
-  const possibilities: PossibilityItem[] = [
-    {
-      id: 1,
-      icon: "mdi-brain",
-      text: "Trening funkcji poznawczych",
-    },
-    {
-      id: 2,
-      icon: "mdi-dumbbell",
-      text: "Trening siłowy",
-    },
-    {
-      id: 3,
-      icon: "mdi-food-apple",
-      text: "Odpowiednia dieta",
-    },
-    {
-      id: 4,
-      icon: "mdi-emoticon",
-      text: "Pozytywne nastawienie",
-    },
-    {
-      id: 5,
-      icon: "mdi-pill",
-      text: "Wczesna reakcja farmakologiczna",
-    },
-  ]
+  const {t} = useI18n();
+
+
+  const possibilities = computed<PossibilityItem[]>(() =>
+    [
+      {
+        id: 1,
+        icon: "mdi-brain",
+        text: t('possibilities.option1'),
+      },
+      {
+        id: 2,
+        icon: "mdi-dumbbell",
+        text: t('possibilities.option2'),
+      },
+      {
+        id: 3,
+        icon: "mdi-food-apple",
+        text: t('possibilities.option3'),
+      },
+      {
+        id: 4,
+        icon: "mdi-emoticon",
+        text: t('possibilities.option4'),
+      },
+      {
+        id: 5,
+        icon: "mdi-pill",
+        text: t('possibilities.option5'),
+      },
+    ]
+  )
 </script>
 
 <template>
   <div class="possibilities-container reveal-slide-up">
-    <p class="title">Co możemy zrobić</p>
+    <p class="title">{{ t('possibilities.options') }}</p>
 
     <ul class="possibilities-list">
       <li

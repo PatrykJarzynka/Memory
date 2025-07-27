@@ -1,27 +1,31 @@
 <script setup lang="ts">
+  import {useI18n} from "vue-i18n";
+
   interface TreatmentItem {
     id: number;
     name: string;
-    price: number | null;
+    priceDesc: string | null;
   }
 
-  const treatmentItems: TreatmentItem[] = [
+  const {t} = useI18n();
+
+  const treatmentItems = computed<TreatmentItem[]>(() => [
     {
       id: 1,
       name: "Donanemab",
-      price: 130_000,
+      priceDesc: t('treatment.price1'),
     },
     {
       id: 2,
       name: "Gantenerumab",
-      price: null,
+      priceDesc: t('treatment.price2')
     },
     {
       id: 3,
       name: "Lecanamab",
-      price: 98_000,
-    },
-  ]
+      priceDesc: t('treatment.price3'),
+    }
+  ])
 
   function splitNumber (value: number): string {
     return value
@@ -42,17 +46,9 @@
           <p class="treatment-name">{{ item.name }}</p>
 
           <p
-            v-if="item.price"
             class="treatment-price"
           >
-            {{ splitNumber(item.price) }} PLN / rok
-          </p>
-
-          <p
-            v-else
-            class="treatment-price"
-          >
-            testowy / eksperymentalny
+            {{ item.priceDesc }}
           </p>
         </div>
 
@@ -63,7 +59,7 @@
       </div>
     </div>
 
-    <p class="treatment-link">Dostęp do leków za pomocą www.medicine.washu.edu/</p>
+    <p class="treatment-link">{{t('treatment.linkDesc')}}</p>
   </div>
 </template>
 

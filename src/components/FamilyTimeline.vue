@@ -2,8 +2,10 @@
   import type { TimelineEvent } from "@/interfaces/TimelineEvent.ts"
 
   import { useDisplay } from "vuetify/framework"
+  import {useI18n} from "vue-i18n";
 
   const { smAndDown, mdAndUp } = useDisplay()
+  const {t} = useI18n()
 
   function getTextAlignClassName (side: string): string {
     if (mdAndUp.value) {
@@ -19,25 +21,25 @@
       id: 1,
       side: "end",
       icon: "mdi-skull",
-      eventDesc: "Nasz dziadek (ojciec mamy) zmarł na tę samą chorobę po dekadzie całkowitej niesamodzielności.",
+      eventDesc: t('familyHistory.event1'),
     },
     {
       id: 2,
       side: "start",
       icon: "mdi-skull",
-      eventDesc: "Nasz wujek (brat Elżbiety i Moniki) zmarł na Alzheimera, zachorował będąc po czterdziestce.",
+      eventDesc: t('familyHistory.event2'),
     },
     {
       id: 3,
       side: "end",
       icon: "mdi-hospital-box",
-      eventDesc: "Nasza mama, Elżbieta, znajduje się dziś w stanie wegetatywnym, pierwsze objawy miała około 40r.ż.",
+      eventDesc: t('familyHistory.event3'),
     },
     {
       id: 4,
       side: "start",
       icon: "mdi-needle",
-      eventDesc: "U Jagody, Kacpra i Moniki potwierdzono mutacje genetyczne PSEN 1",
+      eventDesc: t('familyHistory.event4'),
     },
   ]
 </script>

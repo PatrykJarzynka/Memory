@@ -1,7 +1,9 @@
 <template>
   <v-app theme="lightTheme">
     <Header/>
-    <router-view/>
+    <v-main>
+      <router-view/>
+    </v-main>
   </v-app>
 </template>
 

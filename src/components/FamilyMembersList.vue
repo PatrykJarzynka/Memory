@@ -2,39 +2,42 @@
 
   import type { FamilyMember } from "@/interfaces/FamilyMember.ts"
   import FamilyMemberItem from "@/components/FamilyMemberItem.vue"
+  import {useI18n} from "vue-i18n";
 
-  const familyMembers: FamilyMember[] = [
+  const {t} = useI18n()
+
+  const familyMembers = computed<FamilyMember[]>(() => [
     {
       name: "Kacper Libera",
-      description: "Brat",
+      description: t('familyMembers.brother'),
       psen: true,
       imageUrl: "/images/kacper-profile.JPG",
     },
     {
       name: "Jagoda Libera",
-      description: "Siostra",
+      description: t('familyMembers.sister'),
       psen: true,
       imageUrl: "/images/jagoda-profile.JPG",
     },
     {
       name: "Monika Remplewska",
-      description: "Ciocia",
+      description: t('familyMembers.aunt'),
       psen: true,
       imageUrl: "/images/monika-profile.JPG",
     },
     {
       name: "Aleksandra Libera",
-      description: "Siostra",
+      description:  t('familyMembers.sister'),
       psen: false,
       imageUrl: "/images/ola-profile.JPG",
     },
     {
       name: "Gwidon Libera",
-      description: "Tata",
+      description:  t('familyMembers.father'),
       psen: false,
       imageUrl: "/images/gwidon-profile.JPG",
     },
-  ]
+  ])
 </script>
 
 <template>

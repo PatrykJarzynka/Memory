@@ -1,5 +1,8 @@
 <template>
-  <v-container class="main-container family-section">
+  <v-container
+    id="start"
+    class="main-container family-section"
+  >
     <div class="start-container">
       <Hero/>
 
@@ -100,7 +103,7 @@
 
   </v-container>
 
-  <Footer/>
+  <Footer id="contact"/>
 
 </template>
 

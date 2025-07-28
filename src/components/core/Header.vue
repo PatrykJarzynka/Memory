@@ -2,17 +2,20 @@
   import { useI18n } from "vue-i18n"
   import { useDisplay } from "vuetify/framework"
   import LanguageSelector from "@/components/core/LanguageSelector.vue"
+  import { useActiveSectionTracker } from "@/composables/useActiveSectionTracker.ts"
 
   const { xs, smAndDown } = useDisplay()
   const { t } = useI18n()
 
   interface HeaderItem {
+    id: string;
     title: string;
     action: () => void;
   }
 
   const headerItems = computed<HeaderItem[]>(() => [
     {
+      id: "start",
       title: t("header.item1"),
       action: () => {
         window.scrollTo({
@@ -22,42 +25,49 @@
       },
     },
     {
+      id: "history",
       title: t("header.item2"),
       action: () => {
         scrollTo("history")
       },
     },
     {
+      id: "disease",
       title: t("header.item3"),
       action: () => {
         scrollTo("disease")
       },
     },
     {
+      id: "treatment",
       title: t("header.item4"),
       action: () => {
         scrollTo("treatment")
       },
     },
     {
+      id: "media",
       title: t("header.item5"),
       action: () => {
         scrollTo("media")
       },
     },
     {
+      id: "support",
       title: t("header.item6"),
       action: () => {
         scrollTo("support")
       },
     },
     {
+      id: "friends",
       title: t("header.item7"),
       action: () => {
         scrollTo("friends")
       },
     },
     {
+      id: "contact",
       title: t("header.item8"),
       action: () => {
         window.scrollTo({
@@ -67,13 +77,17 @@
       },
     },
   ])
-
+  const { activeSectionId } = useActiveSectionTracker(headerItems.value.map(item => item.id))
   const drawer = ref(false)
 
   function scrollTo (sectionId: string): void {
     const element = document.querySelector(`#${sectionId}`)
     if (element) {
       element.scrollIntoView({ behavior: "smooth" })
+
+      if (drawer.value) {
+        drawer.value = false
+      }
     }
   }
 
@@ -104,12 +118,12 @@
           v-for="item in headerItems"
           :key="item.title"
           cols="auto"
-          class="h-100 d-flex align-center"
+          class="item-column"
         >
           <v-btn
             :text="item.title"
             variant="plain"
-            class="header-item h-100 py-3"
+            :class="['header-item', 'h-100', 'py-3', {'active': item.id === activeSectionId}]"
             @click="item.action"
           />
         </v-col>
@@ -208,6 +222,18 @@
   opacity: 1;
   color: rgb(var(--v-theme-primary));
   padding: 0 5px;
+}
+
+.item-column {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.active {
+  color: rgb(var(--v-theme-highlight));
+  transform: translateY(-10%);
 }
 
 .header-item:hover {

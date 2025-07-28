@@ -91,7 +91,7 @@
   font-size: 18px;
   width: 60%;
   font-weight: 400;
-  font-family: var(--v-secondary-font);
+  font-family: var(--v-primary-font);
 
   @media only screen and (width >= 600px) {
     font-size: 20px;

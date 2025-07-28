@@ -1,8 +1,13 @@
 <script setup lang="ts">
   import { useI18n } from "vue-i18n"
   import AppButton from "@/components/core/AppButton.vue"
+  import useRedirect from "@/composables/useRedirect.ts"
+  import useScroll from "@/composables/useScroll.ts"
+  import { CHARITY_URL } from "@/utils/constants.ts"
 
   const { t } = useI18n()
+  const { scrollToElementById } = useScroll()
+  const { redirect } = useRedirect()
 </script>
 
 <template>
@@ -27,12 +32,14 @@
           <AppButton
             type="normal"
             :text="t('general.supportButton')"
+            @click="redirect(CHARITY_URL, true)"
           />
 
           <AppButton
             type="flat"
             :text="t('hero.exploreButton')"
             icon="mdi-arrow-right-thin"
+            @click="scrollToElementById('history')"
           />
         </div>
       </v-col>

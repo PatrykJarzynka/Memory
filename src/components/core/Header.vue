@@ -3,9 +3,11 @@
   import { useDisplay } from "vuetify/framework"
   import LanguageSelector from "@/components/core/LanguageSelector.vue"
   import { useActiveSectionTracker } from "@/composables/useActiveSectionTracker.ts"
+  import useScroll from "@/composables/useScroll.ts"
 
   const { xs, smAndDown } = useDisplay()
   const { t } = useI18n()
+  const { scrollToElementById } = useScroll()
 
   interface HeaderItem {
     id: string;
@@ -81,13 +83,9 @@
   const drawer = ref(false)
 
   function scrollTo (sectionId: string): void {
-    const element = document.querySelector(`#${sectionId}`)
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-
-      if (drawer.value) {
-        drawer.value = false
-      }
+    scrollToElementById(sectionId)
+    if (drawer.value) {
+      drawer.value = false
     }
   }
 

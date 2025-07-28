@@ -1,6 +1,7 @@
 <script setup lang="ts">
   import { useI18n } from "vue-i18n"
   import { useDisplay } from "vuetify/framework"
+  import useScroll from "@/composables/useScroll.ts"
 
   interface SupportItem {
     id: number;
@@ -12,6 +13,7 @@
 
   const { smAndDown, lgAndUp } = useDisplay()
   const { t } = useI18n()
+  const { scrollToElementById } = useScroll()
 
   const supportItems = computed<SupportItem[]>(() => [
     {
@@ -19,9 +21,7 @@
       name: t("support.item1Title"),
       description: t("support.item1Desc"),
       icon: "mdi-hand-coin",
-      action: () => {
-        return
-      },
+      action: () => scrollToElementById("goal"),
     },
     {
       id: 2,

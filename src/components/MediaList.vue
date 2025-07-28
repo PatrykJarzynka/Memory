@@ -1,7 +1,9 @@
 <script setup lang="ts">
   import { useDisplay } from "vuetify/framework"
+  import useRedirect from "@/composables/useRedirect.ts"
 
   const { smAndDown } = useDisplay()
+  const { redirect } = useRedirect()
 
   interface MediaData {
     link: string;
@@ -21,7 +23,7 @@
       name: "Pytanie na śniadanie",
       icon: "mdi-television",
       mediaData: {
-        link: "123",
+        link: "https://pytanienasniadanie.tvp.pl/86360094/alzheimer-w-mlodym-wieku",
         platformName: "TVP2",
       },
     },
@@ -30,7 +32,7 @@
       name: "Reporterzy",
       icon: "mdi-television",
       mediaData: {
-        link: "123",
+        link: "https://www.tvp.info/87380625/alzheimer-atakuje-nawet-nastolatkow-w-tej-rodzinie-alzheimer-nie-czeka-na-starosc-reporterzy",
         platformName: "TVP",
       },
     },
@@ -55,6 +57,7 @@
       <v-btn
         :size="smAndDown ? undefined : 'large'"
         class="media-button"
+        @click="redirect(item.mediaData.link, true)"
       >
         <div class="d-flex ga-2">
           <span>{{ item.mediaData.platformName }}</span>
@@ -112,7 +115,6 @@
   font-size: 17px;
   font-weight: 400;
   color: rgba(var(--v-theme-primary));
-
 
   @media only screen and (width >= 600px) {
     font-size: 25px;

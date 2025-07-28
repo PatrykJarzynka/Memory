@@ -1,19 +1,26 @@
 <script setup lang="ts">
 
+  import { useI18n } from "vue-i18n"
   import AppButton from "@/components/core/AppButton.vue"
-  import {useI18n} from "vue-i18n";
+  import useRedirect from "@/composables/useRedirect.ts"
+  import { CHARITY_URL } from "@/utils/constants.ts"
 
-  const {t} = useI18n()
+  const { t } = useI18n()
+  const { redirect } = useRedirect()
 </script>
 
 <template>
-  <div class="goal-container reveal">
+  <div
+    id="goal"
+    class="goal-container reveal"
+  >
     <div class="goal-content">
-      <p class="goal-text">{{t('goal.labelBegin')}} <br> <span class="goal-number">3%</span> {{t('goal.labelEnd')}}</p>
+      <p class="goal-text">{{ t('goal.labelBegin') }} <br> <span class="goal-number">3%</span> {{ t('goal.labelEnd') }}</p>
 
       <AppButton
         type="normal"
         :text="t('goal.supportButton')"
+        @click="redirect(CHARITY_URL, true)"
       />
     </div>
   </div>
@@ -27,6 +34,7 @@
   padding: 30px;
   background: rgb(var(--v-theme-primary));
   border-radius: 50%;
+  scroll-margin-top: 200px;
 
   @media only screen and (width >= 450px) {
     width: 60%

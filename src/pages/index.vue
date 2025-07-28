@@ -29,7 +29,7 @@
       <div class="family-history-content">
         <div class="family-tree-image reveal">
           <v-img
-            :src="locale === 'en' ? '/images/Family-structure-en.png' : '/images/Family-structure.png'"
+            :src="locale === 'en' ? 'images/Family-structure-en.png' : 'images/Family-structure.png'"
           />
         </div>
         <FamilyTimeline/>
@@ -44,7 +44,7 @@
     <IconDivider id="disease"/>
 
     <IllustratedContent
-      image-path="/images/Alzheimer-desc-image.jfif"
+      image-path="images/Alzheimer-desc-image.jfif"
       side="ltr"
     >
       <template #description-content>

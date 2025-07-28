@@ -145,7 +145,7 @@
   white-space: normal;
 
   @media only screen and (width >= 960px) {
-    font-size: 20px;
+    font-size: 17px;
   }
 
   @media only screen and (width >= 1280px) {

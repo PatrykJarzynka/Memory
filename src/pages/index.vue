@@ -29,7 +29,7 @@
       <div class="family-history-content">
         <div class="family-tree-image reveal">
           <v-img
-            :src="locale === 'en' ? 'images/Family-structure-en.png' : 'images/Family-structure.png'"
+            :src="locale === 'en' ? `${base}images/Family-structure-en.png` : `${base}images/Family-structure.png`"
           />
         </div>
         <FamilyTimeline/>
@@ -44,7 +44,7 @@
     <IconDivider id="disease"/>
 
     <IllustratedContent
-      image-path="images/Alzheimer-desc-image.jfif"
+      :image-path="`${base}images/Alzheimer-desc-image.jfif`"
       side="ltr"
     >
       <template #description-content>
@@ -124,6 +124,7 @@
 
   const { smAndDown } = useDisplay()
   const { t, locale } = useI18n()
+  const base = import.meta.env.BASE_URL;
 
   useScrollReveal([".reveal", ".reveal-slide-up", ".reveal-slide-right", ".reveal-slide-left", ".reveal-zoom-in"])
 </script>

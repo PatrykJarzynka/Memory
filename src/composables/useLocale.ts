@@ -6,16 +6,17 @@ import { LanguageType } from '@/enums/LanguageType.ts';
 export function useLocale() {
   const currentRoute = useRoute();
   const { locale } = useI18n();
+  const base = import.meta.env.BASE_URL;
 
   const supportedLanguages: Readonly<Language[]> = Object.freeze([
     {
       type: LanguageType.PL,
-      flagSvg: "/src/assets/polish-flag.svg",
+      flagSvg: `${base}src/assets/polish-flag.svg`,
       locale: "pl",
     },
     {
       type: LanguageType.EN,
-      flagSvg: "/src/assets/english-flag.svg",
+      flagSvg: `${base}src/assets/english-flag.svg`,
       locale: "en",
     },
   ])

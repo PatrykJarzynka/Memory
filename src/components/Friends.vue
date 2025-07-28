@@ -2,6 +2,7 @@
   import { useI18n } from "vue-i18n"
 
   const { t } = useI18n()
+  const base = import.meta.env.BASE_URL;
 
   const friends = computed(() => [
     {
@@ -27,7 +28,7 @@
       name: "Jarosław Szlachta",
       association: "SuperHumans",
       description: t("friends.friendDesc4"),
-      iconUrl: "./src/assets/SuperHumans.svg",
+      iconUrl: `${base}src/assets/SuperHumans.svg`,
     },
   ])
 </script>

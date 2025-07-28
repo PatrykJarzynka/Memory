@@ -5,37 +5,38 @@
   import FamilyMemberItem from "@/components/FamilyMemberItem.vue"
 
   const { t } = useI18n()
+  const base = import.meta.env.BASE_URL;
 
   const familyMembers = computed<FamilyMember[]>(() => [
     {
       name: "Kacper Libera",
       description: t("familyMembers.brother"),
       psen: true,
-      imageUrl: "images/kacper-profile.JPG",
+      imageUrl: `${base}images/kacper-profile.JPG`,
     },
     {
       name: "Jagoda Libera",
       description: t("familyMembers.sister"),
       psen: true,
-      imageUrl: "images/jagoda-profile.JPG",
+      imageUrl: `${base}images/jagoda-profile.JPG`,
     },
     {
       name: "Monika Remplewska",
       description: t("familyMembers.aunt"),
       psen: true,
-      imageUrl: "images/monika-profile.JPG",
+      imageUrl: `${base}images/monika-profile.JPG`,
     },
     {
       name: "Aleksandra Libera",
       description: t("familyMembers.sister"),
       psen: false,
-      imageUrl: "images/ola-profile.JPG",
+      imageUrl: `${base}images/ola-profile.JPG`,
     },
     {
       name: "Gwidon Libera",
       description: t("familyMembers.father"),
       psen: false,
-      imageUrl: "images/gwidon-profile.JPG",
+      imageUrl: `${base}images/gwidon-profile.JPG`,
     },
   ])
 </script>

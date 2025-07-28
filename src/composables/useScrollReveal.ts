@@ -1,11 +1,10 @@
 import { onMounted, onBeforeUnmount } from 'vue'
 
-export function useScrollReveal(selector = '.reveal', classToAdd = 'visible', options: IntersectionObserverInit = { threshold: 0.1 }) {
+export function useScrollReveal(selectors: string[], classToAdd = 'visible', options = { threshold: 0.1 }) {
   let observer: IntersectionObserver | null = null
 
   onMounted(() => {
-    const elements = document.querySelectorAll<HTMLElement>(selector)
-
+    const elements = selectors.flatMap(selector => Array.from(document.querySelectorAll<HTMLElement>(selector)))
     if (!elements.length) return
 
     observer = new IntersectionObserver((entries, obs) => {

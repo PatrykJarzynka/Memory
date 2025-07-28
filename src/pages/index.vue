@@ -125,11 +125,7 @@
   const { smAndDown } = useDisplay()
   const { t, locale } = useI18n()
 
-  useScrollReveal(".reveal")
-  useScrollReveal(".reveal-slide-up")
-  useScrollReveal(".reveal-slide-right")
-  useScrollReveal(".reveal-slide-left")
-  useScrollReveal(".reveal-zoom-in")
+  useScrollReveal([".reveal", ".reveal-slide-up", ".reveal-slide-right", ".reveal-slide-left", ".reveal-zoom-in"])
 </script>
 
 <style lang="scss" scoped>

@@ -1,29 +1,33 @@
 <script setup lang="ts">
+  import { useI18n } from "vue-i18n"
+
+  const { t } = useI18n()
+
   const friends = [
     {
       id: 1,
       name: "Patryk Jarzynka",
       association: null,
-      description: "Programista i przyjaciel, który z zaangażowaniem tworzy naszą stronę internetową, dbając o to, by była nie tylko funkcjonalna, ale i pełna serca.",
+      description: t("friends.friendDesc1"),
     },
     {
       id: 2,
       name: "Aleksandra Bratek",
       association: null,
-      description: "Przyjaciółka i lekarka w trakcie specjalizacji urologicznej. Z ogromnym zaangażowaniem wspiera w poszukiwaniu leczenia choroby.",
+      description: t("friends.friendDesc2"),
     },
     {
       id: 3,
       name: "Aleksandra Dzierżawa",
       association: null,
-      description: "Terapeutka, przyjaciółka. Ogromne wsparcie w naszych działaniach i organizacji.",
+      description: t("friends.friendDesc3"),
     },
     {
       id: 4,
       name: "Jarosław Szlachta",
       association: "SuperHumans",
-      description: "Twórca systemu walki S.A.R.24. Wspiera naszą inicjatywę na wielu poziomach.",
-      iconUrl: './src/assets/SuperHumans.svg',
+      description: t("friends.friendDesc4"),
+      iconUrl: "./src/assets/SuperHumans.svg",
     },
   ]
 </script>
@@ -49,16 +53,17 @@
         <v-card-title class="friend-card-title-container">
           <div class="image-placeholder">
             <v-img
+              v-if="friend.iconUrl"
               style="border-radius: 8px; height: 100%"
               cover
-              v-if="friend.iconUrl"
               :src="friend.iconUrl"
             />
 
             <v-icon
               v-else
               icon="mdi-account-circle"
-              class="image-icon"/>
+              class="image-icon"
+            />
           </div>
 
           <div class="friend-card-title">
@@ -131,7 +136,6 @@
   background-color: rgb(var(--v-theme-highlight));
   border-radius: 8px;
   box-shadow: rgba(207, 231, 255, 0.2) 0px 1px 1px 0px inset;
-
 
   @media only screen and (width >= 600px) {
 

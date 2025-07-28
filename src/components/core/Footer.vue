@@ -1,5 +1,7 @@
 <script setup lang="ts">
+  import { useI18n } from "vue-i18n"
 
+  const { t } = useI18n()
 </script>
 
 <template>
@@ -12,8 +14,8 @@
         cols="12"
         class="footer-info-column"
       >
-        <h2 class="footer-main-label">Jeżeli masz pomysł, lub wiesz jak nam pomóc odezwij się</h2>
-        <p class="footer-text"> Ze względu na duże obciążenie emocjonalne prosimy o ograniczenie kontaktu z Jagodą i Kacprem w tym temacie</p>
+        <h2 class="footer-main-label">{{ t('footer.title') }}</h2>
+        <p class="footer-text"> {{ t('footer.subtitle') }}</p>
       </v-col>
 
       <v-col

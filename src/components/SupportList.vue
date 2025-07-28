@@ -1,4 +1,5 @@
 <script setup lang="ts">
+  import { useI18n } from "vue-i18n"
   import { useDisplay } from "vuetify/framework"
 
   interface SupportItem {
@@ -10,12 +11,13 @@
   }
 
   const { smAndDown, lgAndUp } = useDisplay()
+  const { t } = useI18n()
 
   const supportItems: SupportItem[] = [
     {
       id: 1,
-      name: "Wsparcie pieniężne",
-      description: " Pieniądze zbierane na serwisie zrzutka do momentu prawnych uregulowań fundacji",
+      name: t("support.item1Title"),
+      description: t("support.item1Desc"),
       icon: "mdi-hand-coin",
       action: () => {
         return
@@ -23,36 +25,36 @@
     },
     {
       id: 2,
-      name: "Kontakty z DIAN WashU Medicine",
-      description: "Szukamy pomocy w nawiązaniu kontaktu z amerykańskim zespołem badawczym DIAN, który prowadzi przełomowe terapie dla osób z dziedziczną postacią Alzheimera. Każde połączenie może być dla nas szansą.",
+      name: t("support.item2Title"),
+      description: t("support.item2Desc"),
       icon: "mdi-phone-incoming-outgoing",
       action: null,
     },
     {
       id: 3,
-      name: "Tłumaczy",
-      description: "Potrzebujemy wsparcia w tłumaczeniach dokumentów medycznych i rozmowach z anglojęzycznymi lekarzami.",
+      name: t("support.item3Title"),
+      description: t("support.item3Desc"),
       icon: "mdi-translate-variant",
       action: null,
     },
     {
       id: 4,
-      name: "Prawników",
-      description: "Szukamy pomocy prawnej w sprawach związanych z leczeniem za granicą: dokumenty, zgody, logistyka.",
+      name: t("support.item4Title"),
+      description: t("support.item4Desc"),
       icon: "mdi-account-tie",
       action: null,
     },
     {
       id: 5,
-      name: "Edukacja języka angielskiego",
-      description: "Chcemy uczyć się angielskiego, by lepiej rozumieć leczenie i komunikować się samodzielnie. To dla nas krok do niezależności i odwagi w działaniu.",
+      name: t("support.item5Title"),
+      description: t("support.item5Desc"),
       icon: "mdi-account-school",
       action: null,
     },
     {
       id: 6,
-      name: "Wsparcie w logistyce - mieszkanie, transport",
-      description: "Leczenie i badania odbywają się za granicą — potrzebujemy pomocy w znalezieniu miejsca do życia, organizacji podróży i codziennej logistyce. To wsparcie pozwoli nam skupić się na walce z chorobą.",
+      name: t("support.item6Title"),
+      description: t("support.item6Desc"),
       icon: "mdi-plane-car",
       action: null,
     },
@@ -87,7 +89,7 @@
             class="support-item-button"
             @click="item.action()"
           >
-            Wspomóż
+            {{ t('general.supportButton') }}
           </v-btn>
         </v-list-item-title>
 

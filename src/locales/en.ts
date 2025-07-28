@@ -1,8 +1,10 @@
 export default {
+  general: {
+    supportButton: 'Support us',
+  },
   hero: {
     title: 'Act before time catches up',
     description: 'In our family, Alzheimer\'s starts at age 30-40. We know we don\'t have time - but we have hope.',
-    supportButton: 'Support us',
     exploreButton: 'Learn the story',
   },
   goal: {
@@ -44,5 +46,34 @@ export default {
     price2: 'experimental drug / investigational treatment',
     price3: '20 850 € per year',
     linkDesc: 'Access to medications via www.medicine.washu.edu/'
+  },
+  media: {
+    title: 'Where we have been featured'
+  },
+  support: {
+    title: 'What do we currently need',
+    item1Title: 'Financial support',
+    item1Desc: ' Money raised through this method will be retained until the foundation is legally established.',
+    item2Title: 'Contacts with DIAN WashU Medicine',
+    item2Desc: "We are looking for help in reaching out to the American research team at DIAN, which is developing groundbreaking therapies for people with the inherited form of Alzheimer's. Every connection could be a chance for us.",
+    item3Title: 'Translators',
+    item3Desc: 'We need support with translating medical documents and speaking with English-speaking doctors.',
+    item4Title: 'Lawyers',
+    item4Desc: 'We are seeking legal assistance in matters related to treatment abroad: documents, consents, logistics.',
+    item5Title: 'English language education',
+    item5Desc: "We want to learn English to better understand our treatment and communicate on our own. For us, it's a step toward independence and the courage to take action.",
+    item6Title: 'Logistical support - accomodation, transportation',
+    item6Desc: 'Our treatment and medical research are taking place abroad — we need help finding a place to live, organizing travel, and managing daily logistics. This support would allow us to focus on fighting the disease.',
+  },
+  friends: {
+    title: 'Our friends',
+    friendDesc1: 'A programmer and friend who is passionately building our website, making sure it’s not only functional but also filled with heart.',
+    friendDesc2: 'A friend and doctor currently specializing in urology. She supports our search for treatment with deep dedication and care.',
+    friendDesc3: 'A therapist and friend. A tremendous support in everything we do and in our organisation.',
+    friendDesc4: 'The creator of the S.A.R.24 combat system. He supports our initiative on many levels.',
+  },
+  footer: {
+    title: 'If you have an idea or know how to help us, please reach out',
+    subtitle: 'Due to the high emotional strain, we kindly ask to limit contact with Jagoda and Kacper regarding this matter.',
   }
 }

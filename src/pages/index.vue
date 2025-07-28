@@ -9,7 +9,7 @@
     <IconDivider/>
 
     <div class="d-flex flex-column align-center">
-      <h2 class="section-title reveal-slide-up">{{t('familyMembers.title')}}</h2>
+      <h2 class="section-title reveal-slide-up">{{ t('familyMembers.title') }}</h2>
 
       <FamilyIllustrated/>
     </div>
@@ -18,13 +18,13 @@
   <div class="family-history-container">
     <v-container class="main-container family-inside-container">
       <h3 class="section-sub_title reveal-slide-up">
-        {{t('familyHistory.title')}}
+        {{ t('familyHistory.title') }}
       </h3>
 
       <div class="family-history-content">
         <div class="family-tree-image reveal">
           <v-img
-            :src="locale === 'en' ? '/images/Family-structure-en.png' :  '/images/Family-structure.png'"
+            :src="locale === 'en' ? '/images/Family-structure-en.png' : '/images/Family-structure.png'"
           />
         </div>
         <FamilyTimeline/>
@@ -43,9 +43,9 @@
       side="ltr"
     >
       <template #description-content>
-        <h2 class="description-section-title reveal-slide-up">{{t('disease.title')}}</h2>
+        <h2 class="description-section-title reveal-slide-up">{{ t('disease.title') }}</h2>
 
-        <p class="description-text reveal-slide-up">{{t('disease.description')}}</p>
+        <p class="description-text reveal-slide-up">{{ t('disease.description') }}</p>
       </template>
     </IllustratedContent>
 
@@ -53,11 +53,11 @@
 
     <v-row no-gutters class="justify-center">
       <v-col cols="12" md="6" :class="['d-flex align-center', smAndDown ? 'justify-center' : '']">
-        <h2 class="section-title--left reveal-slide-up">{{t('possibilities.title')}}</h2>
+        <h2 class="section-title--left reveal-slide-up">{{ t('possibilities.title') }}</h2>
       </v-col>
 
       <v-col cols="10" md="6" class="d-flex align-center">
-        <h3 :class="['section-sub_title--primary', 'reveal-slide-up', smAndDown ? 'text-center' : 'text-left']">{{t('possibilities.subtitle')}}</h3>
+        <h3 :class="['section-sub_title--primary', 'reveal-slide-up', smAndDown ? 'text-center' : 'text-left']">{{ t('possibilities.subtitle') }}</h3>
       </v-col>
     </v-row>
 
@@ -65,7 +65,7 @@
 
     <IconDivider/>
 
-    <h2 class="section-title reveal-slide-up">{{t('treatment.title')}}</h2>
+    <h2 class="section-title reveal-slide-up">{{ t('treatment.title') }}</h2>
   </v-container>
 
   <Treatment/>
@@ -73,19 +73,19 @@
   <v-container class="main-container lower-container pt-0">
     <IconDivider/>
 
-    <h2 class="section-title reveal-slide-up">Gdzie o nas mówiono</h2>
+    <h2 class="section-title reveal-slide-up">{{ t('media.title') }}</h2>
 
     <MediaList/>
 
     <IconDivider/>
 
-    <h2 class="section-title reveal-slide-up">Czego obecnie nam trzeba</h2>
+    <h2 class="section-title reveal-slide-up">{{ t('support.title') }}</h2>
 
     <SupportList/>
 
     <IconDivider/>
 
-    <h2 class="section-title reveal-slide-up">Nasi przyjaciele</h2>
+    <h2 class="section-title reveal-slide-up">{{ t('friends.title') }}</h2>
 
     <Friends/>
 
@@ -97,9 +97,10 @@
 
 <script lang="ts" setup>
 
+  import { useI18n } from "vue-i18n"
   import { useDisplay } from "vuetify/framework"
-  import Friends from "@/components/Friends.vue"
   import FamilyIllustrated from "@/components/FamilyIllustrated.vue"
+  import Friends from "@/components/Friends.vue"
   import GoalTracker from "@/components/GoalTracker.vue"
   import IconDivider from "@/components/IconDivider.vue"
   import IllustratedContent from "@/components/IllustratedContent.vue"
@@ -107,17 +108,16 @@
   import Possibilities from "@/components/Possibilities.vue"
   import SupportList from "@/components/SupportList.vue"
   import Treatment from "@/components/Treatment.vue"
-  import {useScrollReveal} from "@/composables/useScrollReveal.ts";
-  import {useI18n} from "vue-i18n";
+  import { useScrollReveal } from "@/composables/useScrollReveal.ts"
 
-  const { smAndDown } = useDisplay();
-  const {t, locale} = useI18n();
+  const { smAndDown } = useDisplay()
+  const { t, locale } = useI18n()
 
-  useScrollReveal('.reveal');
-  useScrollReveal('.reveal-slide-up');
-  useScrollReveal('.reveal-slide-right');
-  useScrollReveal('.reveal-slide-left');
-  useScrollReveal('.reveal-zoom-in');
+  useScrollReveal(".reveal")
+  useScrollReveal(".reveal-slide-up")
+  useScrollReveal(".reveal-slide-right")
+  useScrollReveal(".reveal-slide-left")
+  useScrollReveal(".reveal-zoom-in")
 </script>
 
 <style lang="scss" scoped>

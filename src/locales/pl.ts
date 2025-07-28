@@ -1,8 +1,10 @@
 export default {
+  general: {
+    supportButton: 'Wesprzyj',
+  },
   hero: {
     title: 'Zanim dogoni nas czas - działamy',
     description: 'W naszej rodzinie Alzheimer zaczyna się w wieku 30–40 lat. Wiemy, że nie mamy czasu – ale mamy nadzieję.',
-    supportButton: 'Wesprzyj',
     exploreButton: 'Poznaj historię',
   },
   goal: {
@@ -44,5 +46,34 @@ export default {
     price2: 'testowy / eksperymentalny',
     price3: '98 000 PLN / rok',
     linkDesc: 'Dostęp do leków za pomocą www.medicine.washu.edu/'
+  },
+  media: {
+    title: 'Gdzie o nas mówiono'
+  },
+  support: {
+    title: 'Czego obecnie nam trzeba',
+    item1Title: 'Wsparcie pieniężne',
+    item1Desc: 'Pieniądze zbierane na serwisie zrzutka do momentu prawnych uregulowań fundacji.',
+    item2Title: 'Kontakty z DIAN WashU Medicine',
+    item2Desc: 'Szukamy pomocy w nawiązaniu kontaktu z amerykańskim zespołem badawczym DIAN, który prowadzi przełomowe terapie dla osób z dziedziczną postacią Alzheimera. Każde połączenie może być dla nas szansą.',
+    item3Title: 'Tłumaczy',
+    item3Desc: 'Potrzebujemy wsparcia w tłumaczeniach dokumentów medycznych i rozmowach z anglojęzycznymi lekarzami.',
+    item4Title: 'Prawników',
+    item4Desc: 'Szukamy pomocy prawnej w sprawach związanych z leczeniem za granicą: dokumenty, zgody, logistyka.',
+    item5Title: 'Edukacja języka angielskiego',
+    item5Desc: 'Chcemy uczyć się angielskiego, by lepiej rozumieć leczenie i komunikować się samodzielnie. To dla nas krok do niezależności i odwagi w działaniu.',
+    item6Title: 'Wsparcie w logistyce - mieszkanie, transport',
+    item6Desc: 'Leczenie i badania odbywają się za granicą — potrzebujemy pomocy w znalezieniu miejsca do życia, organizacji podróży i codziennej logistyce. To wsparcie pozwoli nam skupić się na walce z chorobą.',
+  },
+  friends: {
+    title: 'Nasi przyjaciele',
+    friendDesc1: 'Programista i przyjaciel, który z zaangażowaniem tworzy naszą stronę internetową, dbając o to, by była nie tylko funkcjonalna, ale i pełna serca.',
+    friendDesc2: 'Przyjaciółka i lekarka w trakcie specjalizacji urologicznej. Z ogromnym zaangażowaniem wspiera w poszukiwaniu leczenia choroby.',
+    friendDesc3: 'Terapeutka, przyjaciółka. Ogromne wsparcie w naszych działaniach i organizacji.',
+    friendDesc4: 'Twórca systemu walki S.A.R.24. Wspiera naszą inicjatywę na wielu poziomach.',
+  },
+  footer: {
+    title: 'Jeżeli masz pomysł, lub wiesz jak nam pomóc odezwij się',
+    subtitle: 'Ze względu na duże obciążenie emocjonalne prosimy o ograniczenie kontaktu z Jagodą i Kacprem w tym temacie',
   }
 }

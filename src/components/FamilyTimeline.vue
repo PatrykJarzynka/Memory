@@ -1,11 +1,11 @@
 <script setup lang="ts">
   import type { TimelineEvent } from "@/interfaces/TimelineEvent.ts"
 
+  import { useI18n } from "vue-i18n"
   import { useDisplay } from "vuetify/framework"
-  import {useI18n} from "vue-i18n";
 
   const { smAndDown, mdAndUp } = useDisplay()
-  const {t} = useI18n()
+  const { t } = useI18n()
 
   function getTextAlignClassName (side: string): string {
     if (mdAndUp.value) {
@@ -21,25 +21,25 @@
       id: 1,
       side: "end",
       icon: "mdi-skull",
-      eventDesc: t('familyHistory.event1'),
+      eventDesc: t("familyHistory.event1"),
     },
     {
       id: 2,
       side: "start",
       icon: "mdi-skull",
-      eventDesc: t('familyHistory.event2'),
+      eventDesc: t("familyHistory.event2"),
     },
     {
       id: 3,
       side: "end",
       icon: "mdi-hospital-box",
-      eventDesc: t('familyHistory.event3'),
+      eventDesc: t("familyHistory.event3"),
     },
     {
       id: 4,
       side: "start",
       icon: "mdi-needle",
-      eventDesc: t('familyHistory.event4'),
+      eventDesc: t("familyHistory.event4"),
     },
   ]
 </script>

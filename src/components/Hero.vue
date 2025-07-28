@@ -1,8 +1,8 @@
 <script setup lang="ts">
+  import { useI18n } from "vue-i18n"
   import AppButton from "@/components/core/AppButton.vue"
-  import {useI18n} from "vue-i18n";
 
-  const {t} = useI18n()
+  const { t } = useI18n()
 </script>
 
 <template>
@@ -18,15 +18,15 @@
         class="hero-lead-column reveal-slide-up"
       >
         <div class="lead-column-text">
-          <h1 class="hero-title">{{ t('hero.title')}}</h1>
+          <h1 class="hero-title">{{ t('hero.title') }}</h1>
 
-          <p class="hero-description">{{ t('hero.description')}}</p>
+          <p class="hero-description">{{ t('hero.description') }}</p>
         </div>
 
         <div class="hero-action-buttons">
           <AppButton
             type="normal"
-            :text="t('hero.supportButton')"
+            :text="t('general.supportButton')"
           />
 
           <AppButton
@@ -68,7 +68,6 @@
     flex-direction: initial;
   }
 }
-
 
 .hero-lead-column {
   display: flex;

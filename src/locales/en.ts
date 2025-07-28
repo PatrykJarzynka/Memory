@@ -2,6 +2,16 @@ export default {
   general: {
     supportButton: 'Support us',
   },
+  header: {
+    item1: "Start",
+    item2: "History",
+    item3: "Disease",
+    item4: "Treatment",
+    item5: "Media",
+    item6: "Support",
+    item7: 'Friends',
+    item8: "Contact",
+  },
   hero: {
     title: 'Act before time catches up',
     description: 'In our family, Alzheimer\'s starts at age 30-40. We know we don\'t have time - but we have hope.',

@@ -2,6 +2,16 @@ export default {
   general: {
     supportButton: 'Wesprzyj',
   },
+  header: {
+    item1: "Start",
+    item2: "Historia",
+    item3: "Choroba",
+    item4: "Leczenie",
+    item5: "Media",
+    item6: "Pomoc",
+    item7: 'Przyjaciele',
+    item8: "Kontakt",
+  },
   hero: {
     title: 'Zanim dogoni nas czas - działamy',
     description: 'W naszej rodzinie Alzheimer zaczyna się w wieku 30–40 lat. Wiemy, że nie mamy czasu – ale mamy nadzieję.',

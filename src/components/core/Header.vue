@@ -1,14 +1,14 @@
 <script setup lang="ts">
 
-import {useDisplay} from "vuetify/framework"
-import type {Language} from "@/interfaces/Language.ts";
-import {LanguageType} from "@/enums/LanguageType.ts";
+  import type { Language } from "@/interfaces/Language.ts"
+  import { useI18n } from "vue-i18n"
+  import { useDisplay } from "vuetify/framework"
+  import { LanguageType } from "@/enums/LanguageType.ts"
 
-const { xs } = useDisplay();
-const router = useRouter()
-const currentRoute = useRoute()
-import {useI18n} from "vue-i18n";
-const { locale } = useI18n();
+  const { xs, smAndDown } = useDisplay()
+  const router = useRouter()
+  const currentRoute = useRoute()
+  const { locale, t } = useI18n()
 
   interface HeaderItem {
     title: string;
@@ -17,43 +17,49 @@ const { locale } = useI18n();
 
   const headerItems: HeaderItem[] = [
     {
-      title: "Start",
+      title: t("header.item1"),
       action: () => {
         return
       },
     },
     {
-      title: "Historia",
+      title: t("header.item2"),
       action: () => {
         return
       },
     },
     {
-      title: "Choroba",
+      title: t("header.item3"),
       action: () => {
         return
       },
     },
     {
-      title: "Leczenie",
+      title: t("header.item4"),
       action: () => {
         return
       },
     },
     {
-      title: "Media",
+      title: t("header.item5"),
       action: () => {
         return
       },
     },
     {
-      title: "Pomoc",
+      title: t("header.item6"),
       action: () => {
         return
       },
     },
     {
-      title: "Kontakt",
+      title: t("header.item7"),
+      action: () => {
+        return
+      },
+    },
+    {
+      title: t("header.item8"),
       action: () => {
         return
       },
@@ -63,34 +69,34 @@ const { locale } = useI18n();
   const supportedLanguages: Language[] = [
     {
       type: LanguageType.PL,
-      flagSvg: '/src/assets/polish-flag.svg',
-      locale: 'pl',
+      flagSvg: "/src/assets/polish-flag.svg",
+      locale: "pl",
     },
     {
       type: LanguageType.EN,
-      flagSvg: '/src/assets/english-flag.svg',
-      locale: 'en',
+      flagSvg: "/src/assets/english-flag.svg",
+      locale: "en",
     },
   ]
 
-  const selectedLanguage = computed(() => supportedLanguages.find((language) => language.locale === locale.value))
-  const drawer = ref(false);
+  const selectedLanguage = computed(() => supportedLanguages.find(language => language.locale === locale.value))
+  const drawer = ref(false)
 
-  watch(() => currentRoute.path, (newPath) => {
-    locale.value = newPath.startsWith('/en') ? 'en' : 'pl'
+  watch(() => currentRoute.path, newPath => {
+    locale.value = newPath.startsWith("/en") ? "en" : "pl"
   }, { immediate: true })
 
-  function onLanguageClick(languageType: LanguageType): void {
+  function onLanguageClick (languageType: LanguageType): void {
     const newLanguage = supportedLanguages.find(lang => lang.type === languageType)
 
     if (newLanguage === selectedLanguage.value) {
       return
     }
 
-    if (newLanguage?.type !== LanguageType.PL) {
-      router.push(`/${newLanguage?.locale}`)
+    if (newLanguage?.type === LanguageType.PL) {
+      router.push("/")
     } else {
-      router.push('/')
+      router.push(`/${newLanguage?.locale}`)
     }
   }
 
@@ -104,10 +110,10 @@ const { locale } = useI18n();
   >
     <v-container class="header-container">
       <v-row
-        v-if="xs"
+        v-if="smAndDown"
         no-gutters
       >
-        <v-col class="justify-end d-flex">
+        <v-col class="justify-start d-flex">
           <v-app-bar-nav-icon variant="text" @click.stop="drawer = !drawer"/>
         </v-col>
       </v-row>
@@ -134,17 +140,17 @@ const { locale } = useI18n();
 
     <v-menu>
       <template #activator="{props}">
-          <v-btn
-            v-bind="props"
-            class="language-button"
-          >
-            <v-img
-              class="w-100"
-              :src="selectedLanguage.flagSvg"
-            />
+        <v-btn
+          v-bind="props"
+          class="language-button"
+        >
+          <v-img
+            class="w-100"
+            :src="selectedLanguage.flagSvg"
+          />
 
-            <v-icon icon="mdi-menu-down"/>
-          </v-btn>
+          <v-icon icon="mdi-menu-down"/>
+        </v-btn>
       </template>
 
       <v-list>
@@ -217,6 +223,11 @@ const { locale } = useI18n();
   margin-left: auto;
   margin-right: auto;
   background-color: rgb(var(--v-theme-background)) !important;
+  border-bottom: thin solid rgba(var(--v-border-color), var(--v-border-opacity));
+
+  @media only screen and (width >= 960px) {
+    border-bottom: none;
+  }
 
   :deep(.v-toolbar__content) {
     overflow: initial;
@@ -227,7 +238,10 @@ const { locale } = useI18n();
   display: flex;
   align-items: center;
   height: 100%;
-  border-bottom: thin solid rgba(var(--v-border-color), var(--v-border-opacity));
+
+  @media only screen and (width >= 960px) {
+    border-bottom: thin solid rgba(var(--v-border-color), var(--v-border-opacity));
+  }
 
   @media only screen and (min-width: 1920px) {
     max-width: 1500px;

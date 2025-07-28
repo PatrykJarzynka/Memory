@@ -55,7 +55,7 @@ export default {
     price1: '130 000 PLN / rok',
     price2: 'testowy / eksperymentalny',
     price3: '98 000 PLN / rok',
-    linkDesc: 'Dostęp do leków za pomocą www.medicine.washu.edu/'
+    linkDesc: 'Dostęp do leków za pomocą'
   },
   media: {
     title: 'Gdzie o nas mówiono'

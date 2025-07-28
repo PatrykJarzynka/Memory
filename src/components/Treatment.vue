@@ -59,7 +59,17 @@
       </div>
     </div>
 
-    <p class="treatment-link">{{t('treatment.linkDesc')}}</p>
+    <p class="treatment-link">
+      {{t('treatment.linkDesc')}}
+
+      <a
+        href="https://medicine.washu.edu/"
+        target="_blank"
+        class="medicine-link"
+      >
+        {{ ' www.medicine.washu.edu/' }}
+      </a>
+    </p>
   </div>
 </template>
 
@@ -168,5 +178,14 @@
 
 .treatment-link {
   color: rgb(var(--v-theme-primaryContrast));
+}
+
+.medicine-link {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.medicine-link:hover {
+  cursor: pointer;
 }
 </style>

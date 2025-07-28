@@ -55,7 +55,7 @@ export default {
     price1: '27 660 € per year',
     price2: 'experimental drug / investigational treatment',
     price3: '20 850 € per year',
-    linkDesc: 'Access to medications via www.medicine.washu.edu/'
+    linkDesc: 'Access to medications via'
   },
   media: {
     title: 'Where we have been featured'

@@ -6,11 +6,10 @@
       <GoalTracker/>
     </div>
 
-    <IconDivider/>
+    <IconDivider id="history"/>
 
     <div
-      id="history"
-      class="d-flex flex-column align-center scroll-element"
+      class="d-flex flex-column align-center"
     >
       <h2 class="section-title reveal-slide-up">{{ t('familyMembers.title') }}</h2>
 
@@ -39,7 +38,7 @@
 
   <v-container class="main-container py-0">
 
-    <IconDivider/>
+    <IconDivider id="disease"/>
 
     <IllustratedContent
       image-path="/images/Alzheimer-desc-image.jfif"
@@ -52,12 +51,11 @@
       </template>
     </IllustratedContent>
 
-    <IconDivider/>
+    <IconDivider id="treatment"/>
 
     <v-row
-      id="treatment"
       no-gutters
-      class="justify-center scroll-element"
+      class="justify-center"
     >
       <v-col cols="12" md="6" :class="['d-flex align-center', smAndDown ? 'justify-center' : '']">
         <h2 class="section-title--left reveal-slide-up">{{ t('possibilities.title') }}</h2>
@@ -92,12 +90,9 @@
 
     <SupportList/>
 
-    <IconDivider/>
+    <IconDivider id="friends"/>
 
-    <h2
-      id="friends"
-      class="section-title reveal-slide-up scroll-element"
-    >
+    <h2 class="section-title reveal-slide-up">
       {{ t('friends.title') }}
     </h2>
 

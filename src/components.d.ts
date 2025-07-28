@@ -20,6 +20,7 @@ declare module 'vue' {
     Hero: typeof import('./components/Hero.vue')['default']
     IconDivider: typeof import('./components/IconDivider.vue')['default']
     IllustratedContent: typeof import('./components/IllustratedContent.vue')['default']
+    LanguageSelector: typeof import('./components/core/LanguageSelector.vue')['default']
     MediaList: typeof import('./components/MediaList.vue')['default']
     Possibilities: typeof import('./components/Possibilities.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']

@@ -14,7 +14,7 @@ export default {
   },
   hero: {
     title: 'Act before time catches up',
-    description: 'In our family, Alzheimer\'s starts at age 30-40. We know we don\'t have time - but we have hope.',
+    description: "In our family, Alzheimer's starts at age 30-40. We know we don\'t have time - but we have hope.",
     exploreButton: 'Learn the story',
   },
   goal: {
@@ -23,7 +23,7 @@ export default {
     supportButton: 'Back the campaign',
   },
   familyMembers: {
-    title: "Out family's history with the disease",
+    title: "Our family's history with the disease",
     brother: 'Brother',
     sister: 'Sister',
     aunt: 'Aunt',

@@ -11,12 +11,12 @@ export function useLocale() {
   const supportedLanguages: Readonly<Language[]> = Object.freeze([
     {
       type: LanguageType.PL,
-      flagSvg: `${base}src/assets/polish-flag.svg`,
+      flagSvg: `${base}assets/polish-flag.svg`,
       locale: "pl",
     },
     {
       type: LanguageType.EN,
-      flagSvg: `${base}src/assets/english-flag.svg`,
+      flagSvg: `${base}assets/english-flag.svg`,
       locale: "en",
     },
   ])

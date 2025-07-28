@@ -28,7 +28,7 @@
       name: "Jarosław Szlachta",
       association: "SuperHumans",
       description: t("friends.friendDesc4"),
-      iconUrl: `${base}src/assets/SuperHumans.svg`,
+      iconUrl: `${base}assets/SuperHumans.svg`,
     },
   ])
 </script>

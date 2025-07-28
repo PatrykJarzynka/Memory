@@ -13,7 +13,7 @@
   const { smAndDown, lgAndUp } = useDisplay()
   const { t } = useI18n()
 
-  const supportItems: SupportItem[] = [
+  const supportItems = computed<SupportItem[]>(() => [
     {
       id: 1,
       name: t("support.item1Title"),
@@ -58,7 +58,7 @@
       icon: "mdi-plane-car",
       action: null,
     },
-  ]
+  ])
 
   const numberOfColumns = computed(() => smAndDown.value ? 1 : 2)
 </script>

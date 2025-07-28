@@ -8,7 +8,10 @@
 
     <IconDivider/>
 
-    <div class="d-flex flex-column align-center">
+    <div
+      id="history"
+      class="d-flex flex-column align-center scroll-element"
+    >
       <h2 class="section-title reveal-slide-up">{{ t('familyMembers.title') }}</h2>
 
       <FamilyIllustrated/>
@@ -51,7 +54,11 @@
 
     <IconDivider/>
 
-    <v-row no-gutters class="justify-center">
+    <v-row
+      id="treatment"
+      no-gutters
+      class="justify-center scroll-element"
+    >
       <v-col cols="12" md="6" :class="['d-flex align-center', smAndDown ? 'justify-center' : '']">
         <h2 class="section-title--left reveal-slide-up">{{ t('possibilities.title') }}</h2>
       </v-col>
@@ -71,13 +78,15 @@
   <Treatment/>
 
   <v-container class="main-container lower-container pt-0">
-    <IconDivider/>
+    <IconDivider id="media"/>
 
-    <h2 class="section-title reveal-slide-up">{{ t('media.title') }}</h2>
+    <h2 class="section-title reveal-slide-up">
+      {{ t('media.title') }}
+    </h2>
 
     <MediaList/>
 
-    <IconDivider/>
+    <IconDivider id="support"/>
 
     <h2 class="section-title reveal-slide-up">{{ t('support.title') }}</h2>
 
@@ -85,7 +94,12 @@
 
     <IconDivider/>
 
-    <h2 class="section-title reveal-slide-up">{{ t('friends.title') }}</h2>
+    <h2
+      id="friends"
+      class="section-title reveal-slide-up scroll-element"
+    >
+      {{ t('friends.title') }}
+    </h2>
 
     <Friends/>
 

@@ -15,56 +15,69 @@
     action: () => void;
   }
 
-  const headerItems: HeaderItem[] = [
+  function scrollTo (sectionId: string): void {
+    const element = document.querySelector(`#${sectionId}`)
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" })
+    }
+  }
+
+  const headerItems = computed<HeaderItem[]>(() => [
     {
       title: t("header.item1"),
       action: () => {
-        return
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        })
       },
     },
     {
       title: t("header.item2"),
       action: () => {
-        return
+        scrollTo("history")
       },
     },
     {
       title: t("header.item3"),
       action: () => {
-        return
+        scrollTo("disease")
       },
     },
     {
       title: t("header.item4"),
       action: () => {
-        return
+        scrollTo("treatment")
       },
     },
     {
       title: t("header.item5"),
       action: () => {
-        return
+        scrollTo("media")
       },
     },
     {
       title: t("header.item6"),
       action: () => {
-        return
+        scrollTo("support")
       },
     },
     {
       title: t("header.item7"),
       action: () => {
-        return
+        scrollTo("friends")
       },
     },
     {
       title: t("header.item8"),
       action: () => {
-        return
+        window.scrollTo({
+          top: document.body.scrollHeight,
+          behavior: "smooth",
+        })
       },
     },
-  ]
+  ])
 
   const supportedLanguages: Language[] = [
     {
@@ -133,6 +146,7 @@
             :text="item.title"
             variant="plain"
             class="header-item h-100 py-3"
+            @click="item.action"
           />
         </v-col>
       </v-row>
@@ -146,7 +160,8 @@
         >
           <v-img
             class="w-100"
-            :src="selectedLanguage.flagSvg"
+            alt="Country flag"
+            :src="selectedLanguage?.flagSvg"
           />
 
           <v-icon icon="mdi-menu-down"/>
@@ -202,6 +217,7 @@
           :title="item.title"
           :value="item.title"
           class="drawer-item"
+          @click="item.action"
         >
 
           <template #append>

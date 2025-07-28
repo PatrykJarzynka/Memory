@@ -14,7 +14,10 @@
 </script>
 
 <template>
-  <v-row class="content-container">
+  <v-row
+    id="disease"
+    class="content-container scroll-element"
+  >
     <v-col
       :style="{order: side === 'ltr' || smAndDown ? 0 : 1 }"
       cols="11"

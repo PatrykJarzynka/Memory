@@ -16,7 +16,7 @@
       return "text-start"
     }
   }
-  const timelineEvents: TimelineEvent[] = [
+  const timelineEvents = computed<TimelineEvent[]>(() => [
     {
       id: 1,
       side: "end",
@@ -41,7 +41,7 @@
       icon: "mdi-needle",
       eventDesc: t("familyHistory.event4"),
     },
-  ]
+  ])
 </script>
 
 <template>

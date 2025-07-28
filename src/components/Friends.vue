@@ -3,7 +3,7 @@
 
   const { t } = useI18n()
 
-  const friends = [
+  const friends = computed(() => [
     {
       id: 1,
       name: "Patryk Jarzynka",
@@ -29,7 +29,7 @@
       description: t("friends.friendDesc4"),
       iconUrl: "./src/assets/SuperHumans.svg",
     },
-  ]
+  ])
 </script>
 
 <template>

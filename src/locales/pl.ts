@@ -13,7 +13,7 @@ export default {
     item8: "Kontakt",
   },
   hero: {
-    title: 'Zanim dogoni nas czas - działamy',
+    title: 'Nie chcemy zapomnieć',
     description: 'W naszej rodzinie Alzheimer zaczyna się w wieku 30–40 lat. Wiemy, że nie mamy czasu – ale mamy nadzieję.',
     exploreButton: 'Poznaj historię',
   },

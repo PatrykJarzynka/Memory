@@ -13,7 +13,7 @@ export default {
     item8: "Contact",
   },
   hero: {
-    title: 'Act before time catches up',
+    title: "We don't want to forget",
     description: "In our family, Alzheimer's starts at age 30-40. We know we don\'t have time - but we have hope.",
     exploreButton: 'Learn the story',
   },

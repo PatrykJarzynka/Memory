@@ -98,6 +98,7 @@
     <h2 class="section-title reveal-slide-up">
       {{ t('friends.title') }}
     </h2>
+    <h3 class="section-sub_title--primary reveal-slide-up friends-description">{{ t('friends.subtitle') }}</h3>
 
     <Friends/>
 
@@ -236,6 +237,11 @@
     @extend .section-sub_title;
     color: rgb(var(--v-theme-primaryLight));
   }
+}
+
+.friends-description {
+  text-align: justify;
+  padding-inline: 16px;
 }
 
 .description-text {

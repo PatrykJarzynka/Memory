@@ -75,6 +75,7 @@ export default {
   },
   friends: {
     title: 'Neurons of hope',
+    subtitle: 'These are friends who support our foundation in a special way - financially, in-kind or strategically. It is thanks to them that good impulses reach where they are needed most.',
     friendDesc1: 'A programmer and friend who is passionately building our website, making sure it’s not only functional but also filled with heart.',
     friendDesc2: 'A friend and doctor currently specializing in urology. She supports our search for treatment with deep dedication and care.',
     friendDesc3: 'The creator of the S.A.R.24 combat system. He supports our initiative on many levels.',

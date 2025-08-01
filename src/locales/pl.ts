@@ -75,6 +75,7 @@ export default {
   },
   friends: {
     title: 'Neurony nadziei',
+    subtitle: 'To przyjaciele, którzy w szczególny sposób wspierają naszą fundację – finansowo, rzeczowo lub strategicznie. To dzięki nim dobre impulsy docierają tam, gdzie są najbardziej potrzebne.',
     friendDesc1: 'Programista i przyjaciel, który z zaangażowaniem tworzy naszą stronę internetową, dbając o to, by była nie tylko funkcjonalna, ale i pełna serca.',
     friendDesc2: 'Przyjaciółka i lekarka w trakcie specjalizacji urologicznej. Z ogromnym zaangażowaniem wspiera w poszukiwaniu leczenia choroby.',
     friendDesc3: 'Twórca systemu walki S.A.R.24. Wspiera naszą inicjatywę na wielu poziomach.',

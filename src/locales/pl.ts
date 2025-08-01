@@ -52,9 +52,7 @@ export default {
   },
   treatment: {
     title: 'Dostępne leki',
-    price1: '130 000 PLN / rok',
-    price2: 'testowy / eksperymentalny',
-    price3: '98 000 PLN / rok',
+    experimentalDrugTitle: 'testowy / eksperymentalny',
     linkDesc: 'Dostęp do leków za pomocą'
   },
   media: {

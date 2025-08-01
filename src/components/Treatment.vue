@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import {useI18n} from "vue-i18n";
+  import { useI18n } from "vue-i18n"
 
   interface TreatmentItem {
     id: number;
@@ -7,24 +7,24 @@
     priceDesc: string | null;
   }
 
-  const {t} = useI18n();
+  const { t } = useI18n()
 
   const treatmentItems = computed<TreatmentItem[]>(() => [
     {
       id: 1,
       name: "Donanemab",
-      priceDesc: t('treatment.price1'),
+      priceDesc: t("treatment.price1"),
     },
     {
       id: 2,
       name: "Gantenerumab",
-      priceDesc: t('treatment.price2')
+      priceDesc: t("treatment.price2"),
     },
     {
       id: 3,
       name: "Lecanamab",
-      priceDesc: t('treatment.price3'),
-    }
+      priceDesc: t("treatment.price3"),
+    },
   ])
 
   function splitNumber (value: number): string {
@@ -60,7 +60,7 @@
     </div>
 
     <p class="treatment-link">
-      {{t('treatment.linkDesc')}}
+      {{ t('treatment.linkDesc') }}
 
       <a
         href="https://medicine.washu.edu/"
@@ -81,6 +81,7 @@
   justify-content: center;
   background-color: rgba(var(--v-theme-primary));
   padding-block: var(--v-gap-elements-outside--xs);
+  padding-inline: 10px;
   text-align: center;
 
   @media only screen and (width >= 1280px) {

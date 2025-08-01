@@ -79,8 +79,7 @@ export default {
     title: 'Nasi przyjaciele',
     friendDesc1: 'Programista i przyjaciel, który z zaangażowaniem tworzy naszą stronę internetową, dbając o to, by była nie tylko funkcjonalna, ale i pełna serca.',
     friendDesc2: 'Przyjaciółka i lekarka w trakcie specjalizacji urologicznej. Z ogromnym zaangażowaniem wspiera w poszukiwaniu leczenia choroby.',
-    friendDesc3: 'Terapeutka, przyjaciółka. Ogromne wsparcie w naszych działaniach i organizacji.',
-    friendDesc4: 'Twórca systemu walki S.A.R.24. Wspiera naszą inicjatywę na wielu poziomach.',
+    friendDesc3: 'Twórca systemu walki S.A.R.24. Wspiera naszą inicjatywę na wielu poziomach.',
   },
   footer: {
     title: 'Jeżeli masz pomysł, lub wiesz jak nam pomóc odezwij się',

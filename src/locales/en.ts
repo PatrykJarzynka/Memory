@@ -79,8 +79,7 @@ export default {
     title: 'Our friends',
     friendDesc1: 'A programmer and friend who is passionately building our website, making sure it’s not only functional but also filled with heart.',
     friendDesc2: 'A friend and doctor currently specializing in urology. She supports our search for treatment with deep dedication and care.',
-    friendDesc3: 'A therapist and friend. A tremendous support in everything we do and in our organisation.',
-    friendDesc4: 'The creator of the S.A.R.24 combat system. He supports our initiative on many levels.',
+    friendDesc3: 'The creator of the S.A.R.24 combat system. He supports our initiative on many levels.',
   },
   footer: {
     title: 'If you have an idea or know how to help us, please reach out',

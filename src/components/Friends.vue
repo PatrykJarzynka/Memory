@@ -18,15 +18,9 @@
     },
     {
       id: 3,
-      name: "Aleksandra Dzierżawa",
-      association: null,
-      description: t("friends.friendDesc3"),
-    },
-    {
-      id: 4,
       name: "Jarosław Szlachta",
       association: "SuperHumans",
-      description: t("friends.friendDesc4"),
+      description: t("friends.friendDesc3"),
       iconUrl: "./src/assets/SuperHumans.svg",
     },
   ])

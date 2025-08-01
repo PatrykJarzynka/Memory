@@ -74,7 +74,7 @@ export default {
     item6Desc: 'Our treatment and medical research are taking place abroad — we need help finding a place to live, organizing travel, and managing daily logistics. This support would allow us to focus on fighting the disease.',
   },
   friends: {
-    title: 'Our friends',
+    title: 'Neurons of hope',
     friendDesc1: 'A programmer and friend who is passionately building our website, making sure it’s not only functional but also filled with heart.',
     friendDesc2: 'A friend and doctor currently specializing in urology. She supports our search for treatment with deep dedication and care.',
     friendDesc3: 'The creator of the S.A.R.24 combat system. He supports our initiative on many levels.',

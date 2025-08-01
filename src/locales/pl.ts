@@ -74,7 +74,7 @@ export default {
     item6Desc: 'Leczenie i badania odbywają się za granicą — potrzebujemy pomocy w znalezieniu miejsca do życia, organizacji podróży i codziennej logistyce. To wsparcie pozwoli nam skupić się na walce z chorobą.',
   },
   friends: {
-    title: 'Nasi przyjaciele',
+    title: 'Neurony nadziei',
     friendDesc1: 'Programista i przyjaciel, który z zaangażowaniem tworzy naszą stronę internetową, dbając o to, by była nie tylko funkcjonalna, ale i pełna serca.',
     friendDesc2: 'Przyjaciółka i lekarka w trakcie specjalizacji urologicznej. Z ogromnym zaangażowaniem wspiera w poszukiwaniu leczenia choroby.',
     friendDesc3: 'Twórca systemu walki S.A.R.24. Wspiera naszą inicjatywę na wielu poziomach.',

@@ -26,12 +26,6 @@
       priceDesc: t("treatment.price3"),
     },
   ])
-
-  function splitNumber (value: number): string {
-    return value
-      .toString()
-      .replace(/\B(?=(\d{3})+(?!\d))/g, " ")
-  }
 </script>
 
 <template>

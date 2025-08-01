@@ -240,8 +240,10 @@
 }
 
 .friends-description {
-  text-align: justify;
-  padding-inline: 16px;
+  @media only screen and (width < 1280px) {
+    text-align: justify;
+    padding-inline: 16px;
+  }
 }
 
 .description-text {

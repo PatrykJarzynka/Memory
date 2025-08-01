@@ -32,6 +32,7 @@
             :src="locale === 'en' ? '/images/Family-structure-en.png' : '/images/Family-structure.png'"
           />
         </div>
+
         <FamilyTimeline/>
       </div>
 

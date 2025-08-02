@@ -119,8 +119,8 @@ const friends = computed(() => [
   align-self: center;
   border-radius: 50%;
   border: thin solid;
-  padding: 40px;
-  font-size: 60px;
+  padding: 35px;
+  font-size: 50px;
   color: rgb(var(--v-theme-primaryContrast));
   opacity: 0.5;
 

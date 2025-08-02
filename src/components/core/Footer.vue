@@ -8,7 +8,7 @@
   <v-footer class="footer-container">
     <v-row
       no-gutters
-      class="ga-5 justify-center reveal"
+      class="ga-11 justify-center reveal"
     >
       <v-col
         cols="12"
@@ -40,12 +40,42 @@
 
       </v-col>
 
-      <a
-        href="mailto:pamietnikalzheimerowca@gmail.com"
-        class="contact-email"
+      <v-col
+        cols="12"
+        class="socials-column"
       >
-        pamietnikalzheimerowca@gmail.com
-      </a>
+        <div class="social-item-container">
+          <v-icon
+            class="email-icon"
+            icon="mdi-email-outline"
+          />
+
+          <a
+            href="mailto:pamietnikalzheimerowca@gmail.com"
+            class="social-item"
+          >
+            pamietnikalzheimerowca@gmail.com
+          </a>
+        </div>
+
+        <div class="social-item-container">
+          <img
+            src="/assets/instagram.svg"
+            alt="Instagram logo"
+            class="instagram-image"
+          />
+
+          <a
+            href="https://www.instagram.com/pamietnikalzheimerowca/"
+            class="social-item"
+          >
+            instagram.com/pamietnikalzheimerowca/
+          </a>
+        </div>
+
+      </v-col>
+
+
 
     </v-row>
 
@@ -151,7 +181,19 @@
   }
 }
 
-.contact-email {
+.socials-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-item-container {
+  display: flex;
+  column-gap: 10px;
+}
+
+.social-item {
+  align-self: center;
   color: rgb(var(--v-theme-primaryContrast));
   font-size: 15px;
   font-weight: 500;
@@ -169,5 +211,17 @@
     font-size: 20px;
   }
 }
+
+.email-icon {
+  font-size: 33px;
+  color: rgb(var(--v-theme-primaryContrast));
+}
+
+.instagram-image {
+  height: 40px;
+}
+
+
+
 
 </style>

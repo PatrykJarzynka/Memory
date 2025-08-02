@@ -13,7 +13,7 @@ export default {
     item8: "Contact",
   },
   hero: {
-    title: 'Act before time catches up',
+    title: "We don't want to forget",
     description: "In our family, Alzheimer's starts at age 30-40. We know we don\'t have time - but we have hope.",
     exploreButton: 'Learn the story',
   },
@@ -52,9 +52,7 @@ export default {
   },
   treatment: {
     title: 'Medications available',
-    price1: '27 660 € per year',
-    price2: 'experimental drug / investigational treatment',
-    price3: '20 850 € per year',
+    experimentalDrugTitle: 'experimental drug / investigational treatment',
     linkDesc: 'Access to medications via'
   },
   media: {
@@ -76,11 +74,11 @@ export default {
     item6Desc: 'Our treatment and medical research are taking place abroad — we need help finding a place to live, organizing travel, and managing daily logistics. This support would allow us to focus on fighting the disease.',
   },
   friends: {
-    title: 'Our friends',
+    title: 'Neurons of hope',
+    subtitle: 'These are friends who support our foundation in a special way - financially, in-kind or strategically. It is thanks to them that good impulses reach where they are needed most.',
     friendDesc1: 'A programmer and friend who is passionately building our website, making sure it’s not only functional but also filled with heart.',
     friendDesc2: 'A friend and doctor currently specializing in urology. She supports our search for treatment with deep dedication and care.',
-    friendDesc3: 'A therapist and friend. A tremendous support in everything we do and in our organisation.',
-    friendDesc4: 'The creator of the S.A.R.24 combat system. He supports our initiative on many levels.',
+    friendDesc3: 'The creator of the S.A.R.24 combat system. He supports our initiative on many levels.',
   },
   footer: {
     title: 'If you have an idea or know how to help us, please reach out',

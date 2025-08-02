@@ -1,37 +1,31 @@
 <script setup lang="ts">
-  import {useI18n} from "vue-i18n";
+  import { useI18n } from "vue-i18n"
 
   interface TreatmentItem {
     id: number;
     name: string;
-    priceDesc: string | null;
+    isExperimental: boolean;
   }
 
-  const {t} = useI18n();
+  const { t } = useI18n()
 
   const treatmentItems = computed<TreatmentItem[]>(() => [
     {
       id: 1,
       name: "Donanemab",
-      priceDesc: t('treatment.price1'),
+      isExperimental: false,
     },
     {
       id: 2,
       name: "Gantenerumab",
-      priceDesc: t('treatment.price2')
+      isExperimental: true,
     },
     {
       id: 3,
       name: "Lecanamab",
-      priceDesc: t('treatment.price3'),
-    }
+      isExperimental: false,
+    },
   ])
-
-  function splitNumber (value: number): string {
-    return value
-      .toString()
-      .replace(/\B(?=(\d{3})+(?!\d))/g, " ")
-  }
 </script>
 
 <template>
@@ -46,9 +40,10 @@
           <p class="treatment-name">{{ item.name }}</p>
 
           <p
-            class="treatment-price"
+            v-if="item.isExperimental"
+            class="experimental-drug-label"
           >
-            {{ item.priceDesc }}
+            ( {{ t('treatment.experimentalDrugTitle') }} )
           </p>
         </div>
 
@@ -60,7 +55,7 @@
     </div>
 
     <p class="treatment-link">
-      {{t('treatment.linkDesc')}}
+      {{ t('treatment.linkDesc') }}
 
       <a
         href="https://medicine.washu.edu/"
@@ -81,6 +76,7 @@
   justify-content: center;
   background-color: rgba(var(--v-theme-primary));
   padding-block: var(--v-gap-elements-outside--xs);
+  padding-inline: 10px;
   text-align: center;
 
   @media only screen and (width >= 1280px) {
@@ -120,13 +116,14 @@
 }
 
 .treatment-item {
+  position: relative;
   font-family: var(--v-secondary-font);
   color: rgb(var(--v-theme-primaryContrast));
   display: flex;
   flex-direction: column;
-  text-align: center;
-  row-gap: var(--v-gap-elements-inside--xs);
-  padding-inline: 25px;
+  align-items: center;
+  column-gap: 10px;
+  padding-inline: 35px;
 
   @media only screen and (width >= 1280px) {
     padding-inline: 40px;
@@ -134,29 +131,33 @@
 }
 
 .treatment-name {
-  font-size: 23px;
+  font-size: 27px;
   font-family: var(--v-primary-font);
 
   @media only screen and (width >= 600px) {
-    font-size: 24px;
+    font-size: 32px;
   }
 
   @media only screen and (width >= 1280px) {
-    font-size: 28px;
+    font-size: 35px;
+  }
+
+  @media only screen and (width >= 1920px) {
+    font-size: 40px;
   }
 }
 
-.treatment-price {
-  font-size: 24px;
-  font-weight: 400;
-  font-family: var(--v-secondary-font);
-
+.experimental-drug-label {
   @media only screen and (width >= 600px) {
-    font-size: 25px;
+    font-size: 18px;
   }
 
   @media only screen and (width >= 1280px) {
-    font-size: 30px;
+    font-size: 20px;
+  }
+
+  @media only screen and (width >= 1920px) {
+    font-size: 25px;
   }
 }
 

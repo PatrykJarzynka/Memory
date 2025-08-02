@@ -32,6 +32,7 @@
             :src="locale === 'en' ? `${base}images/Family-structure-en.png` : `${base}images/Family-structure.png`"
           />
         </div>
+
         <FamilyTimeline/>
       </div>
 
@@ -98,6 +99,7 @@
     <h2 class="section-title reveal-slide-up">
       {{ t('friends.title') }}
     </h2>
+    <h3 class="section-sub_title--primary reveal-slide-up friends-description">{{ t('friends.subtitle') }}</h3>
 
     <Friends/>
 
@@ -236,6 +238,13 @@
   &--primary {
     @extend .section-sub_title;
     color: rgb(var(--v-theme-primaryLight));
+  }
+}
+
+.friends-description {
+  @media only screen and (width < 1280px) {
+    text-align: justify;
+    padding-inline: 16px;
   }
 }
 

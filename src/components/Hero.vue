@@ -19,7 +19,7 @@
       <v-col
         cols="12"
         sm="9"
-        md="5"
+        md="6"
         class="hero-lead-column reveal-slide-up"
       >
         <div class="lead-column-text">
@@ -62,7 +62,7 @@
   background-color: rgb(var(--v-theme-primary));
   width: 100%;
   border-radius: 24px;
-  padding: var(--v-space-section--xs) 20px;
+  padding: var(--v-space-section--xs) 30px;
 }
 
 .hero-content {
@@ -95,7 +95,7 @@
 .lead-column-text {
   display: flex;
   flex-direction: column;
-  row-gap: 20px;
+  row-gap: 25px;
 }
 
 .hero-title {
@@ -109,12 +109,16 @@
     font-size: 40px;
   }
 
+  @media only screen and (width >= 960px) {
+    font-size: 36px;
+  }
+
   @media only screen and (width >= 1280px) {
-    font-size: 53px;
+    font-size: 55px;
   }
 
   @media only screen and (width >= 1920px) {
-    font-size: 67px;
+    font-size: 60px;
   }
 }
 

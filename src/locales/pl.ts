@@ -13,7 +13,7 @@ export default {
     item8: "Kontakt",
   },
   hero: {
-    title: 'Zanim dogoni nas czas - działamy',
+    title: 'Nie chcemy zapomnieć',
     description: 'W naszej rodzinie Alzheimer zaczyna się w wieku 30–40 lat. Wiemy, że nie mamy czasu – ale mamy nadzieję.',
     exploreButton: 'Poznaj historię',
   },
@@ -52,9 +52,7 @@ export default {
   },
   treatment: {
     title: 'Dostępne leki',
-    price1: '130 000 PLN / rok',
-    price2: 'testowy / eksperymentalny',
-    price3: '98 000 PLN / rok',
+    experimentalDrugTitle: 'testowy / eksperymentalny',
     linkDesc: 'Dostęp do leków za pomocą'
   },
   media: {
@@ -76,11 +74,11 @@ export default {
     item6Desc: 'Leczenie i badania odbywają się za granicą — potrzebujemy pomocy w znalezieniu miejsca do życia, organizacji podróży i codziennej logistyce. To wsparcie pozwoli nam skupić się na walce z chorobą.',
   },
   friends: {
-    title: 'Nasi przyjaciele',
+    title: 'Neurony nadziei',
+    subtitle: 'To przyjaciele, którzy w szczególny sposób wspierają naszą fundację – finansowo, rzeczowo lub strategicznie. To dzięki nim dobre impulsy docierają tam, gdzie są najbardziej potrzebne.',
     friendDesc1: 'Programista i przyjaciel, który z zaangażowaniem tworzy naszą stronę internetową, dbając o to, by była nie tylko funkcjonalna, ale i pełna serca.',
     friendDesc2: 'Przyjaciółka i lekarka w trakcie specjalizacji urologicznej. Z ogromnym zaangażowaniem wspiera w poszukiwaniu leczenia choroby.',
-    friendDesc3: 'Terapeutka, przyjaciółka. Ogromne wsparcie w naszych działaniach i organizacji.',
-    friendDesc4: 'Twórca systemu walki S.A.R.24. Wspiera naszą inicjatywę na wielu poziomach.',
+    friendDesc3: 'Twórca systemu walki S.A.R.24. Wspiera naszą inicjatywę na wielu poziomach.',
   },
   footer: {
     title: 'Jeżeli masz pomysł, lub wiesz jak nam pomóc odezwij się',

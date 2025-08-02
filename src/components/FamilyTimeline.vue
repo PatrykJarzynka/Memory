@@ -20,13 +20,13 @@
     {
       id: 1,
       side: "end",
-      icon: "mdi-skull",
+      icon: "mdi-coffin",
       eventDesc: t("familyHistory.event1"),
     },
     {
       id: 2,
       side: "start",
-      icon: "mdi-skull",
+      icon: "mdi-coffin",
       eventDesc: t("familyHistory.event2"),
     },
     {

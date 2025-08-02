@@ -17,7 +17,13 @@
         <div class="images-container">
           <v-img cover class="family-image big-image" src="/images/family-members-2.PNG"/>
           <v-img aspect-ratio="1" cover class="family-image" src="/images/monika-member.jfif"/>
-          <v-img aspect-ratio="1" cover class="family-image" src="/images/family-members-3.PNG"/>
+          <v-img
+            aspect-ratio="1"
+            cover
+            position="top"
+            class="family-image"
+            src="/images/family-members-3.PNG"
+          />
         </div>
       </v-col>
 
@@ -62,6 +68,7 @@
 
 .family-image {
   border-radius: 24px;
+  object-position: top;
 }
 
 .big-image {

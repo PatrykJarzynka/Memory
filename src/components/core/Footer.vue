@@ -60,7 +60,7 @@
 
         <div class="social-item-container">
           <img
-            src="/assets/instagram.svg"
+            src="/assets/instagram-colored.svg"
             alt="Instagram logo"
             class="instagram-image"
           />

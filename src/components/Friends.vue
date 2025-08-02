@@ -1,32 +1,32 @@
 <script setup lang="ts">
-  import { useI18n } from "vue-i18n"
+import { useI18n } from "vue-i18n"
 
-  const { t } = useI18n()
+const { t } = useI18n()
 
-  const friends = computed(() => [
-    {
-      id: 1,
-      name: "Patryk",
-      surname: "Jarzynka",
-      association: null,
-      description: t("friends.friendDesc1"),
-    },
-    {
-      id: 2,
-      name: "Aleksandra",
-      surname: "Bratek",
-      association: null,
-      description: t("friends.friendDesc2"),
-    },
-    {
-      id: 3,
-      name: "Jarosław",
-      surname: "Szlachta",
-      association: "SuperHumans",
-      description: t("friends.friendDesc3"),
-      iconUrl: "./assets/SuperHumans.svg",
-    },
-  ])
+const friends = computed(() => [
+  {
+    id: 1,
+    name: "Patryk",
+    surname: "Jarzynka",
+    association: null,
+    description: t("friends.friendDesc1"),
+  },
+  {
+    id: 2,
+    name: "Aleksandra",
+    surname: "Bratek",
+    association: null,
+    description: t("friends.friendDesc2"),
+  },
+  {
+    id: 3,
+    name: "Jarosław",
+    surname: "Szlachta",
+    association: "SuperHumans",
+    description: t("friends.friendDesc3"),
+    iconUrl: "./assets/SuperHumans.svg",
+  },
+])
 </script>
 
 <template>
@@ -95,11 +95,13 @@
   padding: 20px;
 
   @media only screen and (width >= 600px) {
-    aspect-ratio: 1;
+    aspect-ratio: 1.2;
+    padding: 10px;
   }
 
   @media only screen and (width >= 960px) {
     aspect-ratio: 2;
+    padding: 20px;
   }
 }
 
@@ -117,7 +119,7 @@
   align-self: center;
   border-radius: 50%;
   border: thin solid;
-  padding: 34px;
+  padding: 40px;
   font-size: 60px;
   color: rgb(var(--v-theme-primaryContrast));
   opacity: 0.5;
@@ -162,9 +164,8 @@
 
   transition: transform 0.6s ease, opacity 0.6s ease;
 
-  @media only screen and (width >= 600px) {
+  @media only screen and (width >= 960px) {
     font-size: 25px;
-    margin-top: 10px;
   }
 }
 
@@ -193,6 +194,14 @@
   transition: opacity 0.6s ease, transform 0.6s ease;
 
   @media only screen and (width >= 600px) {
+    font-size: 16px;
+  }
+
+  @media only screen and (width >= 960px) {
+    font-size: 18px;
+  }
+
+  @media only screen and (width >= 1280px) {
     font-size: 20px;
   }
 }

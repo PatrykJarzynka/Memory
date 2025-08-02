@@ -24,7 +24,7 @@
       surname: "Szlachta",
       association: "SuperHumans",
       description: t("friends.friendDesc3"),
-      iconUrl: "./src/assets/SuperHumans.svg",
+      iconUrl: "./assets/SuperHumans.svg",
     },
   ])
 </script>
@@ -47,33 +47,35 @@
         variant="outlined"
         elevation="5"
       >
-        <v-row>
-          <v-col cols="5">
-            <v-img
-              v-if="friend.iconUrl"
-              :src="friend.iconUrl"
-              alt="Association"
-            />
+        <div class="friend-card-container">
 
-            <div
-              v-else
-              class="icon-container"
-            >
-              <v-icon icon="mdi-handshake-outline"/>
-            </div>
-          </v-col>
+          <img
+            width="100"
+            v-if="friend.iconUrl"
+            :src="friend.iconUrl"
+            alt="Association image"
+            class="friend-card-association-image"
+          />
 
-          <v-col cols="6">
-            <v-card-title class="friend-card-title">
-              <span class="friend-name title-text">{{ friend.name }}</span>
-              <span class="friend-surname title-text">{{ friend.surname }}</span>
-            </v-card-title>
-          </v-col>
-        </v-row>
+          <v-icon
+            v-else
+            class="friend-card-icon"
+            icon="mdi-account"
+          />
 
-        <!--        <v-card-text class="card-content">-->
-        <!--          {{ friend.description }}-->
-        <!--        </v-card-text>-->
+          <v-card-title class="friend-card-title"> {{`${friend.name} ${friend.surname}`}}</v-card-title>
+          <v-card-subtitle
+            v-if="friend.association"
+            class="friend-card-association"
+          >
+            {{friend.association}}
+          </v-card-subtitle>
+
+        </div>
+
+        <v-card-text class="card-content">
+          {{ friend.description }}
+        </v-card-text>
       </v-card>
     </v-col>
   </v-row>
@@ -81,6 +83,7 @@
 
 <style scoped lang="scss">
 .friend-card {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -100,47 +103,117 @@
   }
 }
 
-.friend-card-title {
-  text-align: center;
-  justify-content: center;
-  gap: 10px;
+.friend-card-container {
+  display: grid;
+  grid-template-rows: 50% 30% 10%;
   height: 100%;
+  position: absolute;
+  transition: transform 0.6s ease;
+  padding: 20px;
+}
 
+.friend-card-icon {
+  justify-self: center;
+  align-self: center;
+  border-radius: 50%;
+  border: thin solid;
+  padding: 40px;
+  font-size: 60px;
   color: rgb(var(--v-theme-primaryContrast));
-  font-size: 15px;
+  opacity: 0.5;
+
+  transition: transform 0.6s ease, opacity 0.6s ease;
+
+  @media only screen and (width >= 600px) {
+    font-size: 70px;
+    padding: 45px;
+  }
+
+  @media only screen and (width >= 960px) {
+    font-size: 60px;
+    padding: 40px;
+  }
+}
+
+.friend-card-association-image {
+  justify-self: center;
+  border-radius: 20px;
+  width: 35%;
+  align-self: center;
+
+  transition: transform 0.6s ease, opacity 0.6s ease;
+
+  @media only screen and (width >= 600px) {
+    width: 50%;
+  }
+
+  @media only screen and (width >= 960px) {
+    width: 35%;
+  }
+}
+
+
+.friend-card-title {
+  margin-top: 20px;
+  color: rgb(var(--v-theme-primaryContrast));
+  font-size: 23px;
+  justify-self: center;
+  align-self: center;
+
+  transition: transform 0.6s ease, opacity 0.6s ease;
+
+  @media only screen and (width >= 600px) {
+    font-size: 25px;
+    margin-top: 10px;
+  }
+}
+
+.friend-card-association {
+  margin-top: 10px;
+  justify-self: center;
+  align-self: center;
+  color: rgb(var(--v-theme-primaryContrast));
+
+  transition: transform 0.6s ease, opacity 0.6s ease;
 }
 
 .card-content {
-  opacity: 0;
-  transform: scale(0.9);
-  transition: opacity 0.6s ease, transform 0.6s ease;
   text-align: center;
   background-color: rgb(var(--v-theme-primaryContrast));
   height: 100%;
   border-radius: 20px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: 16px;
+
+  font-size: 17px;
   color: rgb(var(--v-theme-primary));
+
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 
   @media only screen and (width >= 600px) {
     font-size: 20px;
   }
 }
 
-.title-text {
-  transition: transform 0.6s ease, opacity 0.6s ease;
-}
 
-.friend-card:hover .friend-name {
-  transform: translateY(-120%);
-  opacity: 0;
-}
+.friend-card:hover {
+  .friend-card-association-image,
+  .friend-card-icon {
+    transform: translateY(-120%);
+    opacity: 0;
+  }
 
-.friend-card:hover .friend-surname {
-  transform: translateY(120%);
-  opacity: 0;
+  .friend-card-title {
+    transform: translateY(120%);
+    opacity: 0;
+  }
+
+  .friend-card-association {
+    transform: translateY(290%);
+    opacity: 0;
+  }
 }
 
 .friend-card:hover .card-content {

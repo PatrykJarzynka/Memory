@@ -36,11 +36,29 @@
         platformName: "TVP",
       },
     },
+    {
+      id: 3,
+      name: "Telewizja TVT",
+      icon: "mdi-television",
+      mediaData: {
+        link: "https://www.youtube.com/watch?v=GKFxClgcpDc",
+        platformName: "TVT",
+      },
+    },
+    {
+      id: 4,
+      name: "Studio Raban",
+      icon: "mdi-television",
+      mediaData: {
+        link: "https://www.youtube.com/watch?v=HovKI1sU4cs",
+        platformName: "YTube",
+      },
+    },
   ]
 </script>
 
 <template>
-  <div class="media-container reveal-slide-up">
+  <div class="media-container reveal-slide-up shadow-scroll">
     <div
       v-for="item in mediaItems"
       :key="item.id"
@@ -72,24 +90,31 @@
 
 .media-container{
   display: grid;
-  grid-template-columns: 1fr auto;
-  column-gap: 50px;
+  grid-template-columns: 2fr 1.2fr;
+  column-gap: 30px;
   row-gap: 30px;
   margin-inline: auto;
   align-items: center;
   border-inline: 2px solid rgb(var(--v-theme-primary));
-  padding: var(--v-gap-elements-outside--xs) 20px;
+  padding: 20px;
+  max-height: 200px;
+  overflow: auto;
+
+
 
   @media only screen and (width >= 600px) {
-    padding: var(--v-gap-elements-outside--sm);
+    grid-template-columns: 1fr auto;
+    padding: 20px 60px;
   }
 
   @media only screen and (width >= 960px) {
-    padding: var(--v-gap-elements-outside--sm) 80px;
+    padding: 40px 80px;
+    max-height: 300px;
   }
 
   @media only screen and (width >= 1280px) {
     padding: var(--v-gap-elements-outside--sm) 150px;
+    max-height: 360px;
   }
 }
 

@@ -17,6 +17,7 @@ import { createApp } from 'vue'
 // Styles
 import 'unfonts.css'
 import '@/styles/animations.scss'
+import '@/styles/global.scss'
 
 import pl from '@/locales/pl'
 import en from '@/locales/en'

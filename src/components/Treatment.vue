@@ -123,7 +123,6 @@
   flex-direction: column;
   align-items: center;
   column-gap: 10px;
-  padding-inline: 35px;
 
   @media only screen and (width >= 1280px) {
     padding-inline: 40px;

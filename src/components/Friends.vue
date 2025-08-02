@@ -117,7 +117,7 @@
   align-self: center;
   border-radius: 50%;
   border: thin solid;
-  padding: 40px;
+  padding: 34px;
   font-size: 60px;
   color: rgb(var(--v-theme-primaryContrast));
   opacity: 0.5;
@@ -137,7 +137,7 @@
 
 .friend-card-association-image {
   justify-self: center;
-  border-radius: 20px;
+  border-radius: 10px;
   width: 35%;
   align-self: center;
 

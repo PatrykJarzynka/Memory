@@ -118,7 +118,7 @@
 .treatment-item {
   position: relative;
   font-family: var(--v-secondary-font);
-  color: rgb(var(--v-theme-primaryContrast));
+  color: rgb(var(--v-theme-background));
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -163,7 +163,7 @@
 .separator {
   width: 30%;
   height: 2px;
-  background: rgb(var(--v-theme-primaryContrast));
+  background: rgb(var(--v-theme-background));
   margin-block: var(--v-gap-elements-outside--xs);
 
   @media only screen and (width >= 960px) {
@@ -177,7 +177,7 @@
 }
 
 .treatment-link {
-  color: rgb(var(--v-theme-primaryContrast));
+  color: rgb(var(--v-theme-background));
 }
 
 .medicine-link {

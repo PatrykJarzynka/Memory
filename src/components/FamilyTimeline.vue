@@ -51,12 +51,11 @@
     :direction="smAndDown ? 'vertical' : 'horizontal'"
   >
     <v-timeline-item
+      class="timeline-item"
       v-for="event in timelineEvents"
       :key="event.id"
       :icon="event.icon"
       :side="smAndDown ? event.side : 'end'"
-      dot-color="#d5c699"
-      icon-color="#753c00"
       fill-dot
     >
       <p
@@ -71,6 +70,16 @@
 <style scoped lang="scss">
 .event-description {
   font-weight: 500;
-  color: rgb(var(--v-theme-primaryContrast));
+  color: rgb(var(--v-theme-background));
+}
+
+.timeline-item {
+  :deep(.v-icon) {
+    color: rgba(var(--v-theme-primary)) !important;
+  }
+
+  :deep(.v-timeline-divider__inner-dot) {
+    background-color: var(--v-theme-background) !important;
+  }
 }
 </style>

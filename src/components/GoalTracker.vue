@@ -87,7 +87,7 @@
 }
 
 .goal-text {
-  color: rgb(var(--v-theme-primaryContrast));
+  color: rgb(var(--v-theme-background));
   font-size: 18px;
   width: 60%;
   font-weight: 400;

@@ -15,11 +15,11 @@ import { aliases, mdi } from 'vuetify/iconsets/mdi'
 const lightTheme: ThemeDefinition = {
   dark: false,
   colors: {
-    background: '#efebdf',
-    primary: '#6b5336',
-    primaryLight: '#886944',
-    highlight: '#BE753A',
-    primaryContrast: '#fff'
+    background: '#F6E8EA',
+    primary: '#22181C',
+    primaryLight: '#3C2A31',
+    highlight: '#FF5C5F',
+    backgroundContrast: '#F45B69'
   },
   variables: {
     'primary-font': 'Playfair Display, serif',

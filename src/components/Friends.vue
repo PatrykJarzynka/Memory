@@ -121,7 +121,7 @@ const friends = computed(() => [
   border: thin solid;
   padding: 35px;
   font-size: 50px;
-  color: rgb(var(--v-theme-primaryContrast));
+  color: rgb(var(--v-theme-background));
   opacity: 0.5;
 
   transition: transform 0.6s ease, opacity 0.6s ease;
@@ -157,7 +157,7 @@ const friends = computed(() => [
 
 .friend-card-title {
   margin-top: 20px;
-  color: rgb(var(--v-theme-primaryContrast));
+  color: rgb(var(--v-theme-background));
   font-size: 23px;
   justify-self: center;
   align-self: center;
@@ -173,14 +173,14 @@ const friends = computed(() => [
   margin-top: 10px;
   justify-self: center;
   align-self: center;
-  color: rgb(var(--v-theme-primaryContrast));
+  color: rgb(var(--v-theme-background));
 
   transition: transform 0.6s ease, opacity 0.6s ease;
 }
 
 .card-content {
   text-align: center;
-  background-color: rgb(var(--v-theme-primaryContrast));
+  background-color: rgb(var(--v-theme-background));
   height: 100%;
   border-radius: 20px;
   display: flex;

@@ -230,7 +230,7 @@
 }
 
 .active {
-  color: rgb(var(--v-theme-highlight));
+  color: rgb(var(--v-theme-backgroundContrast));
   transform: translateY(-10%);
 }
 
@@ -260,7 +260,7 @@
 
 .drawer-prepend {
   background-color: rgb(var(--v-theme-primary));
-  color: rgb(var(--v-theme-primaryContrast));
+  color: rgb(var(--v-theme-backround));
   height: 64px;
 }
 

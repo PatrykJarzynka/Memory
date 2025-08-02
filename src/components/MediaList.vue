@@ -130,6 +130,7 @@
 
 .media-icon {
   font-size: 25px;
+  color: rgb(var(--v-theme-primaryLight));
 
   @media only screen and (width >= 600px) {
     font-size: 35px;
@@ -156,7 +157,7 @@
 
 .media-button {
   background-color: rgb(var(--v-theme-primaryLight));
-  color: rgb(var(--v-theme-primaryContrast));
+  color: rgb(var(--v-theme-background));
   font-size: 13px;
   width: 100%;
 

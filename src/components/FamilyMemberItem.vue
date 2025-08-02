@@ -109,7 +109,7 @@
   bottom: 5px;
   font-weight: 500;
   font-size: 15px;
-  color: rgb(var(--v-theme-highlight));
+  color: rgb(var(--v-theme-backgroundContrast));
 
   @media only screen and (width >= 600px) {
     font-size: 18px;

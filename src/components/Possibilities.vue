@@ -70,7 +70,7 @@
 }
 
 .title {
-  color: rgb(var(--v-theme-primaryContrast));
+  color: rgb(var(--v-theme-background));
   font-size: 32px;
   text-align: center;
 
@@ -87,7 +87,7 @@
 }
 
 .possibilities-list-item {
-  color: rgb(var(--v-theme-primaryContrast));
+  color: rgb(var(--v-theme-background));
   font-size: 16px;
   text-align: center;
 

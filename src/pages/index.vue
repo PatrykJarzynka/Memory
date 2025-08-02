@@ -29,7 +29,7 @@
       <div class="family-history-content">
         <div class="family-tree-image reveal">
           <v-img
-            :src="locale === 'en' ? `${base}images/Family-structure-en.png` : `${base}images/Family-structure.png`"
+            :src="locale === 'en' ? `${base}images/Family-structure-en.jfif` : `${base}images/Family-structure.svg`"
           />
         </div>
 
@@ -221,7 +221,7 @@
 }
 
 .section-sub_title {
-  color: rgb(var(--v-theme-primaryContrast));
+  color: rgb(var(--v-theme-background));
   font-size:18px;
   text-align: center;
   padding-bottom: var(--v-gap-elements-outside--xs);
@@ -294,7 +294,7 @@
   width: 100%;
 
   @media only screen and (width >= 1280px) {
-    width: 60%;
+    width: 75%;
   }
 }
 

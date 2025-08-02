@@ -99,7 +99,7 @@
 }
 
 .hero-title {
-  color: rgb(var(--v-theme-primaryContrast));
+  color: rgb(var(--v-theme-background));
   font-size: 30px;
   font-weight: 100;
   line-height: 1.2em;
@@ -123,7 +123,7 @@
 }
 
 .hero-description {
-  color: rgb(var(--v-theme-primaryContrast));;
+  color: rgb(var(--v-theme-background));;
   font-size: 14px;
   font-family: Rubik, "sans-serif";
 

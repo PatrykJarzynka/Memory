@@ -103,7 +103,7 @@
 .footer-main-label {
   font-size: 20px;
   text-align: center;
-  color: rgb(var(--v-theme-primaryContrast));
+  color: rgb(var(--v-theme-background));
   font-family: var(--v-primary-font);
   padding-bottom: var(--v-gap-elements-outside--xs);
 
@@ -123,7 +123,7 @@
 
 .footer-text {
   text-align: center;
-  color: rgb(var(--v-theme-primaryContrast));
+  color: rgb(var(--v-theme-background));
 
   @media only screen and (width >= 600px) {
     font-size: 17px;
@@ -143,7 +143,7 @@
   justify-content: center;
   column-gap: 20px;
   background-color: transparent;
-  color: rgb(var(--v-theme-primaryContrast));
+  color: rgb(var(--v-theme-background));
   font-weight: 500;
 
   @media only screen and (width >= 1920px) {
@@ -194,7 +194,7 @@
 
 .social-item {
   align-self: center;
-  color: rgb(var(--v-theme-primaryContrast));
+  color: rgb(var(--v-theme-background));
   font-size: 15px;
   font-weight: 500;
   text-decoration: none;
@@ -214,7 +214,7 @@
 
 .email-icon {
   font-size: 33px;
-  color: rgb(var(--v-theme-primaryContrast));
+  color: rgb(var(--v-theme-background));
 }
 
 .instagram-image {

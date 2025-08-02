@@ -134,7 +134,7 @@
 }
 
 .support-item-button {
-  color: rgb(var(--v-theme-primaryContrast));
+  color: rgb(var(--v-theme-background));
   background-color: rgb(var(--v-theme-primaryLight));
 }
 
